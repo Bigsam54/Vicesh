@@ -1,0 +1,6 @@
+{
+  "name": "Vicesh Cosmetics",
+  "description": "A premium Ghanaian beauty and cosmetics brand specializing in eco-friendly, botanical-infused haircare and skincare solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
