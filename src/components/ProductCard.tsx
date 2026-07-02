@@ -60,28 +60,28 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <div 
-      className="group relative bg-[#F2F2F2] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col h-full cursor-pointer p-6"
+      className="group relative bg-white border border-brand-beige/40 rounded-lg overflow-hidden transition-all duration-400 flex flex-col h-full cursor-pointer hover:-translate-y-1 hover:shadow-luxury-hover"
       onClick={handleProductClick}
     >
       {/* Product Image Area */}
-      <div className="relative aspect-square w-full flex items-center justify-center bg-transparent mb-5">
+      <div className="relative aspect-square w-full bg-brand-ivory overflow-hidden p-6 flex items-center justify-center">
         <img 
           src={product.image} 
           alt={product.name} 
-          className="w-[85%] h-[85%] object-cover rounded-full shadow-sm transform scale-100 group-hover:scale-[1.04] transition-transform duration-500 ease-out"
+          className="w-full h-full object-cover rounded-md shadow-[0_2px_15px_rgba(0,0,0,0.05)] transform scale-100 group-hover:scale-[1.08] transition-transform duration-700 ease-out"
           loading="lazy"
         />
 
         {/* Brand Badges */}
-        <div className="absolute top-0 left-0 flex flex-col gap-1.5 z-10">
+        <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
           {product.bestSeller && (
-            <span className="bg-black text-white text-[8px] font-black tracking-widest uppercase px-2 py-0.5 rounded-xs">
-              ★ BESTSELLER
+            <span className="bg-brand-gold text-brand-purple text-[9px] font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-sm">
+              Bestseller
             </span>
           )}
           {product.featured && (
-            <span className="bg-[#1C1326] text-brand-gold text-[8px] font-black tracking-widest uppercase px-2 py-0.5 rounded-xs">
-              ✦ LIMITED EDITION
+            <span className="bg-brand-purple text-white text-[9px] font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-sm">
+              Limited Edition
             </span>
           )}
         </div>
@@ -89,90 +89,91 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         {/* Wishlist Button */}
         <button
           onClick={handleWishlistToggle}
-          className={`absolute top-0 right-0 z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+          className={`absolute top-4 right-4 z-10 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-sm transition-all duration-300 ${
             favorite 
-              ? 'text-red-600' 
-              : 'text-brand-charcoal/40 hover:text-red-500'
+              ? 'text-brand-purple' 
+              : 'text-brand-gray hover:text-brand-purple hover:scale-110'
           }`}
           aria-label={favorite ? 'Remove from Wishlist' : 'Add to Wishlist'}
         >
-          <Heart className={`w-4 h-4 ${favorite ? 'fill-current' : ''}`} />
+          <Heart className={`w-4 h-4 ${favorite ? 'fill-current' : 'stroke-[1.5]'}`} />
         </button>
+
+        {/* Quick View Button Overlay */}
+        <div className="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 flex justify-center transform translate-y-4 group-hover:translate-y-0">
+          <button 
+            onClick={handleQuickViewClick}
+            className="bg-white/90 backdrop-blur-md text-brand-charcoal hover:text-brand-purple font-sans font-medium text-xs px-6 py-2 rounded-full shadow-luxury flex items-center gap-2 transition-colors"
+          >
+            <Eye className="w-3.5 h-3.5" />
+            Quick View
+          </button>
+        </div>
       </div>
 
       {/* Product Information */}
-      <div className="flex flex-col flex-1 justify-between text-left space-y-4">
-        <div className="space-y-1.5">
-          {/* Name - permanent marker handwritten vibe */}
-          <h3 className="font-editorial text-lg text-[#222222] uppercase tracking-wide group-hover:text-brand-purple transition-colors leading-tight">
-            {product.name}
-          </h3>
-
+      <div className="flex flex-col flex-1 justify-between text-left p-6 space-y-5 bg-white">
+        <div className="space-y-3">
           {/* Sub-headline / Category */}
-          <span className="text-[10px] uppercase tracking-wider text-[#5D536B] font-black block">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gray font-medium block">
             {product.category}
           </span>
 
+          {/* Name */}
+          <h3 className="font-editorial text-xl font-medium text-brand-charcoal leading-tight">
+            {product.name}
+          </h3>
+
           {/* Description */}
-          <p className="text-xs text-[#5D536B]/90 line-clamp-2 leading-relaxed">
+          <p className="text-sm font-sans font-light text-brand-gray line-clamp-2 leading-relaxed">
             {product.shortDescription}
           </p>
-
-          {/* Rating */}
-          <div className="flex items-center gap-1.5 py-0.5">
-            <div className="flex text-brand-gold">
-              {[...Array(5)].map((_, i) => (
-                <Star 
-                  key={i} 
-                  className={`w-3 h-3 ${
-                    i < Math.floor(product.rating) ? 'fill-current' : 'text-gray-300'
-                  }`} 
-                />
-              ))}
-            </div>
-            <span className="text-[11px] text-[#5D536B] font-bold">
-              {product.rating} ({product.reviewsCount})
-            </span>
-          </div>
-
-          {/* Price */}
-          <div className="text-sm font-black text-[#222222] pt-1">
-            ${product.price.toFixed(2)}
-          </div>
-
-          {/* Delivery & Availability Stamps */}
-          <div className="space-y-1 pt-1 text-[11px] font-bold text-[#5D536B]">
-            <div className="flex items-center gap-1.5 text-emerald-700">
-              <span className="text-[10px]">✓</span>
-              <span>Online delivery</span>
-            </div>
-            <div className="flex items-center gap-1.5 text-[#5D536B]/80">
-              <span className="text-[10px]">⚲</span>
-              <span>Check availability for collection in-store</span>
-            </div>
-          </div>
         </div>
 
-        {/* Add to Bag centered pill button */}
-        <div className="pt-2 flex justify-center">
+        <div className="space-y-4 pt-2">
+          <div className="flex items-center justify-between">
+            {/* Price */}
+            <div className="text-xl font-editorial font-medium text-brand-charcoal">
+              ${product.price.toFixed(2)}
+            </div>
+            
+            {/* Rating */}
+            <div className="flex items-center gap-1.5">
+              <div className="flex text-brand-gold">
+                {[...Array(5)].map((_, i) => (
+                  <Star 
+                    key={i} 
+                    className={`w-3.5 h-3.5 ${
+                      i < Math.floor(product.rating) ? 'fill-current' : 'text-brand-beige'
+                    }`} 
+                  />
+                ))}
+              </div>
+              <span className="text-[11px] text-brand-gray font-medium">
+                ({product.reviewsCount})
+              </span>
+            </div>
+          </div>
+
+          {/* Add to Bag centered pill button */}
           <button
             onClick={handleQuickAdd}
             disabled={isAdding}
-            className={`px-6 py-2.5 text-[10px] tracking-widest font-black uppercase rounded-full border border-black/20 bg-white text-brand-charcoal transition-all duration-300 hover:bg-[#222222] hover:text-white flex items-center justify-center gap-1.5 shadow-2xs ${
-              addedSuccessfully ? 'bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700' : ''
+            className={`w-full py-3.5 text-xs font-semibold uppercase tracking-widest rounded-md transition-all duration-300 flex items-center justify-center gap-2 ${
+              addedSuccessfully ? 'bg-brand-gold text-brand-purple' : 'btn-secondary hover:border-brand-purple hover:bg-brand-purple hover:text-white'
             }`}
           >
             {isAdding ? (
-              <span className="w-3.5 h-3.5 border-2 border-brand-charcoal border-t-transparent rounded-full animate-spin"></span>
+              <span className="w-4 h-4 border-2 border-brand-purple border-t-transparent rounded-full animate-spin"></span>
             ) : addedSuccessfully ? (
               <>
-                <Check className="w-3.5 h-3.5 text-white" />
-                <span className="text-white">Added</span>
+                <Check className="w-4 h-4" />
+                <span>Added</span>
               </>
             ) : (
               <>
-                <ShoppingBag className="w-3 h-3" />
-                <span>Add to bag</span>
+                <ShoppingBag className="w-4 h-4 stroke-[1.5]" />
+                <span>Add to Bag</span>
               </>
             )}
           </button>

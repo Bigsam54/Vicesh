@@ -18,6 +18,7 @@ import { Contact } from './pages/Contact';
 import { FAQs } from './pages/FAQs';
 import { Policies } from './pages/Policies';
 import { NotFound } from './pages/NotFound';
+import { CategoryPage } from './pages/CategoryPage';
 import { QuickViewModal } from './components/QuickViewModal';
 import { ArrowUp } from 'lucide-react';
 
@@ -148,28 +149,10 @@ const MainApp: React.FC = () => {
         />
       );
     }
-    if (currentPage === 'haircare') {
+    if (['haircare', 'pedicure', 'manicure'].includes(currentPage)) {
       return (
-        <Shop 
-          initialCategory="haircare" 
-          setCurrentPage={setCurrentPage} 
-          setSelectedProductId={setSelectedProductId} 
-        />
-      );
-    }
-    if (currentPage === 'pedicure') {
-      return (
-        <Shop 
-          initialCategory="pedicure" 
-          setCurrentPage={setCurrentPage} 
-          setSelectedProductId={setSelectedProductId} 
-        />
-      );
-    }
-    if (currentPage === 'manicure') {
-      return (
-        <Shop 
-          initialCategory="manicure" 
+        <CategoryPage 
+          categoryId={currentPage} 
           setCurrentPage={setCurrentPage} 
           setSelectedProductId={setSelectedProductId} 
         />
@@ -187,13 +170,26 @@ const MainApp: React.FC = () => {
       return <Checkout setCurrentPage={setCurrentPage} />;
     }
     if (currentPage === 'about') {
-      return <AboutUs setCurrentPage={setCurrentPage} />;
+      return <AboutUs setCurrentPage={setCurrentPage} setSelectedProductId={setSelectedProductId} />;
     }
     if (currentPage === 'contact') {
       return <Contact />;
     }
     if (currentPage === 'faqs') {
       return <FAQs setCurrentPage={setCurrentPage} />;
+    }
+
+    // Dynamic Category Routing (handles any category id clicked from Shop)
+    if (currentPage.startsWith('category:')) {
+      const parts = currentPage.split(':');
+      const categoryId = parts[1] || 'all';
+      return (
+        <CategoryPage 
+          categoryId={categoryId} 
+          setCurrentPage={setCurrentPage} 
+          setSelectedProductId={setSelectedProductId} 
+        />
+      );
     }
 
     // Dynamic Product Detail Routing

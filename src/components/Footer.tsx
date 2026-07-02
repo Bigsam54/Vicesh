@@ -31,63 +31,63 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
   };
 
   return (
-    <footer id="vicesh-footer" className="bg-brand-offwhite text-brand-charcoal border-t border-brand-beige/25 pt-16 pb-8">
+    <footer id="vicesh-footer" className="bg-brand-purple text-brand-white pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-brand-beige/20 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 border-b border-brand-white/10 pb-16">
           
           {/* Brand Info & Story */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center">
               <img 
                 src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
-                alt="Apothecary Logo" 
-                className="h-10 w-auto object-contain"
+                alt="Vicesh Logo" 
+                className="h-10 w-auto object-contain brightness-0 invert opacity-90"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <p className="text-xs leading-relaxed text-brand-sage font-light max-w-sm">
+            <p className="text-sm leading-relaxed text-brand-white/80 font-sans font-light">
               We handcraft premium, organic self-care formulas infused with wild-harvested African botanicals and therapeutic essential oils, directly supporting women-led agricultural collectives in Northern Ghana.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-brand-forest hover:text-brand-gold transition-colors" aria-label="Instagram">
-                <Instagram className="w-5 h-5" />
+            <div className="flex space-x-5 pt-2">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-brand-white/80 hover:text-brand-gold transition-colors" aria-label="Instagram">
+                <Instagram className="w-5 h-5 stroke-[1.5]" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-brand-forest hover:text-brand-gold transition-colors" aria-label="Facebook">
-                <Facebook className="w-5 h-5" />
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-brand-white/80 hover:text-brand-gold transition-colors" aria-label="Facebook">
+                <Facebook className="w-5 h-5 stroke-[1.5]" />
               </a>
             </div>
           </div>
 
           {/* Quick Nav Collections */}
-          <div className="space-y-5">
-            <h3 className="font-editorial text-base font-semibold text-brand-forest tracking-wider">
+          <div className="space-y-6">
+            <h3 className="font-editorial text-xl font-medium text-brand-gold">
               Botanical Collections
             </h3>
-            <ul className="space-y-3 text-xs tracking-wider uppercase font-medium font-sans text-brand-sage">
+            <ul className="space-y-4 text-sm font-sans font-light text-brand-white/80">
               <li>
-                <button onClick={() => handleNavigate('haircare')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('haircare')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Hair Care Solutions
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('pedicure')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('pedicure')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Premium Pedicure
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('manicure')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('manicure')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Nourishing Manicure
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('shop')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('shop')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Shop All Products
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('about')} className="hover:text-brand-gold transition-colors text-left text-brand-forest font-semibold">
+                <button onClick={() => handleNavigate('about')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left text-brand-white font-medium">
                   Our Botanical Story
                 </button>
               </li>
@@ -95,100 +95,91 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
           </div>
 
           {/* Support & Policies */}
-          <div className="space-y-5">
-            <h3 className="font-editorial text-base font-semibold text-brand-forest tracking-wider">
+          <div className="space-y-6">
+            <h3 className="font-editorial text-xl font-medium text-brand-gold">
               Customer Sanctuary
             </h3>
-            <ul className="space-y-3 text-xs tracking-wider uppercase font-medium font-sans text-brand-sage">
+            <ul className="space-y-4 text-sm font-sans font-light text-brand-white/80">
               <li>
-                <button onClick={() => handleNavigate('contact')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('contact')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Contact Us
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('faqs')} className="hover:text-brand-gold transition-colors text-left">
-                  Frequently FAQs
+                <button onClick={() => handleNavigate('faqs')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
+                  Frequently Asked Questions
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('policies', 'shipping')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('policies', 'shipping')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Shipping Policy
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('policies', 'returns')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('policies', 'returns')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Returns & Refunds
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('policies', 'privacy')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('policies', 'privacy')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Privacy Policy
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigate('policies', 'terms')} className="hover:text-brand-gold transition-colors text-left">
+                <button onClick={() => handleNavigate('policies', 'terms')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Terms & Conditions
                 </button>
-              </li>
-              <li className="pt-2 border-t border-brand-beige/20">
-                <div className="text-[10px] normal-case text-brand-sage font-light leading-snug">
-                  <span className="font-bold text-brand-forest uppercase tracking-wider block text-[8px] mb-1">Brand Compliance</span>
-                  For design feedback or brand guidelines questions, contact our <button onClick={() => handleNavigate('contact')} className="underline hover:text-brand-gold font-bold">Communications Manager</button>.
-                </div>
               </li>
             </ul>
           </div>
 
           {/* Newsletter Signup */}
-          <div className="space-y-5">
-            <h3 className="font-editorial text-base font-semibold text-brand-forest tracking-wider">
+          <div className="space-y-6">
+            <h3 className="font-editorial text-xl font-medium text-brand-gold">
               The Botanical Circle
             </h3>
-            <p className="text-xs text-brand-sage font-light leading-relaxed">
+            <p className="text-sm text-brand-white/80 font-sans font-light leading-relaxed">
               Subscribe to receive curated beauty wisdom, herbal wellness practices, and exclusive access to new seasonal collections.
             </p>
 
             {subscribed ? (
-              <div className="bg-brand-forest/5 border border-brand-forest/20 rounded-xs p-4 flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-brand-forest shrink-0 mt-0.5" />
+              <div className="bg-brand-white/5 border border-brand-gold/30 rounded-md p-5 flex items-start gap-4">
+                <ShieldCheck className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-brand-forest uppercase tracking-wider">You are enrolled!</p>
-                  <p className="text-[10px] text-brand-sage mt-1 leading-normal font-light">Welcome to the inner circle. Your 10% enrollment discount code will arrive shortly.</p>
+                  <p className="text-sm font-medium text-brand-white">You are enrolled!</p>
+                  <p className="text-xs text-brand-white/70 mt-1.5 leading-relaxed font-light">Welcome to the inner circle. Your 10% enrollment discount code will arrive shortly.</p>
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="space-y-2">
-                <div className="flex border-b border-brand-beige/40 pb-2 focus-within:border-brand-gold transition-colors">
+              <form onSubmit={handleSubscribe} className="space-y-3 mt-2">
+                <div className="relative group">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
-                    className="bg-transparent text-xs w-full focus:outline-none placeholder-brand-sage/50 pr-4 text-brand-charcoal"
+                    className="bg-brand-white/5 border border-brand-white/20 rounded-full text-sm w-full font-sans focus:outline-none focus:border-brand-gold placeholder-brand-white/40 pl-5 pr-12 py-3 transition-colors"
                     required
                   />
-                  <button type="submit" className="text-brand-forest hover:text-brand-gold transition-colors" aria-label="Subscribe">
-                    <ArrowRight className="w-4 h-4" />
+                  <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-brand-gold text-brand-purple hover:bg-white transition-colors" aria-label="Subscribe">
+                    <ArrowRight className="w-4 h-4 stroke-[2]" />
                   </button>
                 </div>
-                <span className="block text-[10px] text-brand-sage/60 font-light font-sans">
-                  By subscribing, you agree to receive promotional letters. Opt out anytime.
-                </span>
               </form>
             )}
 
             {/* Ghana Presence Details */}
-            <div className="pt-4 flex flex-col space-y-2 text-xs font-light text-brand-sage text-left">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-brand-forest shrink-0 mt-0.5" />
+            <div className="pt-6 flex flex-col space-y-3 text-sm font-light text-brand-white/80 text-left">
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-brand-gold shrink-0 stroke-[1.5]" />
                 <span>CL-0635-9738, Oguaakrom, Winneba Road</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-brand-forest shrink-0" />
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-brand-gold shrink-0 stroke-[1.5]" />
                 <span>+233 (0) 59 578 0477</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-brand-forest shrink-0" />
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-brand-gold shrink-0 stroke-[1.5]" />
                 <span>viceshcompanyltd@gmail.com</span>
               </div>
             </div>
@@ -197,17 +188,15 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
         </div>
 
         {/* Footer Bottom (Accreditation & Disclaimer) */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-brand-sage tracking-wider font-sans space-y-4 md:space-y-0 uppercase font-medium">
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-white/60 font-sans space-y-4 md:space-y-0">
           <div className="flex flex-wrap justify-center gap-4 text-center">
-            <span>© 2026 VICESH COSMETICS. ALL RIGHTS RESERVED.</span>
-            <span className="hidden md:inline">|</span>
-            <span>ECO-CONSCIOUS BEAUTY HUB</span>
-            <span className="hidden md:inline">|</span>
-            <span>MADE WITH LOVE IN GHANA</span>
+            <span>&copy; {new Date().getFullYear()} Vicesh Cosmetics. All Rights Reserved.</span>
+            <span className="hidden md:inline text-brand-white/30">|</span>
+            <span>Made with Care in Ghana</span>
           </div>
-          <div className="flex items-center gap-2 bg-brand-forest/5 px-3 py-1.5 rounded-full border border-brand-forest/10 text-brand-forest">
-            <span className="w-1.5 h-1.5 bg-brand-gold rounded-full animate-pulse"></span>
-            <span>Secure SSL Encrypted Checkout</span>
+          <div className="flex items-center gap-2 bg-brand-white/5 px-4 py-2 rounded-full border border-brand-white/10">
+            <ShieldCheck className="w-3.5 h-3.5 text-brand-gold stroke-[1.5]" />
+            <span className="font-medium text-brand-white/80 tracking-wide uppercase text-[10px]">Secure SSL Checkout</span>
           </div>
         </div>
 

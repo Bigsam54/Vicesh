@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&family=Permanent+Marker&family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 html {
@@ -6,70 +6,123 @@ html {
 }
 
 @theme {
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-rounded: "Arial Rounded MT Bold", "Quicksand", system-ui, -apple-system, sans-serif;
-  --font-brush: "Permanent Marker", cursive;
-  --font-handwritten: "Caveat", cursive;
   
-  --color-brand-cream: #ffffee; /* Soft Cream */
-  --color-brand-offwhite: #fdfffa; /* Light Off-white */
-  --color-brand-forest: #8b008b; /* Dark Magenta */
-  --color-brand-purple: #8b008b; /* Dark Magenta (Primary) */
-  --color-brand-sage: #5D536B; /* Muted Slate (Secondary) */
-  --color-brand-beige: #dfaf37; /* Golden Yellow for borders/lines */
-  --color-brand-gold: #dfaf37; /* Golden Yellow (Accent) */
-  --color-brand-charcoal: #222222; /* Deep Charcoal Text */
+  /* Primary Colors */
+  --color-brand-purple: #4A205A; /* Royal Purple */
+  --color-brand-purple-dark: #32133e;
+  --color-brand-gold: #C5A059; /* Luxury Gold */
+  --color-brand-gold-light: #DFCA9B;
+  
+  /* Neutral Palette */
+  --color-brand-ivory: #FCFAF6;
+  --color-brand-white: #FFFCF9;
+  --color-brand-beige: #F5F0E6;
+  --color-brand-light-gray: #F9F9F9;
+  --color-brand-cream: #ffffff; 
+  
+  /* Text Colors */
+  --color-brand-charcoal: #222222;
+  --color-brand-gray: #555555;
+  --color-brand-muted: #888888;
+
+  /* Shadows */
+  --shadow-luxury: 0 4px 20px rgba(34, 34, 34, 0.05);
+  --shadow-luxury-lg: 0 10px 40px rgba(34, 34, 34, 0.08);
+  --shadow-luxury-hover: 0 15px 50px rgba(34, 34, 34, 0.12);
+
+  /* Radius */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 }
 
-/* Make all headings use Playfair Display font */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif) !important;
+  color: var(--color-brand-charcoal);
+  letter-spacing: 0.01em;
+  text-transform: none !important;
 }
 
 body {
-  background-color: var(--color-brand-cream);
-  color: var(--color-brand-charcoal);
-  font-family: var(--font-rounded);
+  background-color: var(--color-brand-ivory);
+  color: var(--color-brand-gray);
+  font-family: var(--font-sans);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .font-editorial {
   font-family: var(--font-serif);
 }
 
-.font-rounded {
-  font-family: var(--font-rounded);
+.font-sans {
+  font-family: var(--font-sans);
 }
 
-/* Luxury oil-droplet and botanical patterns */
-.brand-pattern-light {
-  background-image: radial-gradient(#dfaf37 0.75px, transparent 0.75px), radial-gradient(#dfaf37 0.75px, #fdfffa 0.75px);
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
-  opacity: 0.25;
+/* Luxury Buttons */
+.btn-primary {
+  background-color: var(--color-brand-purple);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-luxury);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.brand-pattern-dark {
-  background-image: radial-gradient(#dfaf37 1px, transparent 1px), radial-gradient(#dfaf37 1px, #8b008b 1px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
-  opacity: 0.35;
+.btn-primary:hover {
+  background-color: var(--color-brand-purple-dark);
+  box-shadow: var(--shadow-luxury-hover);
+  transform: translateY(-2px);
 }
 
-/* Custom scrollbar for premium editorial look */
+.btn-secondary {
+  background-color: #ffffff;
+  color: var(--color-brand-purple);
+  border: 1px solid var(--color-brand-purple);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-brand-ivory);
+  color: var(--color-brand-gold);
+  border-color: var(--color-brand-gold);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-brand-cream);
+  background: var(--color-brand-ivory);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color-brand-beige);
-  border-radius: 3px;
+  border-radius: var(--radius-xl);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-gold);
+  background: var(--color-brand-gold-light);
 }
 
+/* Selection */
+::selection {
+  background-color: var(--color-brand-purple);
+  color: #ffffff;
+}
