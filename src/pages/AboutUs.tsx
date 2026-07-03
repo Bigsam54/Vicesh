@@ -35,7 +35,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
               Our Story
             </span>
             <h1 className="font-editorial text-4xl sm:text-5xl md:text-7xl font-medium text-white tracking-tight leading-[1.1]">
-              Nature’s Luxury.<br />
+              Nature’s Best.<br />
               <span className="text-brand-gold">Crafted in Ghana.</span>
             </h1>
             <p className="text-sm md:text-base text-brand-cream/90 max-w-xl leading-relaxed font-sans font-light">
@@ -79,7 +79,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
                   Healthy beauty begins with healthy ingredients. At Vicesh Cosmetics, our journey started with a simple observation: the market was saturated with products that sacrificed long-term wellness for short-term illusions. We knew that true beauty is not only about appearance, but also about confidence, wellness, and daily self-care.
                 </p>
                 <p>
-                  We develop premium eco-friendly haircare, skincare, and nail care formulated with raw botanical elements and carefully selected essential oils. Every formulation is developed with intention rather than simply following fleeting trends. 
+                  We develop authentic, local eco-friendly haircare, skincare, and nail care formulated with raw botanical elements and carefully selected essential oils. Every formulation is developed with intention rather than simply following fleeting trends. 
                 </p>
                 <p>
                   Located proudly at CL-0635-9738, Oguaakrom, Winneba Road, Ghana, we serve both individual connoisseurs of self-care and elite wholesale partners who demand the very best for their clientele. Customers deserve products they can trust deeply.
@@ -114,7 +114,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
                 <span className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-sans font-semibold">Our Mission</span>
               </div>
               <h3 className="font-editorial text-2xl md:text-3xl font-medium leading-relaxed">
-                Vicesh Cosmetics exists to create premium beauty products that <span className="text-brand-gold italic">nourish, protect, and restore</span> hair and skin using nature-inspired ingredients and carefully researched formulations.
+                Vicesh Cosmetics exists to create authentic beauty products that <span className="text-brand-gold italic">nourish, protect, and restore</span> hair and skin using nature-inspired ingredients and carefully researched formulations.
               </h3>
             </div>
 
@@ -227,7 +227,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
             {[
-              { icon: Sparkles, title: "Premium Formulations", desc: "Uncompromisingly luxurious textures crafted for profound efficacy." },
+              { icon: Sparkles, title: "Authentic Formulations", desc: "Rich textures crafted for profound efficacy." },
               { icon: Leaf, title: "Botanical Ingredients", desc: "Harnessing the raw, concentrated power of natural plants and essential oils." },
               { icon: Globe, title: "Eco-Conscious Beauty", desc: "Mindful development practices that respect our planet and communities." },
               { icon: Award, title: "Professional Quality", desc: "Rigorous standards that exceed traditional salon and spa requirements." },
@@ -263,7 +263,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
                 </div>
                 <ul className="space-y-4">
                   {[
-                    "Premium Quality Standards",
+                    "Authentic Quality Standards",
                     "Thoughtfully Selected Ingredients",
                     "Absolute Customer Satisfaction",
                     "Continuous Innovation",
@@ -323,7 +323,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
           <BrandDroplet size={48} color="#C5A059" className="mx-auto drop-shadow-lg" />
           <p className="font-editorial text-2xl md:text-4xl font-medium leading-relaxed px-4 md:px-12 italic text-brand-cream drop-shadow-md">
-            "Vicesh Cosmetics is more than a cosmetics company—it is a brand dedicated to helping people care for themselves with premium products inspired by nature, backed by thoughtful formulation, and created with a genuine commitment to quality and wellbeing."
+            "Vicesh Cosmetics is more than a cosmetics company—it is a brand dedicated to helping people care for themselves with authentic products inspired by nature, backed by thoughtful formulation, and created with a genuine commitment to quality and wellbeing."
           </p>
           <div className="pt-8">
             <button 

@@ -33,7 +33,7 @@ const MainApp: React.FC = () => {
 
     // SEO Dynamic Metadata Mapping
     const titleMap: Record<string, string> = {
-      home: 'Vicesh Cosmetics | Premium Eco-Friendly Hair & Skincare',
+      home: 'Vicesh Cosmetics | Authentic Eco-Friendly Hair & Skincare',
       shop: 'Shop Eco-Friendly Cosmetics | Vicesh Cosmetics',
       haircare: 'Organic Hair Care Collection | Vicesh Cosmetics',
       pedicure: 'Professional Pedicure Sets | Vicesh Cosmetics',

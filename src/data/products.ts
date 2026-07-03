@@ -82,7 +82,7 @@ export const PRODUCTS: Product[] = [
     ],
     category: 'haircare',
     shortDescription: 'A deep softening conditioner enriched with avocado extracts, high in healthy fats and proteins, to restore and retain moisture.',
-    description: 'Vicesh Avocado Infused Hair Conditioner is meticulously crafted to restore and retain moisture in the hair after cleansing. Formulated with premium avocado extracts rich in healthy fats, essential amino acids, and structural proteins, it nourishes and strengthens weak hair strands. This conditioner melts tangles, softens the hair shaft, and makes combing effortless. NB: On designated days for deep conditioning treatments, kindly avoid using Avocado Infused Hair Conditioner to allow the treatment to work effectively.',
+    description: 'Vicesh Avocado Infused Hair Conditioner is meticulously crafted to restore and retain moisture in the hair after cleansing. Formulated with authentic, locally sourced avocado extracts rich in healthy fats, essential amino acids, and structural proteins, it nourishes and strengthens weak hair strands. This conditioner melts tangles, softens the hair shaft, and makes combing effortless. NB: On designated days for deep conditioning treatments, kindly avoid using Avocado Infused Hair Conditioner to allow the treatment to work effectively.',
     ingredients: [
       'Purified Water',
       'Avocado Fruit Extract (Persea Gratissima)',
@@ -362,7 +362,7 @@ export const PRODUCTS: Product[] = [
       'https://images.unsplash.com/photo-1519735052327-2b992f8c0444?auto=format&fit=crop&q=80&w=800'
     ],
     category: 'pedicure',
-    shortDescription: 'A premium 6-step numbered pedicure kit with 2 additional gift products for a comprehensive, professional foot spa treatment.',
+    shortDescription: 'An authentic 6-step numbered pedicure kit with 2 additional gift products for a comprehensive, professional foot spa treatment.',
     description: 'The Vicesh Skin Talk Pedicure Set (Green Set) is a complete professional foot care system designed to relax, soften, exfoliate, and refresh tired feet. The sequential numbering system of this product is essential for its correct identification and application. The kit includes six full-sized numbered products and two crucial gift products (Pedicure Salt and Antiseptic) that ease muscle tension, release body pains, prevent bacterial infections, and leave your feet feeling incredibly soft, healthy, and revitalized.',
     ingredients: [
       'Mineral Sea Salts',
@@ -378,7 +378,7 @@ export const PRODUCTS: Product[] = [
       'Includes 6 full-sized numbered products and 2 essential gifts (Pedicure Salt & Antiseptic)',
       'Relaxation of leg muscles and calming of tired feet via therapeutic Pedicure Salt',
       'Prevents fungal and bacterial infections while maintaining absolute hygiene',
-      'Numbered system guides you seamlessly through a premium salon-grade pedicure at home'
+      'Numbered system guides you seamlessly through an authentic salon-grade pedicure at home'
     ],
     usage: [
       'Step 1 (Sanitize): Spray the Hygiene Spray (No. 2) evenly over the feet to cleanse and prepare them for treatment.',
@@ -401,7 +401,7 @@ export const PRODUCTS: Product[] = [
         id: 'rev-pg1',
         name: 'Mavis Asante',
         rating: 5,
-        title: 'Luxury spa at home',
+        title: 'Authentic spa at home',
         comment: 'This green set is outstanding. The numbering makes it so easy to follow. My feet feel incredibly soft, and the pedicure salt totally relieved my muscle fatigue after standing all day.',
         date: '2026-05-25'
       }
@@ -431,7 +431,7 @@ export const PRODUCTS: Product[] = [
       'Salicylic-infused Pedicure Cream'
     ],
     benefits: [
-      'Includes 5 full-sized numbered products and 4 premium gifts for advanced foot therapy',
+      'Includes 5 full-sized numbered products and 4 beautiful gifts for advanced foot therapy',
       'Specialized salon-grade Pedicure Cream removes tough calluses for a smoother appearance',
       'Mineral-infused Pedicure Salt detoxifies the body, reduces stress, and calms muscles',
       'Cuticle Softener and Cuticle Oil provide comprehensive, damage-free nail and cuticle grooming'
@@ -476,7 +476,7 @@ export const PRODUCTS: Product[] = [
       'https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=800'
     ],
     category: 'manicure',
-    shortDescription: 'A premium 6-step numbered manicure kit with 3 professional-grade gifts to hydrate hands, soften cuticles, and promote nail health.',
+    shortDescription: 'An authentic 6-step numbered manicure kit with 3 professional-grade gifts to hydrate hands, soften cuticles, and promote nail health.',
     description: 'Keep your hands feeling soft, youthful, and beautifully groomed with the Vicesh Skin Talk Manicure Set. The sequential numbering system of this product is vital for its correct identification and therapeutic application. This luxurious kit features six full-sized numbered products designed to soothe, sanitize, exfoliate, and deeply rehydrate dry hands. It also contains three high-grade gifts: Pedicure Salt for muscle relaxation, Antiseptic for absolute hygiene, and a professional-grade Cuticle Softener that loosens cuticles for easy, damage-free grooming.',
     ingredients: [
       'Sweet Almond Oil',

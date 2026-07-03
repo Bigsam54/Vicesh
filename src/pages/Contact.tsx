@@ -149,7 +149,7 @@ export const Contact: React.FC = () => {
               <h4 className="font-editorial text-lg font-bold">Communications & Brand Identity</h4>
             </div>
             <p className="text-xs text-brand-cream/90 font-light leading-relaxed z-10 relative">
-              The VICESH brand system represents luxury, botanical purity, and eco-certified craftsmanship. These design principles and rules must be applied consistently across all printed and digital communications.
+              The VICESH brand system represents authentic local heritage, botanical purity, and eco-certified craftsmanship. These design principles and rules must be applied consistently across all printed and digital communications.
             </p>
             <div className="bg-black/15 p-3 rounded-xs border border-brand-gold/10 z-10 relative text-[11px] leading-relaxed">
               <p className="font-semibold text-brand-gold mb-1">Manager Contact Details:</p>

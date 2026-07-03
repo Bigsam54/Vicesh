@@ -84,12 +84,68 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
+      {/* Top Promotional Banner */}
+      <div className="bg-brand-cream text-brand-purple text-xs sm:text-sm font-sans font-bold text-center py-2 px-4 cursor-pointer hover:bg-brand-beige transition-colors border-b border-brand-purple/10">
+        ✨ Join Vicesh Club
+      </div>
+
       {/* Navigation Header */}
       <header 
         id="vicesh-header"
-        className={`sticky top-0 z-40 transition-all duration-300 w-full ${isScrolled ? 'bg-brand-ivory/90 backdrop-blur-md shadow-luxury border-b border-brand-beige/50 py-3' : 'bg-brand-ivory border-b border-brand-beige/20 py-5'}`}
+        className={`sticky top-0 z-40 transition-all duration-300 w-full ${isScrolled ? 'bg-brand-purple/95 backdrop-blur-md shadow-luxury border-b border-brand-purple-dark/50 py-2 sm:py-3' : 'bg-brand-purple border-b border-brand-purple-dark/20 py-3 sm:py-4'}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+        {/* MOBILE VIEW */}
+        <div className="md:hidden flex items-center justify-between px-4 relative h-12">
+          {/* Hamburger (Left) */}
+          <button 
+            id="mobile-menu-btn"
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="text-brand-cream hover:text-brand-gold transition-colors p-2 -ml-2"
+            aria-label="Open Menu"
+          >
+            <Menu className="w-6 h-6 stroke-[1.5]" />
+          </button>
+
+          {/* Centered Logo */}
+          <button 
+            id="brand-logo-btn-mobile"
+            onClick={() => handleNavigate('home')} 
+            className="absolute left-1/2 -translate-x-1/2 focus:outline-none"
+          >
+            <img 
+              src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
+              alt="Vicesh Logo" 
+              className="h-12 w-auto object-contain transition-all duration-300"
+              referrerPolicy="no-referrer"
+            />
+          </button>
+
+          {/* Search & Cart (Right) */}
+          <div className="flex items-center gap-1 text-brand-cream">
+            <button 
+              onClick={() => setIsSearchOpen(true)}
+              className="p-2 hover:text-brand-gold transition-colors"
+            >
+              <Search className="w-5 h-5 stroke-[1.5]" />
+            </button>
+            <button 
+              id="header-cart-btn-mobile"
+              onClick={() => setIsCartDrawerOpen(true)}
+              className="p-2 hover:text-brand-gold transition-colors relative -mr-2"
+              aria-label="Cart"
+            >
+              <ShoppingBag className="w-5 h-5 stroke-[1.5]" />
+              {totalCartItems > 0 && (
+                <span className="absolute top-1 right-1 bg-brand-gold text-brand-purple text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold font-sans shadow-sm">
+                  {totalCartItems}
+                </span>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* DESKTOP VIEW */}
+        <div className="hidden md:flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 items-center justify-between gap-4">
           
           {/* Left/Center: Elegant Logo + Clean Links */}
           <div className="flex items-center gap-8 md:gap-12">
@@ -102,34 +158,34 @@ export const Header: React.FC<HeaderProps> = ({
               <img 
                 src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
                 alt="Vicesh Logo" 
-                className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16'}`}
+                className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-16 lg:h-20' : 'h-20 lg:h-24'}`}
                 referrerPolicy="no-referrer"
               />
             </button>
 
             {/* Editorial Navigation Links (Desktop Only) */}
-            <nav className="hidden lg:flex items-center space-x-10 text-sm font-sans font-medium text-brand-charcoal">
+            <nav className="flex items-center space-x-10 text-sm font-sans font-bold text-brand-cream">
               <button 
                 id="nav-shop"
                 onClick={() => handleNavigate('shop')}
-                className={`relative py-2 transition-colors cursor-pointer group ${currentPage === 'shop' ? 'text-brand-purple' : 'hover:text-brand-purple'}`}
+                className={`relative py-2 transition-colors cursor-pointer group hover:text-brand-gold`}
               >
                 Products
-                <span className={`absolute left-0 bottom-0 w-full h-[1px] bg-brand-purple transition-transform duration-300 origin-left ${currentPage === 'shop' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+                <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-brand-gold transition-transform duration-300 origin-left ${currentPage === 'shop' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
               </button>
               <button 
                 id="nav-about"
                 onClick={() => handleNavigate('about')}
-                className={`relative py-2 transition-colors cursor-pointer group ${currentPage === 'about' ? 'text-brand-purple' : 'hover:text-brand-purple'}`}
+                className={`relative py-2 transition-colors cursor-pointer group hover:text-brand-gold`}
               >
                 Our Story
-                <span className={`absolute left-0 bottom-0 w-full h-[1px] bg-brand-purple transition-transform duration-300 origin-left ${currentPage === 'about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+                <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-brand-gold transition-transform duration-300 origin-left ${currentPage === 'about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
               </button>
             </nav>
           </div>
 
           {/* Center-Right: Pill-shaped Search Bar */}
-          <div className="hidden md:block flex-1 max-w-xs mx-4">
+          <div className="flex-1 max-w-xs mx-4">
             <div className="relative group">
               <input 
                 type="text"
@@ -140,25 +196,25 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsSearchOpen(true);
                 }}
                 onClick={() => setIsSearchOpen(true)}
-                className="w-full bg-brand-white text-brand-charcoal border border-brand-beige/60 rounded-full font-sans text-sm py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brand-purple focus:border-brand-purple transition-all duration-300 hover:shadow-luxury cursor-pointer"
+                className="w-full bg-brand-purple-dark/50 text-brand-cream border border-brand-purple-dark rounded-full font-sans text-sm py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brand-gold focus:border-brand-gold transition-all duration-300 hover:bg-brand-purple-dark/80 cursor-pointer placeholder-brand-cream/50"
               />
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-muted pointer-events-none group-focus-within:text-brand-purple transition-colors" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-cream/50 pointer-events-none group-focus-within:text-brand-gold transition-colors" />
             </div>
           </div>
 
           {/* Right Side: Utility Icons */}
-          <div className="flex items-center space-x-3 sm:space-x-5 text-brand-charcoal">
+          <div className="flex items-center space-x-5 text-brand-cream">
             
             {/* Account Button */}
             <button 
               id="header-account-btn"
               onClick={() => handleNavigate('account')}
-              className={`hover:text-brand-purple transition-colors p-2 relative ${currentPage.startsWith('account') ? 'text-brand-purple' : ''}`}
+              className={`hover:text-brand-gold transition-colors p-2 relative`}
               aria-label="Account"
             >
               <User className="w-5 h-5 stroke-[1.5]" />
               {currentUser && (
-                <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-brand-purple border-2 border-brand-ivory"></span>
+                <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-brand-gold border-2 border-brand-purple"></span>
               )}
             </button>
 
@@ -172,12 +228,12 @@ export const Header: React.FC<HeaderProps> = ({
                   handleNavigate('account'); // force login
                 }
               }}
-              className="hidden md:flex hover:text-brand-purple transition-colors p-2 relative"
+              className="flex hover:text-brand-gold transition-colors p-2 relative"
               aria-label="Wishlist"
             >
               <Heart className="w-5 h-5 stroke-[1.5]" />
               {wishlist.length > 0 && (
-                <span className="absolute top-0 right-0 bg-brand-gold text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-medium font-sans">
+                <span className="absolute top-0 right-0 bg-brand-gold text-brand-purple text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold font-sans">
                   {wishlist.length}
                 </span>
               )}
@@ -187,25 +243,15 @@ export const Header: React.FC<HeaderProps> = ({
             <button 
               id="header-cart-btn"
               onClick={() => setIsCartDrawerOpen(true)}
-              className="hover:text-brand-purple transition-colors p-2 relative"
+              className="hover:text-brand-gold transition-colors p-2 relative"
               aria-label="Cart"
             >
               <ShoppingBag className="w-5 h-5 stroke-[1.5]" />
               {totalCartItems > 0 && (
-                <span className="absolute top-0 right-0 bg-brand-purple text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-medium font-sans shadow-sm">
+                <span className="absolute top-0 right-0 bg-brand-gold text-brand-purple text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold font-sans shadow-sm">
                   {totalCartItems}
                 </span>
               )}
-            </button>
-
-            {/* Mobile Menu Trigger */}
-            <button 
-              id="mobile-menu-btn"
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden text-brand-charcoal hover:text-brand-purple transition-colors p-2"
-              aria-label="Open Menu"
-            >
-              <Menu className="w-6 h-6 stroke-[1.5]" />
             </button>
           </div>
         </div>
@@ -506,7 +552,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <img 
                   src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
                   alt="Vicesh Logo" 
-                  className="h-10 w-auto object-contain"
+                  className="h-12 w-auto object-contain"
                   referrerPolicy="no-referrer"
                 />
                 <button 
@@ -527,14 +573,14 @@ export const Header: React.FC<HeaderProps> = ({
                   <button 
                     id="mobile-nav-shop"
                     onClick={() => handleNavigate('shop')}
-                    className="text-left font-editorial text-2xl font-medium text-brand-charcoal hover:text-brand-purple transition-colors py-1"
+                    className="text-left font-editorial text-2xl font-bold text-brand-charcoal hover:text-brand-purple transition-colors py-1"
                   >
                     Products
                   </button>
                   <button 
                     id="mobile-nav-about"
                     onClick={() => handleNavigate('about')}
-                    className="text-left font-editorial text-2xl font-medium text-brand-charcoal hover:text-brand-purple transition-colors py-1"
+                    className="text-left font-editorial text-2xl font-bold text-brand-charcoal hover:text-brand-purple transition-colors py-1"
                   >
                     Our Story
                   </button>
@@ -570,7 +616,7 @@ export const Header: React.FC<HeaderProps> = ({
                   Vicesh Cosmetics
                 </p>
                 <p className="text-sm text-brand-gray font-sans">
-                  Luxury botanical self-care.
+                  Authentic Ghanaian botanical self-care.
                 </p>
               </div>
 

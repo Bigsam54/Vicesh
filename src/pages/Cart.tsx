@@ -84,7 +84,7 @@ export const Cart: React.FC<CartProps> = ({ setCurrentPage, setSelectedProductId
           </div>
           <h2 className="font-editorial text-2xl font-bold text-brand-forest">Your basket is empty</h2>
           <p className="text-xs text-brand-sage max-w-sm mx-auto leading-relaxed">
-            Fill your self-care shelf with our raw, botanical haircare, premium pedicure elements, and organic manicure formulations.
+            Fill your self-care shelf with our raw, botanical haircare, authentic pedicure elements, and organic manicure formulations.
           </p>
           <button
             onClick={() => setCurrentPage('shop')}

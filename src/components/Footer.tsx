@@ -43,12 +43,12 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
               <img 
                 src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
                 alt="Vicesh Logo" 
-                className="h-10 w-auto object-contain brightness-0 invert opacity-90"
+                className="h-16 w-auto object-contain brightness-0 invert opacity-90"
                 referrerPolicy="no-referrer"
               />
             </div>
             <p className="text-sm leading-relaxed text-brand-white/80 font-sans font-light">
-              We handcraft premium, organic self-care formulas infused with wild-harvested African botanicals and therapeutic essential oils, directly supporting women-led agricultural collectives in Northern Ghana.
+              We handcraft authentic, organic self-care formulas infused with wild-harvested African botanicals and therapeutic essential oils, directly supporting women-led agricultural collectives in Northern Ghana.
             </p>
             <div className="flex space-x-5 pt-2">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-brand-white/80 hover:text-brand-gold transition-colors" aria-label="Instagram">
@@ -73,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
               </li>
               <li>
                 <button onClick={() => handleNavigate('pedicure')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
-                  Premium Pedicure
+                  Authentic Pedicure
                 </button>
               </li>
               <li>
