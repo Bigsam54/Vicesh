@@ -85,22 +85,22 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <>
       {/* Top Promotional Banner */}
-      <div className="bg-brand-cream text-brand-purple text-xs sm:text-sm font-sans font-bold text-center py-2 px-4 cursor-pointer hover:bg-brand-beige transition-colors border-b border-brand-purple/10">
+      <div className="bg-brand-purple text-brand-cream text-xs sm:text-sm font-sans font-bold text-center py-2 px-4 cursor-pointer hover:bg-brand-purple-dark transition-colors border-b border-brand-purple-dark/20">
         ✨ Join Vicesh Club
       </div>
 
       {/* Navigation Header */}
       <header 
         id="vicesh-header"
-        className={`sticky top-0 z-40 transition-all duration-300 w-full ${isScrolled ? 'bg-brand-purple/95 backdrop-blur-md shadow-luxury border-b border-brand-purple-dark/50 py-2 sm:py-3' : 'bg-brand-purple border-b border-brand-purple-dark/20 py-3 sm:py-4'}`}
+        className={`sticky top-0 z-40 transition-all duration-300 w-full ${isScrolled ? 'bg-brand-ivory/95 backdrop-blur-md shadow-luxury border-b border-brand-beige/50 py-2 sm:py-3' : 'bg-brand-ivory border-b border-brand-beige/20 py-3 sm:py-4'}`}
       >
         {/* MOBILE VIEW */}
-        <div className="md:hidden flex items-center justify-between px-4 relative h-12">
+        <div className="md:hidden flex items-center justify-between px-4 relative h-16">
           {/* Hamburger (Left) */}
           <button 
             id="mobile-menu-btn"
             onClick={() => setIsMobileMenuOpen(true)}
-            className="text-brand-cream hover:text-brand-gold transition-colors p-2 -ml-2"
+            className="text-brand-purple hover:text-brand-gold transition-colors p-2 -ml-2"
             aria-label="Open Menu"
           >
             <Menu className="w-6 h-6 stroke-[1.5]" />
@@ -110,18 +110,18 @@ export const Header: React.FC<HeaderProps> = ({
           <button 
             id="brand-logo-btn-mobile"
             onClick={() => handleNavigate('home')} 
-            className="absolute left-1/2 -translate-x-1/2 focus:outline-none"
+            className="absolute left-1/2 -translate-x-1/2 focus:outline-none z-50"
           >
             <img 
-              src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
+              src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844747/VICESH_variation_1_slzxn0.png" 
               alt="Vicesh Logo" 
-              className="h-12 w-auto object-contain transition-all duration-300"
+              className="h-20 w-auto object-contain transition-all duration-300 scale-110"
               referrerPolicy="no-referrer"
             />
           </button>
 
           {/* Search & Cart (Right) */}
-          <div className="flex items-center gap-1 text-brand-cream">
+          <div className="flex items-center gap-1 text-brand-purple">
             <button 
               onClick={() => setIsSearchOpen(true)}
               className="p-2 hover:text-brand-gold transition-colors"
@@ -156,7 +156,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="group focus:outline-none cursor-pointer flex items-center transition-all duration-500 hover:opacity-80"
             >
               <img 
-                src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
+                src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844747/VICESH_variation_1_slzxn0.png" 
                 alt="Vicesh Logo" 
                 className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-16 lg:h-20' : 'h-20 lg:h-24'}`}
                 referrerPolicy="no-referrer"
@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             {/* Editorial Navigation Links (Desktop Only) */}
-            <nav className="flex items-center space-x-10 text-sm font-sans font-bold text-brand-cream">
+            <nav className="flex items-center space-x-10 text-sm font-sans font-bold text-brand-purple">
               <button 
                 id="nav-shop"
                 onClick={() => handleNavigate('shop')}
@@ -196,14 +196,14 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsSearchOpen(true);
                 }}
                 onClick={() => setIsSearchOpen(true)}
-                className="w-full bg-brand-purple-dark/50 text-brand-cream border border-brand-purple-dark rounded-full font-sans text-sm py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brand-gold focus:border-brand-gold transition-all duration-300 hover:bg-brand-purple-dark/80 cursor-pointer placeholder-brand-cream/50"
+                className="w-full bg-brand-white text-brand-charcoal border border-brand-beige/60 rounded-full font-sans text-sm py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brand-purple focus:border-brand-purple transition-all duration-300 hover:shadow-sm cursor-pointer placeholder-brand-gray/60"
               />
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-cream/50 pointer-events-none group-focus-within:text-brand-gold transition-colors" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-gray/60 pointer-events-none group-focus-within:text-brand-purple transition-colors" />
             </div>
           </div>
 
           {/* Right Side: Utility Icons */}
-          <div className="flex items-center space-x-5 text-brand-cream">
+          <div className="flex items-center space-x-5 text-brand-purple">
             
             {/* Account Button */}
             <button 
@@ -550,7 +550,7 @@ export const Header: React.FC<HeaderProps> = ({
               {/* Mobile Drawer Header */}
               <div className="px-6 py-5 border-b border-brand-beige/30 flex items-center justify-between bg-white">
                 <img 
-                  src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
+                  src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844747/VICESH_variation_1_slzxn0.png" 
                   alt="Vicesh Logo" 
                   className="h-12 w-auto object-contain"
                   referrerPolicy="no-referrer"

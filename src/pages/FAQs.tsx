@@ -37,12 +37,12 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
       
       {/* Header section */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
-        <span className="text-xs uppercase tracking-[0.25em] text-brand-sage font-bold block">Apothecary Help Desk</span>
-        <h1 className="font-editorial text-3xl sm:text-4xl font-bold text-brand-forest uppercase">
+        <span className="text-xs uppercase tracking-[0.25em] text-brand-cream/80 font-bold block">Apothecary Help Desk</span>
+        <h1 className="font-editorial text-3xl sm:text-4xl font-bold text-brand-cream uppercase">
           Frequently Answered
         </h1>
         <div className="w-12 h-[1.5px] bg-brand-gold mx-auto mt-2"></div>
-        <p className="text-xs sm:text-sm text-brand-sage font-light leading-relaxed">
+        <p className="text-xs sm:text-sm text-brand-cream/80 font-light leading-relaxed">
           Unlock answers regarding cold-pressed ingredient storage, delivery regions across Ghana, international DHL shipping speeds, and Paystack payments.
         </p>
       </div>
@@ -57,9 +57,9 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search our help database..."
-            className="w-full bg-brand-offwhite border border-brand-beige/65 text-xs rounded-full px-5 py-3 pl-11 focus:outline-none focus:border-brand-sage text-brand-forest shadow-xs"
+            className="w-full bg-brand-offwhite border border-brand-cream/20 text-xs rounded-full px-5 py-3 pl-11 focus:outline-none focus:border-brand-sage text-brand-cream shadow-xs"
           />
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-sage pointer-events-none" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-cream/80 pointer-events-none" />
         </div>
 
         {/* Category Pill select selectors */}
@@ -74,7 +74,7 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
               className={`px-4 py-2 text-xs font-semibold rounded-full border transition-all cursor-pointer ${
                 activeCategory === cat
                   ? 'bg-brand-forest text-brand-cream border-brand-forest shadow-xs'
-                  : 'bg-brand-cream text-brand-forest border-brand-beige/45 hover:border-brand-sage'
+                  : 'bg-brand-purple-dark text-brand-cream border-brand-cream/20 hover:border-brand-sage'
               }`}
             >
               {cat === 'all' ? 'All Questions' : cat}
@@ -87,10 +87,10 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
       {/* FAQ list Accordions */}
       <div className="space-y-4 text-left">
         {filteredFAQs.length === 0 ? (
-          <div className="bg-brand-offwhite border border-brand-beige/25 rounded-md p-10 text-center space-y-2">
-            <HelpCircle className="w-10 h-10 text-brand-sage mx-auto" />
-            <h4 className="font-editorial text-lg font-semibold text-brand-forest">No matches found</h4>
-            <p className="text-xs text-brand-sage font-light">Try entering alternative keywords or expanding your active category tag filters.</p>
+          <div className="bg-brand-offwhite border border-brand-cream/20 rounded-md p-10 text-center space-y-2">
+            <HelpCircle className="w-10 h-10 text-brand-cream/80 mx-auto" />
+            <h4 className="font-editorial text-lg font-semibold text-brand-cream">No matches found</h4>
+            <p className="text-xs text-brand-cream/80 font-light">Try entering alternative keywords or expanding your active category tag filters.</p>
           </div>
         ) : (
           filteredFAQs.map((faq, idx) => {
@@ -98,24 +98,24 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
             return (
               <div 
                 key={idx} 
-                className="bg-brand-offwhite border border-brand-beige/25 rounded-md overflow-hidden transition-all duration-300 shadow-2xs"
+                className="bg-brand-offwhite border border-brand-cream/20 rounded-md overflow-hidden transition-all duration-300 shadow-2xs"
               >
                 {/* Trigger heading banner */}
                 <button
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full px-5 sm:px-6 py-4 flex justify-between items-center text-left gap-4 font-editorial text-sm sm:text-base font-bold text-brand-forest hover:bg-brand-cream/35 transition-colors cursor-pointer"
+                  className="w-full px-5 sm:px-6 py-4 flex justify-between items-center text-left gap-4 font-editorial text-sm sm:text-base font-bold text-brand-cream hover:bg-brand-purple-dark/35 transition-colors cursor-pointer"
                 >
                   <span>{faq.question}</span>
                   {isOpen ? (
-                    <ChevronUp className="w-4 h-4 text-brand-sage shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-brand-cream/80 shrink-0" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-brand-sage shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-brand-cream/80 shrink-0" />
                   )}
                 </button>
 
                 {/* Answer content (collapsible) */}
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-brand-sage font-light leading-relaxed border-t border-brand-beige/10 bg-brand-cream/15">
+                  <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-brand-cream/80 font-light leading-relaxed border-t border-brand-cream/20 bg-brand-purple-dark/15">
                     <p className="text-xs uppercase tracking-widest text-brand-gold font-bold mb-1.5">{faq.category}</p>
                     <p>{faq.answer}</p>
                   </div>
@@ -127,9 +127,9 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
       </div>
 
       {/* Call to actions footer */}
-      <div className="bg-brand-cream border border-brand-beige/25 rounded-md p-6 sm:p-10 text-center space-y-4 max-w-2xl mx-auto shadow-2xs">
-        <h3 className="font-editorial text-xl font-bold text-brand-forest">Still Have Unanswered Inquiries?</h3>
-        <p className="text-xs text-brand-sage font-light leading-relaxed max-w-md mx-auto">
+      <div className="bg-brand-purple-dark border border-brand-cream/20 rounded-md p-6 sm:p-10 text-center space-y-4 max-w-2xl mx-auto shadow-2xs">
+        <h3 className="font-editorial text-xl font-bold text-brand-cream">Still Have Unanswered Inquiries?</h3>
+        <p className="text-xs text-brand-cream/80 font-light leading-relaxed max-w-md mx-auto">
           Our helpful customer care desk is available on WhatsApp or through our help tickets to answer custom cosmetic questions or process special delivery requests.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2 text-xs font-bold uppercase tracking-wider">
@@ -143,9 +143,9 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
             href="https://wa.me/233595780477"
             target="_blank"
             rel="noreferrer"
-            className="px-6 py-3 border border-brand-forest text-brand-forest hover:bg-brand-offwhite transition-all rounded-xs flex items-center justify-center gap-1.5"
+            className="px-6 py-3 border border-brand-forest text-brand-cream hover:bg-brand-offwhite transition-all rounded-xs flex items-center justify-center gap-1.5"
           >
-            <MessageCircle className="w-4 h-4 text-brand-sage fill-current" />
+            <MessageCircle className="w-4 h-4 text-brand-cream/80 fill-current" />
             WhatsApp Support Desk
           </a>
         </div>

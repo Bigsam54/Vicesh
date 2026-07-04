@@ -69,7 +69,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   };
 
   return (
-    <div className="w-full bg-white text-[#222222] pb-10 min-h-[60vh]">
+    <div className="w-full bg-brand-purple-dark text-[#222222] pb-10 min-h-[60vh]">
       {/* ─── Thin top banner ─── */}
       <div className="w-full bg-brand-forest text-brand-cream text-center text-xs tracking-widest uppercase font-bold py-2.5">
         🌿 Free standard delivery on orders over $50+
@@ -80,7 +80,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
         {/* Back Button */}
         <button 
           onClick={() => setCurrentPage('shop')}
-          className="flex items-center gap-2 text-xs font-bold text-neutral-500 hover:text-brand-forest uppercase tracking-wider transition-colors mb-4 cursor-pointer"
+          className="flex items-center gap-2 text-xs font-bold text-neutral-500 hover:text-brand-cream uppercase tracking-wider transition-colors mb-4 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Apothecary
@@ -127,7 +127,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           </div>
         ) : paginatedProducts.length === 0 ? (
           <div className="bg-neutral-50 rounded-lg py-16 text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-white border border-neutral-200 flex items-center justify-center mx-auto text-neutral-400">
+            <div className="w-16 h-16 rounded-full bg-brand-purple-dark border border-neutral-200 flex items-center justify-center mx-auto text-neutral-400">
               <Search className="w-8 h-8" />
             </div>
             <h3 className="font-editorial text-xl font-bold text-[#222222]">No matching products</h3>
@@ -136,7 +136,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
             </p>
             <button
               onClick={handleResetFilters}
-              className="px-6 py-3 bg-[#222222] text-white hover:bg-neutral-700 transition-colors text-xs tracking-widest uppercase font-bold rounded-md cursor-pointer"
+              className="px-6 py-3 bg-[#222222] text-brand-purple hover:bg-neutral-700 transition-colors text-xs tracking-widest uppercase font-bold rounded-md cursor-pointer"
             >
               Reset Filter
             </button>
@@ -173,7 +173,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
                   onClick={() => handlePageChange(pageIdx)}
                   className={`w-9 h-9 text-xs font-bold rounded-md transition-all cursor-pointer ${
                     currentPageNum === pageIdx
-                      ? 'bg-[#222222] text-white'
+                      ? 'bg-[#222222] text-brand-purple'
                       : 'border border-neutral-200 text-[#222222] hover:border-neutral-400'
                   }`}
                 >

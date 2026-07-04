@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, ArrowRight, Instagram, Facebook, ShieldCheck } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight, Instagram, Facebook } from 'lucide-react';
 
 interface FooterProps {
   setCurrentPage: (page: string) => void;
@@ -31,8 +31,19 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
   };
 
   return (
-    <footer id="vicesh-footer" className="bg-brand-purple text-brand-white pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer id="vicesh-footer" className="bg-brand-purple text-brand-white pt-24 pb-12 relative overflow-hidden">
+      {/* Brand Pattern Overlay */}
+      <div 
+        className="absolute inset-0 z-0 opacity-25 pointer-events-none"
+        style={{
+          backgroundImage: `url('https://res.cloudinary.com/dja3u7oha/image/upload/v1783194050/Pattern_3_pljtnl.png')`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+      />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 border-b border-brand-white/10 pb-16">
@@ -43,8 +54,9 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
               <img 
                 src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
                 alt="Vicesh Logo" 
-                className="h-16 w-auto object-contain brightness-0 invert opacity-90"
+                className="h-16 w-auto object-contain"
                 referrerPolicy="no-referrer"
+                crossOrigin="anonymous"
               />
             </div>
             <p className="text-sm leading-relaxed text-brand-white/80 font-sans font-light">
@@ -194,10 +206,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
             <span className="hidden md:inline text-brand-white/30">|</span>
             <span>Made with Care in Ghana</span>
           </div>
-          <div className="flex items-center gap-2 bg-brand-white/5 px-4 py-2 rounded-full border border-brand-white/10">
-            <ShieldCheck className="w-3.5 h-3.5 text-brand-gold stroke-[1.5]" />
-            <span className="font-medium text-brand-white/80 tracking-wide uppercase text-[10px]">Secure SSL Checkout</span>
-          </div>
+
         </div>
 
       </div>

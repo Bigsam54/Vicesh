@@ -60,15 +60,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <div 
-      className="group relative bg-white border border-brand-beige/40 rounded-lg overflow-hidden transition-all duration-400 flex flex-col h-full cursor-pointer hover:-translate-y-1 hover:shadow-luxury-hover"
+      className="group relative bg-brand-purple-dark border border-brand-cream/20 rounded-lg overflow-hidden transition-all duration-400 flex flex-col h-full cursor-pointer hover:-translate-y-1 hover:shadow-luxury-hover"
       onClick={handleProductClick}
     >
       {/* Product Image Area */}
-      <div className="relative aspect-square w-full bg-brand-ivory overflow-hidden p-6 flex items-center justify-center">
+      <div className="relative aspect-square w-full bg-brand-purple overflow-hidden">
         <img 
           src={product.image} 
           alt={product.name} 
-          className="w-full h-full object-cover rounded-md shadow-[0_2px_15px_rgba(0,0,0,0.05)] transform scale-100 group-hover:scale-[1.08] transition-transform duration-700 ease-out"
+          className="w-full h-full object-cover transform scale-100 group-hover:scale-[1.08] transition-transform duration-700 ease-out"
           loading="lazy"
         />
 
@@ -80,7 +80,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             </span>
           )}
           {product.featured && (
-            <span className="bg-brand-purple text-white text-[9px] font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-sm">
+            <span className="bg-brand-gold text-brand-purple text-[9px] font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-sm">
               Limited Edition
             </span>
           )}
@@ -89,10 +89,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         {/* Wishlist Button */}
         <button
           onClick={handleWishlistToggle}
-          className={`absolute top-4 right-4 z-10 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-sm transition-all duration-300 ${
+          className={`absolute top-4 right-4 z-10 w-8 h-8 bg-brand-purple-dark/90 backdrop-blur rounded-full flex items-center justify-center shadow-sm transition-all duration-300 ${
             favorite 
-              ? 'text-brand-purple' 
-              : 'text-brand-gray hover:text-brand-purple hover:scale-110'
+              ? 'text-brand-gold' 
+              : 'text-brand-cream/80 hover:text-brand-gold hover:scale-110'
           }`}
           aria-label={favorite ? 'Remove from Wishlist' : 'Add to Wishlist'}
         >
@@ -103,7 +103,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         <div className="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10 flex justify-center transform translate-y-4 group-hover:translate-y-0">
           <button 
             onClick={handleQuickViewClick}
-            className="bg-white/90 backdrop-blur-md text-brand-charcoal hover:text-brand-purple font-sans font-medium text-xs px-6 py-2 rounded-full shadow-luxury flex items-center gap-2 transition-colors"
+            className="bg-brand-purple-dark/90 backdrop-blur-md text-brand-cream hover:text-brand-gold font-sans font-medium text-xs px-6 py-2 rounded-full shadow-luxury flex items-center gap-2 transition-colors"
           >
             <Eye className="w-3.5 h-3.5" />
             Quick View
@@ -112,20 +112,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       </div>
 
       {/* Product Information */}
-      <div className="flex flex-col flex-1 justify-between text-left p-6 space-y-5 bg-white">
+      <div className="flex flex-col flex-1 justify-between text-left p-6 space-y-5 bg-brand-purple-dark">
         <div className="space-y-3">
           {/* Sub-headline / Category */}
-          <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gray font-medium block">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-brand-cream/80 font-medium block">
             {product.category}
           </span>
 
           {/* Name */}
-          <h3 className="font-editorial text-xl font-medium text-brand-charcoal leading-tight">
+          <h3 className="font-editorial text-xl font-medium text-brand-cream leading-tight">
             {product.name}
           </h3>
 
           {/* Description */}
-          <p className="text-sm font-sans font-light text-brand-gray line-clamp-2 leading-relaxed">
+          <p className="text-sm font-sans font-light text-brand-cream/80 line-clamp-2 leading-relaxed">
             {product.shortDescription}
           </p>
         </div>
@@ -133,7 +133,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         <div className="space-y-4 pt-2">
           <div className="flex items-center justify-between">
             {/* Price */}
-            <div className="text-xl font-editorial font-medium text-brand-charcoal">
+            <div className="text-xl font-editorial font-medium text-brand-cream">
               ${product.price.toFixed(2)}
             </div>
             
@@ -149,7 +149,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   />
                 ))}
               </div>
-              <span className="text-[11px] text-brand-gray font-medium">
+              <span className="text-[11px] text-brand-cream/80 font-medium">
                 ({product.reviewsCount})
               </span>
             </div>
@@ -160,11 +160,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             onClick={handleQuickAdd}
             disabled={isAdding}
             className={`w-full py-3.5 text-xs font-semibold uppercase tracking-widest rounded-md transition-all duration-300 flex items-center justify-center gap-2 ${
-              addedSuccessfully ? 'bg-brand-gold text-brand-purple' : 'btn-secondary hover:border-brand-purple hover:bg-brand-purple hover:text-white'
+              addedSuccessfully ? 'bg-brand-gold text-brand-purple' : 'btn-secondary hover:border-brand-gold hover:bg-brand-gold hover:text-brand-purple'
             }`}
           >
             {isAdding ? (
-              <span className="w-4 h-4 border-2 border-brand-purple border-t-transparent rounded-full animate-spin"></span>
+              <span className="w-4 h-4 border-2 border-brand-gold border-t-transparent rounded-full animate-spin"></span>
             ) : addedSuccessfully ? (
               <>
                 <Check className="w-4 h-4" />

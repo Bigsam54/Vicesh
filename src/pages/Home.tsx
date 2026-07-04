@@ -72,12 +72,12 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
   };
 
   return (
-    <div className="bg-brand-ivory min-h-screen">
+    <div className="bg-brand-purple min-h-screen">
       
       {/* =========================================================================
           1. IMMERSIVE HERO SECTION
           ========================================================================= */}
-      <section id="hero-section" className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] bg-brand-ivory overflow-hidden">
+      <section id="hero-section" className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] bg-brand-purple overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -103,46 +103,46 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
           </svg>
 
           {/* Bright bar content area */}
-          <div className="bg-brand-ivory text-brand-charcoal pt-4 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 border-b border-brand-beige/30">
+          <div className="bg-brand-purple text-brand-cream pt-4 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 border-b border-brand-cream/20">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
               
               {/* Left Column */}
               <div className="space-y-5 text-left">
                 <div className="flex items-center gap-3">
-                  <h2 className="font-editorial text-4xl sm:text-5xl lg:text-6xl text-brand-purple font-medium select-none">
+                  <h2 className="font-editorial text-4xl sm:text-5xl lg:text-6xl text-brand-cream font-medium select-none">
                     Fresh Botanical Care
                   </h2>
                 </div>
                 
                 {/* Sublinks */}
-                <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-sans font-medium text-brand-gray">
+                <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-sans font-medium text-brand-cream/80">
                   <button 
                     onClick={() => handleNavigate('haircare')} 
-                    className="relative py-1 group hover:text-brand-purple transition-colors cursor-pointer"
+                    className="relative py-1 group hover:text-brand-gold transition-colors cursor-pointer"
                   >
                     Hair & Scalp Care
-                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                   </button>
                   <button 
                     onClick={() => handleNavigate('pedicure')} 
-                    className="relative py-1 group hover:text-brand-purple transition-colors cursor-pointer"
+                    className="relative py-1 group hover:text-brand-gold transition-colors cursor-pointer"
                   >
                     Skin Talk Pedicure
-                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                   </button>
                   <button 
                     onClick={() => handleNavigate('manicure')} 
-                    className="relative py-1 group hover:text-brand-purple transition-colors cursor-pointer"
+                    className="relative py-1 group hover:text-brand-gold transition-colors cursor-pointer"
                   >
                     Nail & Manicure Care
-                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                   </button>
                   <button 
                     onClick={() => handleNavigate('shop')} 
-                    className="relative py-1 group hover:text-brand-purple transition-colors cursor-pointer"
+                    className="relative py-1 group hover:text-brand-gold transition-colors cursor-pointer"
                   >
                     Botanical Apothecary
-                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-purple scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                   </button>
                 </div>
               </div>

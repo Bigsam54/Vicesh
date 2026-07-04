@@ -20,7 +20,7 @@ const ScrollArrow: React.FC<{
 }> = ({ direction, onClick }) => (
   <button
     onClick={onClick}
-    className="w-10 h-10 rounded-full border border-brand-beige flex items-center justify-center hover:bg-white hover:border-brand-purple hover:text-brand-purple transition-all cursor-pointer text-brand-gray shrink-0 shadow-sm"
+    className="w-10 h-10 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-purple-dark hover:border-brand-gold hover:text-brand-gold transition-all cursor-pointer text-brand-cream/80 shrink-0 shadow-sm"
     aria-label={`Scroll ${direction}`}
   >
     {direction === 'left' ? (
@@ -194,10 +194,10 @@ export const Shop: React.FC<ShopProps> = ({
      RENDER
      ═══════════════════════════════════════════════════════════════════════ */
   return (
-    <div className="w-full bg-brand-ivory text-brand-charcoal pb-16">
+    <div className="w-full bg-brand-purple text-brand-cream pb-16">
       
       {/* ─── Thin top banner ─── */}
-      <div className="w-full bg-brand-purple text-white text-center text-xs tracking-widest uppercase font-sans font-medium py-3">
+      <div className="w-full bg-brand-gold text-brand-purple text-center text-xs tracking-widest uppercase font-sans font-medium py-3">
         🌿 Complimentary standard delivery on orders over $50+
       </div>
 
@@ -205,7 +205,7 @@ export const Shop: React.FC<ShopProps> = ({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         
         {/* Centered title */}
-        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-charcoal mb-10">
+        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10">
           Find your perfect product
         </h2>
 
@@ -220,20 +220,24 @@ export const Shop: React.FC<ShopProps> = ({
               <button
                 key={card.id}
                 onClick={() => handleCategoryClick(card.id)}
-                className="flex-none flex flex-col items-center text-center group cursor-pointer focus:outline-none"
+                className="flex-none relative w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] group cursor-pointer focus:outline-none rounded-sm overflow-hidden"
               >
-                {/* Thumbnail image */}
-                <div className="w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] rounded-full overflow-hidden mb-4 shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-400 group-hover:shadow-luxury group-hover:-translate-y-1">
-                  <img
-                    src={card.image}
-                    alt={card.label}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
-                  />
+                <img
+                  src={card.image}
+                  alt={card.label}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                {/* Text */}
+                <div className="absolute bottom-4 left-4 text-left">
+                  <span className="block text-brand-cream font-sans font-bold text-sm uppercase tracking-wide">
+                    {card.label}
+                  </span>
+                  <span className="block text-[9px] text-brand-gold font-medium tracking-widest uppercase mt-1">
+                    Explore
+                  </span>
                 </div>
-                {/* Label below image */}
-                <span className="text-sm font-sans font-medium text-brand-gray group-hover:text-brand-purple transition-colors">
-                  {card.label}
-                </span>
               </button>
             ))}
           </div>
@@ -247,9 +251,9 @@ export const Shop: React.FC<ShopProps> = ({
       </section>
 
       {/* ═══ ROW 2: "How do you want to feel?" ═══ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-beige/40">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-cream/20">
 
-        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-charcoal mb-10">
+        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10">
           How do you want to feel?
         </h2>
 
@@ -272,7 +276,7 @@ export const Shop: React.FC<ShopProps> = ({
                 />
                 {/* Bottom label overlay */}
                 <div className="absolute inset-x-0 bottom-0 p-3 flex justify-center">
-                  <span className="bg-white/95 backdrop-blur-md text-brand-charcoal text-xs font-sans font-semibold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
+                  <span className="bg-brand-purple-dark/95 backdrop-blur-md text-brand-cream text-xs font-sans font-semibold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
                     {card.label}
                   </span>
                 </div>
@@ -288,9 +292,9 @@ export const Shop: React.FC<ShopProps> = ({
       </section>
 
       {/* ═══ ROW 3: "Trending" ═══ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-beige/40">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-cream/20">
 
-        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-charcoal mb-10">
+        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10">
           Trending
         </h2>
 
@@ -313,7 +317,7 @@ export const Shop: React.FC<ShopProps> = ({
                 />
                 {/* Bottom label overlay */}
                 <div className="absolute inset-x-0 bottom-0 p-4">
-                  <span className="bg-white/95 backdrop-blur-md text-brand-charcoal text-xs sm:text-sm font-sans font-semibold uppercase tracking-widest px-4 py-2 rounded-sm shadow-sm inline-block">
+                  <span className="bg-brand-purple-dark/95 backdrop-blur-md text-brand-cream text-xs sm:text-sm font-sans font-semibold uppercase tracking-widest px-4 py-2 rounded-sm shadow-sm inline-block">
                     {card.label}
                   </span>
                 </div>

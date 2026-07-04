@@ -230,7 +230,7 @@ const MainApp: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-cream text-brand-forest selection:bg-brand-sage/25 selection:text-brand-forest">
+    <div className="min-h-screen flex flex-col bg-brand-purple-dark text-brand-cream selection:bg-brand-sage/25 selection:text-brand-cream">
       
       {/* Announcement Banner Bar */}
       <div id="vicesh-announcement-bar" className="bg-brand-forest text-brand-cream text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] py-2.5 px-4 text-center border-b border-brand-gold/15 select-none z-50">

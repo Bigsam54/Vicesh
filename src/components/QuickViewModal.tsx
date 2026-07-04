@@ -56,13 +56,13 @@ export const QuickViewModal: React.FC = () => {
       />
 
       {/* Modal Card */}
-      <div className="relative bg-brand-cream rounded-md max-w-4xl w-full shadow-2xl overflow-hidden border border-brand-beige/50 z-10 grid grid-cols-1 md:grid-cols-2 max-h-[90vh] md:max-h-[85vh]">
+      <div className="relative bg-brand-purple-dark rounded-md max-w-4xl w-full shadow-2xl overflow-hidden border border-brand-cream/20 z-10 grid grid-cols-1 md:grid-cols-2 max-h-[90vh] md:max-h-[85vh]">
         
         {/* Close button */}
         <button 
           id="close-quickview-modal"
           onClick={closeQuickView}
-          className="absolute top-4 right-4 z-20 bg-brand-cream/80 backdrop-blur-xs text-brand-forest hover:text-brand-sage p-1.5 rounded-full hover:bg-brand-cream shadow-xs transition-all"
+          className="absolute top-4 right-4 z-20 bg-brand-purple-dark/80 backdrop-blur-xs text-brand-cream hover:text-brand-cream/80 p-1.5 rounded-full hover:bg-brand-purple-dark shadow-xs transition-all"
         >
           <X className="w-5 h-5" />
         </button>
@@ -90,16 +90,16 @@ export const QuickViewModal: React.FC = () => {
         </div>
 
         {/* Right Side: Product Customizations */}
-        <div className="p-6 sm:p-8 flex flex-col h-full overflow-y-auto bg-brand-cream">
+        <div className="p-6 sm:p-8 flex flex-col h-full overflow-y-auto bg-brand-purple-dark">
           <div className="flex-1">
             
             {/* Category */}
-            <span className="text-[10px] uppercase tracking-[0.2em] text-brand-sage font-bold">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-brand-cream/80 font-bold">
               {quickViewProduct.category} Collection
             </span>
 
             {/* Title */}
-            <h2 className="font-editorial text-2xl font-bold text-brand-forest mt-1">
+            <h2 className="font-editorial text-2xl font-bold text-brand-cream mt-1">
               {quickViewProduct.name}
             </h2>
 
@@ -115,25 +115,25 @@ export const QuickViewModal: React.FC = () => {
                   />
                 ))}
               </div>
-              <span className="text-xs text-brand-sage font-medium">
+              <span className="text-xs text-brand-cream/80 font-medium">
                 {quickViewProduct.rating} out of 5 stars ({quickViewProduct.reviewsCount} reviews)
               </span>
             </div>
 
             {/* Price */}
-            <div className="text-xl font-bold text-brand-forest mt-4">
+            <div className="text-xl font-bold text-brand-cream mt-4">
               ${quickViewProduct.price.toFixed(2)}
             </div>
 
             {/* Short Description */}
-            <p className="text-xs text-brand-sage leading-relaxed mt-4 font-light border-b border-brand-beige/25 pb-4">
+            <p className="text-xs text-brand-cream/80 leading-relaxed mt-4 font-light border-b border-brand-cream/20 pb-4">
               {quickViewProduct.shortDescription}
             </p>
 
             {/* Size Variants */}
             <div className="mt-5">
-              <h4 className="text-xs uppercase tracking-widest text-brand-forest font-semibold mb-2.5">
-                Select Size: <span className="text-brand-sage font-normal">{selectedSize}</span>
+              <h4 className="text-xs uppercase tracking-widest text-brand-cream font-semibold mb-2.5">
+                Select Size: <span className="text-brand-cream/80 font-normal">{selectedSize}</span>
               </h4>
               <div className="flex gap-2">
                 {quickViewProduct.sizes.map((size) => (
@@ -143,7 +143,7 @@ export const QuickViewModal: React.FC = () => {
                     className={`px-4 py-2 text-xs font-semibold rounded-xs border uppercase tracking-wider transition-all ${
                       selectedSize === size
                         ? 'bg-brand-forest text-brand-cream border-brand-forest'
-                        : 'bg-brand-cream text-brand-forest border-brand-beige/50 hover:border-brand-sage'
+                        : 'bg-brand-purple-dark text-brand-cream border-brand-cream/20 hover:border-brand-sage'
                     }`}
                   >
                     {size}
@@ -154,22 +154,22 @@ export const QuickViewModal: React.FC = () => {
 
             {/* Quantity Selector */}
             <div className="mt-5">
-              <h4 className="text-xs uppercase tracking-widest text-brand-forest font-semibold mb-2.5">
+              <h4 className="text-xs uppercase tracking-widest text-brand-cream font-semibold mb-2.5">
                 Quantity
               </h4>
-              <div className="flex items-center w-28 border border-brand-beige/60 rounded-xs bg-brand-offwhite">
+              <div className="flex items-center w-28 border border-brand-cream/20 rounded-xs bg-brand-offwhite">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-3 py-1.5 text-brand-forest hover:text-brand-sage font-medium"
+                  className="px-3 py-1.5 text-brand-cream hover:text-brand-cream/80 font-medium"
                 >
                   -
                 </button>
-                <span className="flex-1 text-center text-xs font-semibold text-brand-forest">
+                <span className="flex-1 text-center text-xs font-semibold text-brand-cream">
                   {quantity}
                 </span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="px-3 py-1.5 text-brand-forest hover:text-brand-sage font-medium"
+                  className="px-3 py-1.5 text-brand-cream hover:text-brand-cream/80 font-medium"
                 >
                   +
                 </button>
@@ -177,15 +177,15 @@ export const QuickViewModal: React.FC = () => {
             </div>
 
             {/* Key Botanical Highlights */}
-            <div className="mt-6 bg-brand-offwhite rounded-xs p-3.5 border border-brand-beige/20">
-              <span className="text-[10px] uppercase tracking-wider text-brand-sage font-bold block mb-1">
+            <div className="mt-6 bg-brand-offwhite rounded-xs p-3.5 border border-brand-cream/20">
+              <span className="text-[10px] uppercase tracking-wider text-brand-cream/80 font-bold block mb-1">
                 Active Botanicals
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {quickViewProduct.keyIngredients.map((ing) => (
                   <span 
                     key={ing} 
-                    className="text-[10px] bg-brand-cream border border-brand-beige/40 px-2 py-0.5 rounded-full text-brand-forest"
+                    className="text-[10px] bg-brand-purple-dark border border-brand-cream/20 px-2 py-0.5 rounded-full text-brand-cream"
                   >
                     🌱 {ing}
                   </span>
@@ -196,7 +196,7 @@ export const QuickViewModal: React.FC = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="mt-8 pt-4 border-t border-brand-beige/25 flex gap-3">
+          <div className="mt-8 pt-4 border-t border-brand-cream/20 flex gap-3">
             <button
               onClick={handleAddToCart}
               disabled={isAdding || addedSuccess}
@@ -229,7 +229,7 @@ export const QuickViewModal: React.FC = () => {
               className={`w-12 h-12 rounded-xs border flex items-center justify-center transition-all ${
                 favorited 
                   ? 'bg-red-50 border-red-200 text-red-600 shadow-sm' 
-                  : 'bg-brand-cream border-brand-beige/50 text-brand-forest hover:border-brand-sage'
+                  : 'bg-brand-purple-dark border-brand-cream/20 text-brand-cream hover:border-brand-sage'
               }`}
               title={favorited ? 'Remove from Wishlist' : 'Add to Wishlist'}
             >
