@@ -115,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({
             <img 
               src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844747/VICESH_variation_1_slzxn0.png" 
               alt="Vicesh Logo" 
-              className="h-20 w-auto object-contain transition-all duration-300 scale-110"
+              className="h-28 w-auto object-contain transition-all duration-300 scale-125"
               referrerPolicy="no-referrer"
             />
           </button>
