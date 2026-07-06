@@ -38,11 +38,11 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({
   if (!product) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-24 text-center space-y-6">
-        <div className="w-20 h-20 bg-brand-white rounded-full flex items-center justify-center mx-auto shadow-sm">
-          <AlertCircle className="w-8 h-8 text-brand-cream/60 stroke-[1.5]" />
+        <div className="w-20 h-20 bg-brand-white border border-brand-cream/20 rounded-full flex items-center justify-center mx-auto shadow-sm">
+          <AlertCircle className="w-8 h-8 text-brand-purple stroke-[1.5]" />
         </div>
         <h2 className="font-editorial text-3xl font-medium text-brand-cream">Product Not Found</h2>
-        <p className="text-sm text-brand-cream/80 font-sans">The botanical product you are looking for does not exist in our apothecary.</p>
+        <p className="text-sm text-brand-cream font-sans max-w-sm mx-auto">The botanical product you are looking for does not exist in our apothecary or has been removed.</p>
         <button 
           onClick={() => setCurrentPage('shop')}
           className="btn-primary mt-4"

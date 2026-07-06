@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, ArrowRight, Instagram, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight, Instagram, Facebook, ShieldCheck } from 'lucide-react';
 
 interface FooterProps {
   setCurrentPage: (page: string) => void;
@@ -140,6 +140,11 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
               <li>
                 <button onClick={() => handleNavigate('policies', 'terms')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left">
                   Terms & Conditions
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavigate('admin')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left font-semibold text-brand-white">
+                  Admin Portal
                 </button>
               </li>
             </ul>

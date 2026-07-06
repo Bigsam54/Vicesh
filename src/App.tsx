@@ -21,6 +21,7 @@ import { NotFound } from './pages/NotFound';
 import { CategoryPage } from './pages/CategoryPage';
 import { QuickViewModal } from './components/QuickViewModal';
 import { ArrowUp } from 'lucide-react';
+import { Admin } from './pages/Admin';
 
 const MainApp: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<string>('home');
@@ -131,6 +132,10 @@ const MainApp: React.FC = () => {
 
   // Render Page Component based on custom state router
   const renderPage = () => {
+    if (currentPage === 'admin') {
+      return <Admin setCurrentPage={setCurrentPage} />;
+    }
+
     // Exact match
     if (currentPage === 'home') {
       return (
@@ -233,24 +238,30 @@ const MainApp: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-brand-purple-dark text-brand-cream selection:bg-brand-sage/25 selection:text-brand-cream">
       
       {/* Announcement Banner Bar */}
-      <div id="vicesh-announcement-bar" className="bg-brand-forest text-brand-cream text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] py-2.5 px-4 text-center border-b border-brand-gold/15 select-none z-50">
-        🍃 Complimentary Shipping on all Ghana orders above $100 equivalent — Hand-crafted Organic Botanicals
-      </div>
+      {currentPage !== 'admin' && (
+        <div id="vicesh-announcement-bar" className="bg-brand-forest text-brand-cream text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] py-2.5 px-4 text-center border-b border-brand-gold/15 select-none z-50">
+          🍃 Complimentary Shipping on all Ghana orders above $100 equivalent — Hand-crafted Organic Botanicals
+        </div>
+      )}
 
       {/* Main Header navigation */}
-      <Header 
-        currentPage={currentPage} 
-        setCurrentPage={setCurrentPage} 
-        setSelectedProductId={setSelectedProductId} 
-      />
+      {currentPage !== 'admin' && (
+        <Header 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage} 
+          setSelectedProductId={setSelectedProductId} 
+        />
+      )}
 
       {/* Dynamic Main Body Content Area */}
-      <main id="vicesh-main-canvas" className="flex-grow pt-10 sm:pt-16 pb-16">
+      <main id="vicesh-main-canvas" className={`flex-grow ${currentPage === 'admin' ? '' : 'pt-10 sm:pt-16 pb-16'}`}>
         {renderPage()}
       </main>
 
       {/* Premium editorial footer */}
-      <Footer setCurrentPage={setCurrentPage} />
+      {currentPage !== 'admin' && (
+        <Footer setCurrentPage={setCurrentPage} />
+      )}
 
       {/* Embedded Global Modal overlays */}
       <QuickViewModal 

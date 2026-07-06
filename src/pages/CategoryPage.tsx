@@ -126,17 +126,17 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
             ))}
           </div>
         ) : paginatedProducts.length === 0 ? (
-          <div className="bg-neutral-50 rounded-lg py-16 text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-brand-purple-dark border border-neutral-200 flex items-center justify-center mx-auto text-neutral-400">
-              <Search className="w-8 h-8" />
+          <div className="bg-brand-purple-dark border border-brand-cream/20 rounded-md py-16 text-center space-y-4">
+            <div className="w-16 h-16 rounded-full bg-brand-offwhite border border-brand-cream/20 flex items-center justify-center mx-auto shadow-sm">
+              <Search className="w-8 h-8 text-brand-purple" />
             </div>
-            <h3 className="font-editorial text-xl font-bold text-[#222222]">No matching products</h3>
-            <p className="text-sm text-neutral-500 max-w-sm mx-auto leading-relaxed">
+            <h3 className="font-editorial text-xl font-bold text-brand-cream">No matching products</h3>
+            <p className="text-sm text-brand-cream/80 max-w-sm mx-auto leading-relaxed">
               We couldn't find any products in this category matching your filters.
             </p>
             <button
               onClick={handleResetFilters}
-              className="px-6 py-3 bg-[#222222] text-brand-purple hover:bg-neutral-700 transition-colors text-xs tracking-widest uppercase font-bold rounded-md cursor-pointer"
+              className="px-6 py-3 bg-brand-forest text-brand-cream hover:bg-brand-sage transition-colors text-xs tracking-widest uppercase font-bold rounded-xs cursor-pointer shadow-xs"
             >
               Reset Filter
             </button>
