@@ -235,7 +235,7 @@ const MainApp: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-purple-dark text-brand-cream selection:bg-brand-sage/25 selection:text-brand-cream">
+    <div className="min-h-screen flex flex-col bg-brand-purple-dark text-brand-cream selection:bg-brand-sage/25 selection:text-brand-cream relative">
       
       {/* Announcement Banner Bar */}
       {currentPage !== 'admin' && (

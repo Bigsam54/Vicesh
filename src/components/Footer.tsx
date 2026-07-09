@@ -40,6 +40,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
+          transform: 'scale(1.8)',
         }}
       />
       

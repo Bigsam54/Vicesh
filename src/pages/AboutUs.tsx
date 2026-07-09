@@ -21,7 +21,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
       <section className="relative w-full h-[60vh] min-h-[500px] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=2000" 
+            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543196/African_woman_applying_hair_cond__202607082033_jiapeo.jpg" 
             alt="Vicesh Sourcing Heritage" 
             className="w-full h-full object-cover filter brightness-90 contrast-105 object-center"
           />
@@ -51,11 +51,11 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-lg overflow-hidden shadow-luxury">
               <img 
-                src="https://images.unsplash.com/photo-1615397323175-6e0b457e5b7f?auto=format&fit=crop&q=80&w=1000" 
+                src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543197/Mother_helping_daughter_with_hair_202607082034_arawam.jpg" 
                 alt="Botanical formulation process"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover opacity-100 drop-shadow-sm transform hover:scale-105 transition-transform duration-700 relative z-10"
               />
-              <div className="absolute inset-0 bg-brand-gold/10" />
+              <div className="absolute inset-0 bg-brand-gold/10 z-0" />
               <div className="absolute bottom-8 left-8 right-8 bg-brand-purple-dark/95 backdrop-blur-md p-8 rounded-md border border-brand-cream/20 shadow-sm">
                 <p className="font-editorial text-xl font-medium text-brand-cream text-center tracking-wide leading-relaxed">
                   "Every ingredient must serve a profound purpose."
@@ -102,16 +102,6 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
 
       {/* 3. MISSION & VISION (BOLD TYPOGRAPHY) */}
       <section className="py-24 bg-brand-gold text-brand-purple relative overflow-hidden">
-        {/* Brand Pattern Overlay */}
-        <div 
-          className="absolute inset-0 z-0 opacity-30 pointer-events-none"
-          style={{
-            backgroundImage: `url('https://res.cloudinary.com/dja3u7oha/image/upload/v1783194050/Pattern_3_pljtnl.png')`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-          }}
-        />
 
         <div className="absolute inset-0 opacity-10 pointer-events-none flex justify-center items-center z-0">
           <BrandDroplet size="120vw" color="#C5A059" className="transform -translate-y-1/4" />
@@ -143,8 +133,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* 4. THE INGREDIENT STORY */}
-      <section className="py-24 bg-brand-purple border-b border-brand-cream/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <section className="py-24 bg-brand-purple border-b border-brand-cream/20 relative overflow-hidden">
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto space-y-6">
             <span className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-sans font-semibold">The Ingredient Story</span>
             <h2 className="font-editorial text-4xl md:text-5xl font-medium text-brand-cream tracking-tight">
@@ -180,8 +171,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* 5. OUR COLLECTIONS */}
-      <section className="py-24 bg-brand-purple-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <section className="py-24 bg-brand-purple-dark relative overflow-hidden">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-2xl space-y-4">
               <span className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-sans font-semibold">Professional Regimens</span>
@@ -193,7 +185,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div onClick={() => handleNavigate('haircare')} className="group cursor-pointer block relative aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
-              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Hair Care" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
+              <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543196/Man_applying_hair_oil_mirror_202607082036_pkobba.jpg" alt="Hair Care" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                 <h3 className="font-editorial text-3xl font-medium mb-3">Hair Care</h3>
                 <p className="text-sm font-sans font-light text-brand-purple/90 mb-6 max-w-xs leading-relaxed">Cleanse, strengthen, moisturize, repair, and stimulate healthy growth using our signature botanical blends.</p>
@@ -215,7 +207,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
             </div>
 
             <div onClick={() => handleNavigate('manicure')} className="group cursor-pointer block relative aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
-              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800" alt="Manicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
+              <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543196/African_woman_caring_for_hands_202607082036_dcxe2g.jpg" alt="Manicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                 <h3 className="font-editorial text-3xl font-medium mb-3">Manicure</h3>
                 <p className="text-sm font-sans font-light text-brand-purple/90 mb-6 max-w-xs leading-relaxed">Experience the importance of healthy hand care, intensive hydration, and professional nail care routines daily.</p>
@@ -229,8 +221,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* 6. WHY CHOOSE VICESH (6 PILLARS) */}
-      <section className="py-24 bg-brand-purple border-y border-brand-cream/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-brand-purple border-y border-brand-cream/20 relative overflow-hidden">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 space-y-4">
             <span className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-sans font-semibold">The Vicesh Standard</span>
             <h2 className="font-editorial text-3xl md:text-5xl font-medium text-brand-cream tracking-tight">Why Choose Vicesh</h2>
@@ -324,13 +317,6 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
 
       {/* 8. ENDING STATEMENT */}
       <section className="py-24 md:py-32 bg-brand-gold text-brand-purple text-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&q=80&w=2000" 
-            alt="Vicesh Brand Lifestyle" 
-            className="w-full h-full object-cover opacity-30 filter grayscale blur-[2px]"
-          />
-        </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
           <BrandDroplet size={48} color="#C5A059" className="mx-auto drop-shadow-lg" />
           <p className="font-editorial text-2xl md:text-4xl font-medium leading-relaxed px-4 md:px-12 italic text-brand-cream drop-shadow-md">

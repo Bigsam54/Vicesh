@@ -202,12 +202,19 @@ export const Shop: React.FC<ShopProps> = ({
       </div>
 
       {/* ═══ ROW 1: "Find your perfect product" ═══ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div 
+        className="w-full relative bg-cover bg-center"
+        style={{ backgroundImage: `url('https://res.cloudinary.com/dja3u7oha/image/upload/v1783540759/Avocado_ingredients_with_water_s__202607081955_1_e7imt4.jpg')` }}
+      >
+        {/* Subtle dark overlay to ensure the white text and cards remain visible */}
+        <div className="absolute inset-0 bg-brand-purple-dark/60 mix-blend-multiply" />
         
-        {/* Centered title */}
-        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10">
-          Find your perfect product
-        </h2>
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 relative z-10">
+          
+          {/* Centered title */}
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10 drop-shadow-md">
+            Find your perfect product
+          </h2>
 
         {/* Horizontal scroll track */}
         <div className="relative">
@@ -249,6 +256,7 @@ export const Shop: React.FC<ShopProps> = ({
           </div>
         </div>
       </section>
+      </div>
 
       {/* ═══ ROW 2: "How do you want to feel?" ═══ */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-cream/20">
@@ -292,11 +300,17 @@ export const Shop: React.FC<ShopProps> = ({
       </section>
 
       {/* ═══ ROW 3: "Trending" ═══ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-cream/20">
+      <div 
+        className="w-full relative bg-cover bg-center border-t border-brand-cream/20"
+        style={{ backgroundImage: `url('https://res.cloudinary.com/dja3u7oha/image/upload/v1783594372/Oranges_water_splashes_botanical__2K_202607091044_anxijn.jpg')` }}
+      >
+        <div className="absolute inset-0 bg-brand-purple-dark/60 mix-blend-multiply" />
+        
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
 
-        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10">
-          Trending
-        </h2>
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10 drop-shadow-md">
+            Trending
+          </h2>
 
         <div className="relative">
           <div
@@ -316,10 +330,10 @@ export const Shop: React.FC<ShopProps> = ({
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Bottom label overlay */}
-                <div className="absolute inset-x-0 bottom-0 p-4">
-                  <span className="bg-brand-purple-dark/95 backdrop-blur-md text-brand-cream text-xs sm:text-sm font-sans font-semibold uppercase tracking-widest px-4 py-2 rounded-sm shadow-sm inline-block">
+                <div className="absolute inset-x-0 bottom-0 p-4 flex justify-center">
+                  <div className="w-full bg-brand-purple-dark text-brand-cream text-xs sm:text-sm font-sans font-semibold uppercase tracking-widest px-2 py-3 rounded-md shadow-lg text-center leading-tight">
                     {card.label}
-                  </span>
+                  </div>
                 </div>
               </button>
             ))}
@@ -331,6 +345,7 @@ export const Shop: React.FC<ShopProps> = ({
           </div>
         </div>
       </section>
+      </div>
 
     </div>
   );

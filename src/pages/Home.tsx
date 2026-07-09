@@ -81,9 +81,9 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=2000" 
+            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543197/Woman_holding_cosmetic_product_2K_202607082034_isptot.jpg" 
             alt="Vicesh Fresh Botanical Care" 
-            className="w-full h-full object-cover object-center filter brightness-90 contrast-105 transform scale-105"
+            className="w-full h-full object-cover object-center filter brightness-105 contrast-105 transform scale-105 opacity-100"
           />
           {/* Elegant dark gradient overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/60 via-transparent to-transparent"></div>
@@ -94,7 +94,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
           
           {/* Beautiful organic wave shape */}
           <svg 
-            className="w-full h-[60px] sm:h-[80px] md:h-[120px] -mb-[1px] text-brand-ivory fill-current" 
+            className="w-full h-[60px] sm:h-[80px] md:h-[120px] -mb-[1px] text-brand-purple fill-current drop-shadow-[0_-10px_20px_rgba(223,175,55,0.1)]" 
             viewBox="0 0 1440 120" 
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -103,8 +103,8 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
           </svg>
 
           {/* Bright bar content area */}
-          <div className="bg-brand-purple text-brand-cream pt-4 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 border-b border-brand-cream/20">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div className="bg-brand-purple text-brand-cream pt-4 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 border-b border-brand-cream/10 relative">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8 relative z-10">
               
               {/* Left Column */}
               <div className="space-y-5 text-left">
@@ -148,7 +148,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
               </div>
 
               {/* Right Column: CTA buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 shrink-0 md:mb-2">
+              <div className="flex flex-col sm:flex-row gap-4 shrink-0 md:mb-2 relative z-10">
                 <button 
                   onClick={() => handleNavigate('shop')}
                   className="btn-primary"
@@ -167,8 +167,11 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
             </div>
           </div>
 
+          {/* Decorative Floating Botanicals removed per user request */}
+
         </div>
       </section>
+
     </div>
   );
 };

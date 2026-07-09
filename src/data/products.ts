@@ -9,346 +9,208 @@ export const PRODUCTS: Product[] = [
   {
     id: 'rosemary-hair-shampoo',
     name: 'Rosemary Infused Hair Shampoo',
-    price: 24.00,
-    rating: 4.8,
-    reviewsCount: 124,
-    image: 'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=800',
+    price: 0,
+    rating: 0,
+    reviewsCount: 0,
+    image: 'https://via.placeholder.com/800x800?text=Rosemary+Infused+Shampoo',
     images: [
-      'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=800'
+      'https://via.placeholder.com/800x800?text=Rosemary+Infused+Shampoo'
     ],
     category: 'haircare',
-    shortDescription: 'A gentle, stimulating hair shampoo infused with natural rosemary extracts to cleanse and promote robust hair growth.',
-    description: 'Vicesh Rosemary Infused Hair Shampoo is formulated with soft, mild cleansing agents that gently wash away impurities from the hair and scalp without stripping natural moisture. Enriched with pure rosemary leaf extracts, it works to naturally stimulate circulation within the scalp, fortifying hair follicles to induce healthy growth, prevent hair fall, and soothe dryness at the roots. It leaves your scalp refreshed and your hair beautifully clean and primed for conditioning.',
+    shortDescription: 'Cleanses the hair and the scalp gently whilst stimulating hair growth.',
+    description: 'Contains Rosemary extracts which induce and stimulate hair growth whilst cleansing. Soft and mild cleansing agents that cleanses the hair and the scalp gently whilst stimulating hair growth.',
     ingredients: [
-      'Purified Water',
-      'Rosemary Leaf Extract (Rosmarinus Officinalis)',
-      'Decyl Glucoside (Gentle Coconut-derived Cleanser)',
-      'Vegetable Glycerin',
-      'Cocamidopropyl Betaine',
-      'Pro-Vitamin B5 (Panthenol)',
-      'Rosemary Essential Oil',
-      'Tocopherol (Vitamin E)',
-      'Citric Acid (Natural pH Balancer)'
+      'Rosemary extracts'
     ],
     benefits: [
-      'Cleanse the hair and the scalp gently with soft and mild cleansing agents',
-      'Contains Rosemary extracts which induce and stimulate healthy hair growth',
-      'Prevents hair fall by strengthening hair roots and follicles',
-      'Maintains healthy scalp moisture, reducing dryness and flaking'
+      'Cleanses the hair and the scalp gently',
+      'Induces and stimulates hair growth'
     ],
     usage: [
       'Begin by preparing the hair for shampooing.',
-      'Cleanse the hair with Rosemary Infused Shampoo, massage the scalp gently with fingertips in circular motions.',
-      'Repeat the cleansing process two to three times as needed to ensure a thorough yet mild cleanse.',
-      'Rinse out completely with lukewarm water, then blot excess water with a clean towel softly and slowly to minimize friction.'
+      'Cleanse the hair with Rosemary infused Shampoo, repeating the process two to three times as needed to ensure a thorough yet mild cleanse.',
+      'Carefully blot the hair with a clean towel to remove excess water. This should be done softly and slowly to minimize friction and prevent unnecessary breakage.'
     ],
-    sizes: ['250ml', '500ml'],
-    stock: 45,
-    keyIngredients: ['Rosemary Extract', 'Pro-Vitamin B5', 'Vegetable Glycerin'],
-    suitableFor: ['Natural Hair', 'Permed Hair', 'Dreadlocks'],
+    sizes: [],
+    stock: 0,
+    keyIngredients: ['Rosemary extracts'],
+    suitableFor: ['Natural hair', 'Permed hair', 'Dreadlocks'],
     featured: true,
     bestSeller: true,
     relatedIds: ['avocado-hair-conditioner', 'leave-in-conditioner', 'hair-protein'],
-    reviews: [
-      {
-        id: 'rev-r1',
-        name: 'Abena Mensah',
-        rating: 5,
-        title: 'Miracle Cleanse!',
-        comment: 'This shampoo is so gentle and doesn’t dry out my natural dreadlocks. I have noticed less shedding since using it, and my scalp feels amazing.',
-        date: '2026-05-12'
-      },
-      {
-        id: 'rev-r2',
-        name: 'Sarah Coleman',
-        rating: 5,
-        title: 'Wonderful Rosemary Aroma',
-        comment: 'Absolutely love the natural rosemary scent. It lathers nicely for a sulfate-free shampoo and leaves my scalp feeling thoroughly clean and refreshed.',
-        date: '2026-06-02'
-      }
-    ]
+    reviews: []
   },
   {
     id: 'avocado-hair-conditioner',
     name: 'Avocado Infused Hair Conditioner',
-    price: 26.00,
-    rating: 4.9,
-    reviewsCount: 98,
-    image: 'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=800',
+    price: 0,
+    rating: 0,
+    reviewsCount: 0,
+    image: 'https://via.placeholder.com/800x800?text=Avocado+Infused+Conditioner',
     images: [
-      'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=800'
+      'https://via.placeholder.com/800x800?text=Avocado+Infused+Conditioner'
     ],
     category: 'haircare',
-    shortDescription: 'A deep softening conditioner enriched with avocado extracts, high in healthy fats and proteins, to restore and retain moisture.',
-    description: 'Vicesh Avocado Infused Hair Conditioner is meticulously crafted to restore and retain moisture in the hair after cleansing. Formulated with authentic, locally sourced avocado extracts rich in healthy fats, essential amino acids, and structural proteins, it nourishes and strengthens weak hair strands. This conditioner melts tangles, softens the hair shaft, and makes combing effortless. NB: On designated days for deep conditioning treatments, kindly avoid using Avocado Infused Hair Conditioner to allow the treatment to work effectively.',
+    shortDescription: 'Restores and retains moisture after hair cleansing while supplying the hair with healthy fats and proteins.',
+    description: 'Restores and retains moisture after hair cleansing (Shampooing). Softens hair and makes it easier to comb. Contains avocado extracts which is high in healthy fats and proteins which strengthens the hair strands. Naturally derived ingredients were combines to soften and supply the hair with healthy fats and proteins.',
     ingredients: [
-      'Purified Water',
-      'Avocado Fruit Extract (Persea Gratissima)',
-      'Cold-Pressed Avocado Oil',
-      'Shea Butter (Butyrospermum Parkii)',
-      'Cetyl Alcohol (Naturally derived emollient)',
-      'Hydrolyzed Wheat Protein',
-      'Behentrimonium Methosulfate',
-      'Tocopheryl Acetate (Vitamin E)',
-      'Organic Essential Oils'
+      'Avocado extracts'
     ],
     benefits: [
-      'Restores and retains deep moisture in the hair after shampooing',
-      'Softens hair texture and makes it significantly easier to comb',
-      'Nourishes and strengthens hair strands with healthy fats and rich proteins',
-      'Reduces friction and prevents unnecessary mechanical hair breakage during detangling'
+      'Restores and retains moisture after hair cleansing',
+      'Softens hair and makes it easier to comb',
+      'Strengthens the hair strands with healthy fats and proteins'
     ],
     usage: [
-      'After shampooing, carefully blot the hair with a clean towel softly and slowly to remove excess water and minimize friction.',
-      'Apply Avocado Infused Hair Conditioner evenly through the hair from mid-lengths to ends.',
-      'Take time to gently massage the scalp for a few minutes to promote relaxation and improve blood circulation.',
-      'Rinse thoroughly with cold or lukewarm water to seal the cuticles.',
-      'NB: On designated days for deep conditioning treatments, kindly avoid using Avocado Infused Hair Conditioner to let the deep treatment work effectively.'
+      'Apply conditioner evenly through the hair, taking time to gently massage the scalp for a few minutes to promote relaxation and improve circulation.',
+      'After rinsing, gently pat the hair with a towel to absorb excess moisture, ensuring minimal friction against the hair strands.',
+      'NB: On days designated for deep conditioning treatments, kindly avoid using avocado Infused Hair Conditioner to allow the treatment to work effectively.'
     ],
-    sizes: ['250ml', '500ml'],
-    stock: 35,
-    keyIngredients: ['Avocado Extract', 'Cold-Pressed Avocado Oil', 'Hydrolyzed Wheat Protein'],
-    suitableFor: ['Natural Hair', 'Permed Hair'],
+    sizes: [],
+    stock: 0,
+    keyIngredients: ['Avocado extracts'],
+    suitableFor: ['Natural hair', 'Permed hair'],
     featured: true,
     bestSeller: false,
     relatedIds: ['rosemary-hair-shampoo', 'leave-in-conditioner', 'almond-hair-mayonnaise'],
-    reviews: [
-      {
-        id: 'rev-a1',
-        name: 'Grace Osei',
-        rating: 5,
-        title: 'Instant softness!',
-        comment: 'I love how my permed hair feels after using this. It restores moisture immediately and makes my hair so smooth and easy to detangle.',
-        date: '2026-04-20'
-      },
-      {
-        id: 'rev-a2',
-        name: 'Ama Serwaa',
-        rating: 4,
-        title: 'Very rich and nourishing',
-        comment: 'Extremely rich conditioner that penetrates my thick natural hair. Combing is a breeze. Great avocado smell.',
-        date: '2026-05-30'
-      }
-    ]
+    reviews: []
   },
   {
     id: 'leave-in-conditioner',
-    name: 'Leave-In Conditioner',
-    price: 22.00,
-    rating: 4.7,
-    reviewsCount: 85,
-    image: 'https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=800',
+    name: 'Leave In Conditioner',
+    price: 0,
+    rating: 0,
+    reviewsCount: 0,
+    image: 'https://via.placeholder.com/800x800?text=Leave+In+Conditioner',
     images: [
-      'https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=800'
+      'https://via.placeholder.com/800x800?text=Leave+In+Conditioner'
     ],
     category: 'haircare',
-    shortDescription: 'A multi-action styling leave-in cream designed to retain moisture, tighten hair shafts, and restore sheen.',
-    description: 'Vicesh Leave-In Conditioner is uniquely formulated to retain moisture, tighten the hair shaft, and condition the hair. It is used right after washing and conditioning to repair dry strands and prepare them for styling. It delivers outstanding sheen and softness, making it perfect for blow drying, thermal styling, or defining beautiful curls and waves in natural hair and hair extensions. Regular daily use eliminates dryness and brittleness, maintaining optimum hair hydration.',
-    ingredients: [
-      'Organic Aloe Vera Juice',
-      'Shea Butter Ester',
-      'Vegetable Glycerin',
-      'Cold-Pressed Jojoba Seed Oil',
-      'Centrimonium Chloride (anti-static)',
-      'Argan Kernel Oil',
-      'Pro-Vitamin B5 (Panthenol)',
-      'Lavender Essential Oil',
-      'Phenoxyethanol (Gentle preservative)'
-    ],
+    shortDescription: 'Retains moisture, tightens hair shaft and conditions the hair for a healthy look.',
+    description: 'It is used right after conditioning the hair to initiate styling. Repairs hair and leaves it with sheen and softness fro style and control. It can be used on daily bases for hair grooming. Perfect for blow drying or thermal styling. Defines curls and waves when used in hair or hair extensions. Eliminates dryness or brittleness by restoring and maintaining moisture in hair. Uniquely formulated to retain moisture, tighten hair shaft and condition the hair. A moisturized hair is a healthy hair.',
+    ingredients: [],
     benefits: [
-      'Uniquely formulated to retain moisture, tighten hair shaft, and condition the hair',
-      'Repairs hair structure and leaves it with beautiful sheen and softness for style and control',
-      'Eliminates dryness or brittleness by restoring and maintaining moisture in hair',
-      'Provides thermal protection for blow drying or styling, and defines curls and waves'
+      'Repairs hair and leaves it with sheen and softness',
+      'Perfect for blow drying or thermal styling',
+      'Defines curls and waves',
+      'Eliminates dryness or brittleness by restoring moisture',
+      'Retains moisture and tightens hair shaft'
     ],
     usage: [
-      'Use right after washing and conditioning the hair to initiate styling.',
-      'Smooth a generous amount evenly onto damp hair from roots to ends.',
-      'Perfect for use before blow drying, thermal styling, or roller setting to create a smooth foundation.',
-      'Can be used on a daily basis for hair grooming and to define curls in natural hair or hair extensions.'
+      'Used right after conditioning the hair to initiate styling.',
+      'Can be used on daily bases for hair grooming.'
     ],
-    sizes: ['250ml', '500ml'],
-    stock: 50,
-    keyIngredients: ['Aloe Vera', 'Jojoba Oil', 'Pro-Vitamin B5'],
-    suitableFor: ['Natural Hair', 'Permed Hair', 'Hair Extensions'],
+    sizes: [],
+    stock: 0,
+    keyIngredients: [],
+    suitableFor: ['Natural hair', 'Permed hair', 'Hair extensions'],
     featured: false,
     bestSeller: true,
     relatedIds: ['rosemary-hair-shampoo', 'hair-protein', 'scalp-itching-growth-therapy'],
-    reviews: [
-      {
-        id: 'rev-l1',
-        name: 'Esi Ampah',
-        rating: 5,
-        title: 'Perfect Curl Definer',
-        comment: 'This leave-in is excellent for my hair extensions and natural hair. It keeps dry and brittle ends moisturized all day long. Curls stay defined without crunch.',
-        date: '2026-05-15'
-      }
-    ]
+    reviews: []
   },
   {
     id: 'hair-protein',
     name: 'Hair Protein',
-    price: 28.00,
-    rating: 4.8,
-    reviewsCount: 74,
-    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800',
+    price: 0,
+    rating: 0,
+    reviewsCount: 0,
+    image: 'https://via.placeholder.com/800x800?text=Hair+Protein',
     images: [
-      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=800'
+      'https://via.placeholder.com/800x800?text=Hair+Protein'
     ],
     category: 'haircare',
-    shortDescription: 'An intensive, nutrient-enriched protein treatment that prevents hair breakage, combats brittleness, and restores sheen.',
-    description: 'Vicesh Hair Protein is a high-performance balancing treatment formulated to combat hair brittleness and drastically reduce breakages. Enriched with structural proteins, vitamins, and nourishing fats, it strengthens hair strands, restores vitality, and stimulates a beautiful natural sheen. This protein-infused formula makes the hair remarkably easy to comb, ensuring healthy strands and protective barrier restoration against thermal and physical styling.',
-    ingredients: [
-      'Purified Water',
-      'Hydrolyzed Soy Protein',
-      'Hydrolyzed Wheat Protein',
-      'Cold-Pressed Sweet Almond Oil',
-      'Raw Avocado Lipids',
-      'Glycerin',
-      'Centrimonium Bromide',
-      'Vitamin B7 (Biotin)',
-      'Citrus Essential Oil'
-    ],
+    shortDescription: 'Combats hair brittleness, stimulates sheen, and protects the hair strands.',
+    description: 'Combats hair brittleness and stimulates sheen whilst protecting the hair strands. Enriched with nutrients, which strengthens hair, stimulates hair growth and reduce the rate of breakages drastically. The balance formula helps prevent hair breakages. Makes hair easy to comb, thereby reducing breakages whist restoring it with nutrients such as healthy fats and proteins to strengthen the strands.',
+    ingredients: [],
     benefits: [
-      'Balanced formula helps prevent hair breakages and combats brittleness',
-      'Stimulates a beautiful natural sheen while protecting hair strands',
-      'Restores the hair with vital nutrients such as healthy fats and proteins to strengthen strands',
-      'Makes hair highly cooperative and easy to comb, reducing physical damage'
+      'Combats hair brittleness and stimulates sheen',
+      'Strengthens hair and stimulates hair growth',
+      'Reduces the rate of breakages drastically',
+      'Restores hair with healthy fats and proteins'
     ],
     usage: [
-      'After shampooing and conditioning, gently pat the hair with a clean towel to absorb excess moisture.',
-      'Apply Vicesh Hair Protein evenly through the hair from roots to ends.',
-      'Pair it along with a suitable leave-in conditioner to prepare the hair for styling.',
-      'Provides a smooth, fortified foundation perfect for blow-drying, tonging, or roller setting.'
+      'Proceed by applying Vicesh Hair Protein along with a suitable leave-in conditioner to prepare the hair for styling.',
+      'This creates a smooth foundation for blow-drying, tonging, or roller setting.'
     ],
-    sizes: ['150ml', '300ml'],
-    stock: 40,
-    keyIngredients: ['Hydrolyzed Wheat Protein', 'Soy Protein', 'Biotin'],
-    suitableFor: ['Permed Hair', 'Natural Hair', 'Dreadlocks', 'All forms of Hair Extensions'],
+    sizes: [],
+    stock: 0,
+    keyIngredients: [],
+    suitableFor: ['Permed hair', 'Natural hair', 'Dread locks', 'All forms of hair extensions'],
     featured: false,
     bestSeller: false,
     relatedIds: ['rosemary-hair-shampoo', 'leave-in-conditioner', 'almond-hair-mayonnaise'],
-    reviews: [
-      {
-        id: 'rev-p1',
-        name: 'Kofi Boateng',
-        rating: 5,
-        title: 'Reduced shedding completely',
-        comment: 'My permed hair was breaking badly from heat styling. This hair protein has strengthened my hair strands and restored a healthy shine. Absolute staple!',
-        date: '2026-06-11'
-      }
-    ]
+    reviews: []
   },
   {
     id: 'almond-hair-mayonnaise',
     name: 'Almond Hair Mayonnaise',
-    price: 34.00,
-    rating: 4.9,
-    reviewsCount: 112,
-    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=800',
+    price: 0,
+    rating: 0,
+    reviewsCount: 0,
+    image: 'https://via.placeholder.com/800x800?text=Almond+Hair+Mayonnaise',
     images: [
-      'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=800'
+      'https://via.placeholder.com/800x800?text=Almond+Hair+Mayonnaise'
     ],
     category: 'haircare',
-    shortDescription: 'An intense, deep-conditioning treatment rich in Oleic acid to promote hair growth, nourishment, and scalp protection.',
-    description: 'Vicesh Almond Hair Mayonnaise is a luxurious deep conditioner rich in natural Oleic acid and vital nutrients that promote hair growth and deep strand nourishment. It acts as an exceptional formula for restoring moisture, preventing damage before and after chemical perming, and protecting hair during braiding. By providing intense hydration and soothing the scalp, it prevents flaking, eases itchiness, and improves hair elasticity to reduce frizz and split ends.',
+    shortDescription: 'Rich in proteins and nutrients necessary for retaining moisture and strengthening hair strands.',
+    description: 'Very rich in natural Oleic acid which promotes hair growth and nourishment. Helps retain moisture into the hair which makes it an excellent formula for deep conditioning. Rich is proteins and nutrients necessary for retaining moisture and strengthening hair strands. Reduces the rate of breakages and frizz. Making it an essential requirement before and after perming hair. Also, before and after braiding hair, it is essential to undergo deep conditioning to help protect and restore the hair. This process strengthens the hair and improves it elasticity before braiding. Also, providing the hair with intense hydration prior to braiding the hair. It sooths the scalp and reduces the rate of flaking and itches. Thereby, calming the scalp and restoring moisture.',
     ingredients: [
-      'Cold-Pressed Sweet Almond Oil (Prunus Amygdalus Dulcis)',
-      'Natural Oleic Acid',
-      'Egg Protein Extract',
-      'Unrefined Shea Butter',
-      'Olive Fruit Oil',
-      'Hydrolyzed Soy Protein',
-      'Vegetable Glycerin',
-      'Vitamin E (Tocopherol)',
-      'Lavender and Bergamot Essential Oils'
+      'Natural Oleic acid'
     ],
     benefits: [
-      'Rich in natural Oleic acid which promotes robust hair growth and deep nourishment',
-      'Highly effective formula for deep conditioning to retain intense moisture',
-      'Protects and restores hair elasticity before and after braiding or perming hair',
-      'Soothes and calms the scalp, reducing the rate of flaking and itchiness'
+      'Promotes hair growth and nourishment',
+      'Helps retain moisture and acts as an excellent deep conditioner',
+      'Strengthens the hair and improves its elasticity',
+      'Soothes the scalp and reduces the rate of flaking and itches'
     ],
     usage: [
-      'For damaged or brittle hair, perform a deep conditioning treatment once every two weeks.',
-      'For healthy hair maintenance, deep condition once every 3 to 4 weeks.',
-      'Always undergo deep conditioning before and after perming hair to reduce chemical damage and frizz.',
-      'Always deep condition before braiding hair to strengthen strands, improve elasticity, and provide intense hydration.',
-      'Apply a generous amount of Almond Hair Mayonnaise to clean, damp hair. Distribute evenly, cover with a shower cap, leave on for 15-20 minutes, then rinse thoroughly.'
+      'For a damaged or brittle hair, deep conditioning could be done once in two weeks. For a healthy hair, it could be done once in 3 to 4 weeks.',
+      'Deep conditioning should be a constant ritual before and after perming the hair.',
+      'Also, before and after braiding hair, it is essential to undergo deep conditioning.'
     ],
-    sizes: ['250g', '500g'],
-    stock: 30,
-    keyIngredients: ['Sweet Almond Oil', 'Oleic Acid', 'Egg Protein', 'Raw Shea Butter'],
-    suitableFor: ['Natural Hair', 'Permed Hair', 'Hair Extensions'],
+    sizes: [],
+    stock: 0,
+    keyIngredients: ['Natural Oleic acid'],
+    suitableFor: ['Natural hair', 'Permed hair', 'Hair extensions'],
     featured: true,
     bestSeller: true,
     relatedIds: ['rosemary-hair-shampoo', 'avocado-hair-conditioner', 'scalp-itching-growth-therapy'],
-    reviews: [
-      {
-        id: 'rev-m1',
-        name: 'Kezia Ofori',
-        rating: 5,
-        title: 'Deep hydration savior',
-        comment: 'I deep condition with this before getting my braids. My scalp does not flake or itch at all while braided, and when I take them down, my hair is still strong and healthy!',
-        date: '2026-05-18'
-      }
-    ]
+    reviews: []
   },
   {
     id: 'scalp-itching-growth-therapy',
-    name: 'Scalp Itching & Hair Growth Therapy',
-    price: 20.00,
-    rating: 4.8,
-    reviewsCount: 68,
-    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=800',
+    name: 'Scalp Itching and Hair Growth Therapy',
+    price: 0,
+    rating: 0,
+    reviewsCount: 0,
+    image: 'https://via.placeholder.com/800x800?text=Scalp+Itching+Therapy',
     images: [
-      'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=800'
+      'https://via.placeholder.com/800x800?text=Scalp+Itching+Therapy'
     ],
     category: 'haircare',
-    shortDescription: 'A direct-to-scalp targeted therapy containing Jojoba oil to relieve itching, soothe braid tightness, and stimulate hair growth.',
-    description: 'Vicesh Scalp Itching and Hair Growth Therapy is a specialized botanical treatment formulated to target scalp discomfort directly. Infused with cold-pressed Jojoba oil and soothing therapeutic essential oils, it heals the scalp barrier, neutralizes dry flakes, and reduces itchiness immediately. This lightweight oil absorbs quickly and is highly recommended to relieve pain, tension, and tightness after braiding, while continuously stimulating active hair growth.',
+    shortDescription: 'Contains Jojoba oil which stimulate hair growth and repairs the barriers of the scalp.',
+    description: 'Apply directly to scalp and massage it itchy areas. The rate of itchiness will reduce drastically. It can be used after braids to relieve pains and tightness whilst stimulating hair growth. Contains Jojoba oil which stimulate hair growth and repairs the barriers of the scalp.',
     ingredients: [
-      'Cold-Pressed Jojoba Seed Oil (Simmondsia Chinensis)',
-      'Tea Tree Essential Oil (Melaleuca Alternifolia)',
-      'Peppermint Essential Oil (Mentha Piperita)',
-      'Rosemary Leaf Extract',
-      'Castor Seed Oil',
-      'Coconut Oil',
-      'Tocopherol (Vitamin E)'
+      'Jojoba oil'
     ],
     benefits: [
-      'Contains Jojoba oil which stimulates hair growth and repairs the skin barrier of the scalp',
-      'Drastically reduces scalp itchiness and flaking on contact',
-      'Relieves tension, tightness, and post-styling pains after braids',
-      'Lightweight oil blend that does not clog pores or weigh down hair roots'
+      'Stimulates hair growth and repairs the barriers of the scalp',
+      'Reduces the rate of itchiness drastically',
+      'Relieves pains and tightness after braids'
     ],
     usage: [
-      'Apply the therapy directly to the scalp using the targeted nozzle.',
-      'Gently massage into the scalp with your fingertips, focusing on itchy or irritated areas.',
-      'To relieve pain and tightness after braiding, apply along braid lines and hairline.',
-      'Use 2-3 times a week or as often as needed for soothing scalp comfort.'
+      'Apply directly to scalp and massage it itchy areas.',
+      'It can be used after braids to relieve pains and tightness whilst stimulating hair growth.'
     ],
-    sizes: ['100ml', '200ml'],
-    stock: 55,
-    keyIngredients: ['Jojoba Oil', 'Tea Tree Oil', 'Peppermint Oil'],
-    suitableFor: ['All Hair Types', 'Dry Itchy Scalps', 'Post-Braid Relief'],
+    sizes: [],
+    stock: 0,
+    keyIngredients: ['Jojoba oil'],
+    suitableFor: ['All types of hair'],
     featured: false,
     bestSeller: false,
     relatedIds: ['rosemary-hair-shampoo', 'almond-hair-mayonnaise', 'leave-in-conditioner'],
-    reviews: [
-      {
-        id: 'rev-s1',
-        name: 'Derrick Kwakye',
-        rating: 5,
-        title: 'Instant relief from itching',
-        comment: 'This product is a lifesaver. My scalp used to itch terribly two days after getting braids. This oil stops the itch immediately and feels so cool and tingly.',
-        date: '2026-06-10'
-      }
-    ]
+    reviews: []
   },
   {
     id: 'vicesh-skin-talk-green-pedicure-set',
@@ -409,7 +271,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'vicesh-pedicure-red-set',
-    name: 'Vicesh Pedicure Set (Red Set)',
+    name: 'Orange & Cocoa Butter Pedicure Set (Red Set)',
     price: 75.00,
     rating: 4.9,
     reviewsCount: 71,

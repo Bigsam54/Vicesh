@@ -69,18 +69,34 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   };
 
   return (
-    <div className="w-full bg-brand-purple-dark text-[#222222] pb-10 min-h-[60vh]">
-      {/* ─── Thin top banner ─── */}
-      <div className="w-full bg-brand-forest text-brand-cream text-center text-xs tracking-widest uppercase font-bold py-2.5">
-        🌿 Free standard delivery on orders over $50+
-      </div>
+    <div className="w-full relative text-brand-cream pb-10 min-h-[60vh] bg-brand-purple-dark overflow-hidden">
+      {/* Top Background Image (Carrots) */}
+      <div 
+        className="absolute inset-0 bg-[length:250%_auto] sm:bg-[length:100%_auto] bg-top bg-no-repeat z-0 opacity-80"
+        style={{ backgroundImage: `url('https://res.cloudinary.com/dja3u7oha/image/upload/v1783594375/Carrots_herbs_water_splashes_bac__202607091044_ulstv1.jpg')` }}
+      />
+      
+      {/* Bottom Background Image (Lemons) - Visible to continue the background downwards */}
+      <div 
+        className="absolute inset-0 bg-[length:100%_auto] bg-[center_bottom_10%] sm:bg-bottom bg-no-repeat z-0 opacity-80"
+        style={{ backgroundImage: `url('https://res.cloudinary.com/dja3u7oha/image/upload/v1783594374/Lemons_bursting_through_water_2K_202607091044_djff1h.jpg')` }}
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+      {/* Overlay to ensure readability */}
+      <div className="absolute inset-0 bg-brand-purple-dark/80 mix-blend-multiply z-0" />
+      
+      <div className="relative z-10 w-full">
+        {/* ─── Thin top banner ─── */}
+        <div className="w-full bg-brand-forest text-brand-cream text-center text-xs tracking-widest uppercase font-bold py-2.5">
+          🌿 Free standard delivery on orders over $50+
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
         
         {/* Back Button */}
         <button 
           onClick={() => setCurrentPage('shop')}
-          className="flex items-center gap-2 text-xs font-bold text-neutral-500 hover:text-brand-cream uppercase tracking-wider transition-colors mb-4 cursor-pointer"
+          className="flex items-center gap-2 text-xs font-bold text-brand-cream/70 hover:text-brand-cream uppercase tracking-wider transition-colors mb-4 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Apothecary
@@ -89,10 +105,10 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
         {/* Section header + sort */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="font-editorial text-3xl sm:text-4xl font-black text-[#222222] tracking-tight capitalize">
+            <h2 className="font-editorial text-3xl sm:text-4xl font-black text-brand-cream tracking-tight capitalize drop-shadow-md">
               {categoryId.replace(/-/g, ' ')}
             </h2>
-            <p className="text-sm text-neutral-500 font-medium mt-1">
+            <p className="text-sm text-brand-cream/80 font-medium mt-1">
               {sortedProducts.length} product{sortedProducts.length !== 1 ? 's' : ''} found
             </p>
           </div>
@@ -101,19 +117,19 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
             <select
               value={sortOption}
               onChange={(e) => triggerFilterChange(() => setSortOption(e.target.value))}
-              className="bg-transparent border border-neutral-200 rounded-md text-[#222222] text-xs focus:outline-none font-bold uppercase tracking-wider cursor-pointer px-3 py-2"
+              className="bg-transparent border border-brand-cream/30 rounded-md text-brand-cream text-xs focus:outline-none focus:border-brand-cream font-bold uppercase tracking-wider cursor-pointer px-3 py-2"
             >
-              <option value="featured">Featured</option>
-              <option value="price-low-high">Price: Low–High</option>
-              <option value="price-high-low">Price: High–Low</option>
-              <option value="rating">Top Rated</option>
+              <option className="text-brand-purple-dark bg-brand-cream" value="featured">Featured</option>
+              <option className="text-brand-purple-dark bg-brand-cream" value="price-low-high">Price: Low–High</option>
+              <option className="text-brand-purple-dark bg-brand-cream" value="price-high-low">Price: High–Low</option>
+              <option className="text-brand-purple-dark bg-brand-cream" value="rating">Top Rated</option>
             </select>
           </div>
         </div>
 
         {/* Grid */}
         {isFiltering ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
             {[...Array(itemsPerPage)].map((_, idx) => (
               <div key={idx} className="bg-neutral-50 rounded-lg overflow-hidden animate-pulse flex flex-col h-[400px]">
                 <div className="aspect-[4/5] bg-neutral-100"></div>
@@ -142,7 +158,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
             {paginatedProducts.map((product) => (
               <ProductCard 
                 key={product.id}
@@ -192,7 +208,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           </div>
         )}
       </div>
-
+      </div>
     </div>
   );
 };
