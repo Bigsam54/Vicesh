@@ -52,13 +52,9 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
           {/* Brand Info & Story */}
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center">
-              <img 
-                src="https://res.cloudinary.com/dja3u7oha/image/upload/v1782844746/VIKESH_Variation_vzqsnb.png" 
-                alt="Vicesh Logo" 
-                className="h-16 w-auto object-contain"
-                referrerPolicy="no-referrer"
-                crossOrigin="anonymous"
-              />
+              <h2 className="font-editorial text-3xl font-bold tracking-widest text-brand-gold">
+                VICESH
+              </h2>
             </div>
             <p className="text-sm leading-relaxed text-brand-white/80 font-sans font-light">
               We handcraft authentic, organic self-care formulas infused with wild-harvested African botanicals and therapeutic essential oils, directly supporting women-led agricultural collectives in Northern Ghana.

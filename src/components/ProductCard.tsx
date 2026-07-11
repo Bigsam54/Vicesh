@@ -74,20 +74,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           loading="lazy"
         />
 
-        {/* Brand Badges */}
-        <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex flex-col gap-1.5 z-10">
-          {product.bestSeller && (
-            <span className="bg-brand-gold text-brand-purple text-[8px] sm:text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
-              Bestseller
-            </span>
-          )}
-          {product.featured && (
-            <span className="bg-brand-gold text-brand-purple text-[8px] sm:text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
-              Limited Edition
-            </span>
-          )}
-        </div>
-
         {/* Wishlist Button */}
         <button
           onClick={handleWishlistToggle}

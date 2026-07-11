@@ -15,7 +15,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
   };
 
   return (
-    <div className="w-full bg-brand-purple text-brand-cream selection:bg-brand-gold selection:text-brand-purple pb-20">
+    <div className="w-full bg-brand-purple text-brand-cream selection:bg-brand-gold selection:text-brand-purple">
       
       {/* 1. IMMERSIVE HERO SECTION */}
       <section className="relative w-full h-[60vh] min-h-[500px] flex flex-col justify-end overflow-hidden">
@@ -146,22 +146,19 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { name: "Rosemary", role: "Stimulation & Clarity", img: "https://images.unsplash.com/photo-1594031636965-41604a1b023f?auto=format&fit=crop&q=80&w=400", desc: "Used traditionally to invigorate the scalp and encourage an optimal environment for healthy hair routines." },
-              { name: "Avocado", role: "Deep Hydration", img: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&q=80&w=400", desc: "Rich in essential fatty acids, it penetrates deeply to soften, moisturize, and protect against environmental stress." },
-              { name: "Sweet Almond", role: "Nourishing Shield", img: "https://images.unsplash.com/photo-1508061253366-f7da158b6d96?auto=format&fit=crop&q=80&w=400", desc: "A lightweight, vitamin-dense oil that conditions the skin barrier and strengthens the foundation of nail beds." },
-              { name: "Jojoba Oil", role: "Balancing Matrix", img: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=400", desc: "Mimicking the body's natural sebum, it provides non-greasy, soothing comfort to sensitive scalps and cuticles." }
+              { name: "Rosemary", role: "Stimulation & Clarity", img: "/images/rosemary_botanical_1783774271424.png", desc: "Used traditionally to invigorate the scalp and encourage an optimal environment for healthy hair routines." },
+              { name: "Avocado", role: "Deep Hydration", img: "/images/avocado_botanical_1783774281240.png", desc: "Rich in essential fatty acids, it penetrates deeply to soften, moisturize, and protect against environmental stress." },
+              { name: "Sweet Almond", role: "Nourishing Shield", img: "/images/sweet_almond_botanical_1783774290568.png", desc: "A lightweight, vitamin-dense oil that conditions the skin barrier and strengthens the foundation of nail beds." },
+              { name: "Jojoba Oil", role: "Balancing Matrix", img: "/images/jojoba_oil_botanical_1783774298757.png", desc: "Mimicking the body's natural sebum, it provides non-greasy, soothing comfort to sensitive scalps and cuticles." }
             ].map((ing, i) => (
-              <div key={i} className="group relative bg-brand-purple-dark border border-brand-cream/20 p-5 rounded-md hover:shadow-luxury transition-all duration-400">
-                <div className="aspect-square overflow-hidden rounded-md relative mb-6">
+              <div key={i} className="group relative bg-brand-purple-dark border border-brand-cream/20 p-3 sm:p-5 rounded-md hover:shadow-luxury transition-all duration-400">
+                <div className="aspect-square overflow-hidden rounded-md relative mb-3 sm:mb-6">
                   <img src={ing.img} alt={ing.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute top-3 left-3 bg-brand-purple-dark/95 backdrop-blur-md px-3 py-1.5 rounded-sm text-[10px] uppercase font-sans font-semibold tracking-widest text-brand-cream shadow-sm">
-                    {ing.role}
-                  </div>
                 </div>
-                <h4 className="font-editorial text-xl font-medium text-brand-cream">{ing.name}</h4>
-                <p className="text-xs text-brand-cream/80 mt-3 font-sans font-light leading-relaxed">
+                <h4 className="font-editorial text-base sm:text-xl font-medium text-brand-cream">{ing.name}</h4>
+                <p className="text-[10px] sm:text-xs text-brand-cream/80 mt-2 sm:mt-3 font-sans font-light leading-relaxed">
                   {ing.desc}
                 </p>
               </div>
@@ -183,36 +180,36 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div onClick={() => handleNavigate('haircare')} className="group cursor-pointer block relative aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 md:grid md:grid-cols-3 md:gap-8 pb-4 sm:pb-8 hide-scrollbar">
+            <div onClick={() => handleNavigate('haircare')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
               <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543196/Man_applying_hair_oil_mirror_202607082036_pkobba.jpg" alt="Hair Care" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
-              <div className="absolute inset-0 p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
-                <h3 className="font-editorial text-3xl font-medium mb-3">Hair Care</h3>
-                <p className="text-sm font-sans font-light text-brand-purple/90 mb-6 max-w-xs leading-relaxed">Cleanse, strengthen, moisturize, repair, and stimulate healthy growth using our signature botanical blends.</p>
-                <span className="text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
-                  Explore Rituals <ArrowRight className="w-4 h-4 stroke-[1.5]" />
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Hair Care</h3>
+                <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Cleanse, strengthen, moisturize, repair, and stimulate healthy growth using our signature botanical blends.</p>
+                <span className="text-[10px] md:text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
+                  Explore Rituals <ArrowRight className="w-3 h-3 md:w-4 md:h-4 stroke-[1.5]" />
                 </span>
               </div>
             </div>
 
-            <div onClick={() => handleNavigate('pedicure')} className="group cursor-pointer block relative aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
-              <img src="https://images.unsplash.com/photo-1519415510236-8a5169043d56?auto=format&fit=crop&q=80&w=800" alt="Pedicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
-              <div className="absolute inset-0 p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
-                <h3 className="font-editorial text-3xl font-medium mb-3">Pedicure</h3>
-                <p className="text-sm font-sans font-light text-brand-purple/90 mb-6 max-w-xs leading-relaxed">Professional-quality foot care products that help you enjoy restorative, salon-quality treatments from the comfort of home.</p>
-                <span className="text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
-                  Explore Rituals <ArrowRight className="w-4 h-4 stroke-[1.5]" />
+            <div onClick={() => handleNavigate('pedicure')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
+              <img src="/images/pedicure_green_set_1783773485048.png" alt="Pedicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Pedicure</h3>
+                <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Professional-quality foot care products that help you enjoy restorative, salon-quality treatments from the comfort of home.</p>
+                <span className="text-[10px] md:text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
+                  Explore Rituals <ArrowRight className="w-3 h-3 md:w-4 md:h-4 stroke-[1.5]" />
                 </span>
               </div>
             </div>
 
-            <div onClick={() => handleNavigate('manicure')} className="group cursor-pointer block relative aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
+            <div onClick={() => handleNavigate('manicure')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
               <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543196/African_woman_caring_for_hands_202607082036_dcxe2g.jpg" alt="Manicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
-              <div className="absolute inset-0 p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
-                <h3 className="font-editorial text-3xl font-medium mb-3">Manicure</h3>
-                <p className="text-sm font-sans font-light text-brand-purple/90 mb-6 max-w-xs leading-relaxed">Experience the importance of healthy hand care, intensive hydration, and professional nail care routines daily.</p>
-                <span className="text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
-                  Explore Rituals <ArrowRight className="w-4 h-4 stroke-[1.5]" />
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Manicure</h3>
+                <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Experience the importance of healthy hand care, intensive hydration, and professional nail care routines daily.</p>
+                <span className="text-[10px] md:text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
+                  Explore Rituals <ArrowRight className="w-3 h-3 md:w-4 md:h-4 stroke-[1.5]" />
                 </span>
               </div>
             </div>

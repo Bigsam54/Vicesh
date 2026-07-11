@@ -41,7 +41,7 @@ const categoryCards = [
   {
     id: 'pedicure',
     label: 'Pedicure',
-    image: 'https://images.unsplash.com/photo-1519415510236-8a5169043d56?auto=format&fit=crop&q=80&w=400',
+    image: '/images/pedicure_green_set_1783773485048.png',
   },
   {
     id: 'manicure',

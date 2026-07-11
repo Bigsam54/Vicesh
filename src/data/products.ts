@@ -12,9 +12,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: 'https://via.placeholder.com/800x800?text=Rosemary+Infused+Shampoo',
+    image: '/images/rosemary_shampoo_1783773464827.png',
     images: [
-      'https://via.placeholder.com/800x800?text=Rosemary+Infused+Shampoo'
+      '/images/rosemary_shampoo_1783773464827.png'
     ],
     category: 'haircare',
     shortDescription: 'Cleanses the hair and the scalp gently whilst stimulating hair growth.',
@@ -46,9 +46,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: 'https://via.placeholder.com/800x800?text=Avocado+Infused+Conditioner',
+    image: '/images/avocado_conditioner_1783773475439.png',
     images: [
-      'https://via.placeholder.com/800x800?text=Avocado+Infused+Conditioner'
+      '/images/avocado_conditioner_1783773475439.png'
     ],
     category: 'haircare',
     shortDescription: 'Restores and retains moisture after hair cleansing while supplying the hair with healthy fats and proteins.',
@@ -81,9 +81,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: 'https://via.placeholder.com/800x800?text=Leave+In+Conditioner',
+    image: '/images/leave_in_conditioner_1783773519703.png',
     images: [
-      'https://via.placeholder.com/800x800?text=Leave+In+Conditioner'
+      '/images/leave_in_conditioner_1783773519703.png'
     ],
     category: 'haircare',
     shortDescription: 'Retains moisture, tightens hair shaft and conditions the hair for a healthy look.',
@@ -115,9 +115,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: 'https://via.placeholder.com/800x800?text=Hair+Protein',
+    image: '/images/hair_protein_1783773529449.png',
     images: [
-      'https://via.placeholder.com/800x800?text=Hair+Protein'
+      '/images/hair_protein_1783773529449.png'
     ],
     category: 'haircare',
     shortDescription: 'Combats hair brittleness, stimulates sheen, and protects the hair strands.',
@@ -148,9 +148,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: 'https://via.placeholder.com/800x800?text=Almond+Hair+Mayonnaise',
+    image: '/images/almond_hair_mayo_1783773536923.png',
     images: [
-      'https://via.placeholder.com/800x800?text=Almond+Hair+Mayonnaise'
+      '/images/almond_hair_mayo_1783773536923.png'
     ],
     category: 'haircare',
     shortDescription: 'Rich in proteins and nutrients necessary for retaining moisture and strengthening hair strands.',
@@ -184,9 +184,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: 'https://via.placeholder.com/800x800?text=Scalp+Itching+Therapy',
+    image: '/images/scalp_therapy_1783773545562.png',
     images: [
-      'https://via.placeholder.com/800x800?text=Scalp+Itching+Therapy'
+      '/images/scalp_therapy_1783773545562.png'
     ],
     category: 'haircare',
     shortDescription: 'Contains Jojoba oil which stimulate hair growth and repairs the barriers of the scalp.',
@@ -218,10 +218,9 @@ export const PRODUCTS: Product[] = [
     price: 65.00,
     rating: 4.9,
     reviewsCount: 88,
-    image: 'https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&q=80&w=800',
+    image: '/images/pedicure_green_set_1783773485048.png',
     images: [
-      'https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1519735052327-2b992f8c0444?auto=format&fit=crop&q=80&w=800'
+      '/images/pedicure_green_set_1783773485048.png'
     ],
     category: 'pedicure',
     shortDescription: 'An authentic 6-step numbered pedicure kit with 2 additional gift products for a comprehensive, professional foot spa treatment.',
@@ -275,10 +274,9 @@ export const PRODUCTS: Product[] = [
     price: 75.00,
     rating: 4.9,
     reviewsCount: 71,
-    image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800',
+    image: '/images/pedicure_red_set_1783773494727.png',
     images: [
-      'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1519735052327-2b992f8c0444?auto=format&fit=crop&q=80&w=800'
+      '/images/pedicure_red_set_1783773494727.png'
     ],
     category: 'pedicure',
     shortDescription: 'An elite 5-step numbered pedicure restoration system with 4 professional-grade gifts for tough calluses and nail care.',
@@ -332,10 +330,9 @@ export const PRODUCTS: Product[] = [
     price: 60.00,
     rating: 4.8,
     reviewsCount: 54,
-    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800',
+    image: '/images/manicure_set_1783773553340.png',
     images: [
-      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=800'
+      '/images/manicure_set_1783773553340.png'
     ],
     category: 'manicure',
     shortDescription: 'An authentic 6-step numbered manicure kit with 3 professional-grade gifts to hydrate hands, soften cuticles, and promote nail health.',

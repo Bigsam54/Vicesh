@@ -83,7 +83,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
           <img 
             src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543197/Woman_holding_cosmetic_product_2K_202607082034_isptot.jpg" 
             alt="Vicesh Fresh Botanical Care" 
-            className="w-full h-full object-cover object-center filter brightness-105 contrast-105 transform scale-105 opacity-100"
+            className="w-full h-full object-cover object-top sm:object-center filter brightness-105 contrast-105 transform scale-105 opacity-100"
           />
           {/* Elegant dark gradient overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/60 via-transparent to-transparent"></div>
@@ -94,7 +94,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
           
           {/* Beautiful organic wave shape */}
           <svg 
-            className="w-full h-[60px] sm:h-[80px] md:h-[120px] -mb-[1px] text-brand-purple fill-current drop-shadow-[0_-10px_20px_rgba(223,175,55,0.1)]" 
+            className="w-full h-[40px] sm:h-[80px] md:h-[120px] -mb-[1px] text-brand-purple fill-current drop-shadow-[0_-10px_20px_rgba(223,175,55,0.1)]" 
             viewBox="0 0 1440 120" 
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -103,62 +103,30 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
           </svg>
 
           {/* Bright bar content area */}
-          <div className="bg-brand-purple text-brand-cream pt-4 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 border-b border-brand-cream/10 relative">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8 relative z-10">
+          <div className="bg-brand-purple text-brand-cream pt-2 sm:pt-4 pb-6 md:pb-16 px-4 sm:px-6 lg:px-8 border-b border-brand-cream/10 relative">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-8 relative z-10">
               
               {/* Left Column */}
-              <div className="space-y-5 text-left">
+              <div className="space-y-3 sm:space-y-5 text-left">
                 <div className="flex items-center gap-3">
-                  <h2 className="font-editorial text-4xl sm:text-5xl lg:text-6xl text-brand-cream font-medium select-none">
+                  <h2 className="font-editorial text-3xl sm:text-5xl lg:text-6xl text-brand-cream font-medium select-none">
                     Fresh Botanical Care
                   </h2>
-                </div>
-                
-                {/* Sublinks */}
-                <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-sans font-medium text-brand-cream/80">
-                  <button 
-                    onClick={() => handleNavigate('haircare')} 
-                    className="relative py-1 group hover:text-brand-gold transition-colors cursor-pointer"
-                  >
-                    Hair & Scalp Care
-                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                  </button>
-                  <button 
-                    onClick={() => handleNavigate('pedicure')} 
-                    className="relative py-1 group hover:text-brand-gold transition-colors cursor-pointer"
-                  >
-                    Skin Talk Pedicure
-                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                  </button>
-                  <button 
-                    onClick={() => handleNavigate('manicure')} 
-                    className="relative py-1 group hover:text-brand-gold transition-colors cursor-pointer"
-                  >
-                    Nail & Manicure Care
-                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                  </button>
-                  <button 
-                    onClick={() => handleNavigate('shop')} 
-                    className="relative py-1 group hover:text-brand-gold transition-colors cursor-pointer"
-                  >
-                    Botanical Apothecary
-                    <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                  </button>
                 </div>
               </div>
 
               {/* Right Column: CTA buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 shrink-0 md:mb-2 relative z-10">
+              <div className="flex flex-row gap-3 sm:gap-4 shrink-0 md:mb-2 relative z-10">
                 <button 
                   onClick={() => handleNavigate('shop')}
-                  className="btn-primary"
+                  className="btn-primary flex items-center justify-center py-2 sm:py-3 px-4 sm:px-6 text-[11px] sm:text-sm whitespace-nowrap"
                 >
                   Explore Collections
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2" />
                 </button>
                 <button 
                   onClick={() => handleNavigate('about')}
-                  className="btn-secondary"
+                  className="btn-secondary flex items-center justify-center py-2 sm:py-3 px-4 sm:px-6 text-[11px] sm:text-sm whitespace-nowrap"
                 >
                   Our Story
                 </button>
