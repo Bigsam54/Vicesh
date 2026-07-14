@@ -72,7 +72,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
   };
 
   return (
-    <div className="bg-brand-purple min-h-screen">
+    <div className="bg-brand-purple">
       
       {/* =========================================================================
           1. IMMERSIVE HERO SECTION

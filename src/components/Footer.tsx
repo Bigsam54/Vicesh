@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center">
               <h2 className="font-editorial text-3xl font-bold tracking-widest text-brand-gold">
-                VICESH
+                Vicesh Cosmetics
               </h2>
             </div>
             <p className="text-sm leading-relaxed text-brand-white/80 font-sans font-light">

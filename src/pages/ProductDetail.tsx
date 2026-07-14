@@ -578,14 +578,15 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({
             <p className="text-brand-cream/80 mt-2 font-sans font-light">Pair with these botanical essentials.</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex overflow-x-auto gap-4 sm:gap-6 pb-6 snap-x hide-scrollbar">
             {relatedProducts.map((p) => (
-              <ProductCard 
-                key={p.id}
-                product={p}
-                setCurrentPage={setCurrentPage}
-                setSelectedProductId={setSelectedProductId}
-              />
+              <div key={p.id} className="min-w-[280px] sm:min-w-[320px] max-w-[320px] shrink-0 snap-start">
+                <ProductCard 
+                  product={p}
+                  setCurrentPage={setCurrentPage}
+                  setSelectedProductId={setSelectedProductId}
+                />
+              </div>
             ))}
           </div>
         </div>
