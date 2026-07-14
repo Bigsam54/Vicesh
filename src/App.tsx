@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { StoreProvider } from './context/StoreContext';
+import { StoreProvider, useStore } from './context/StoreContext';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
@@ -24,6 +24,7 @@ import { ArrowUp } from 'lucide-react';
 import { Admin } from './pages/Admin';
 
 const MainApp: React.FC = () => {
+  const { isLoadingProducts } = useStore();
   const [currentPage, setCurrentPage] = useState<string>('home');
   const [selectedProductId, setSelectedProductId] = useState<string>('');
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -234,9 +235,17 @@ const MainApp: React.FC = () => {
     return <NotFound setCurrentPage={setCurrentPage} />;
   };
 
+  if (isLoadingProducts) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-brand-purple-dark text-brand-cream space-y-4">
+        <div className="w-12 h-12 border-4 border-brand-gold border-t-transparent rounded-full animate-spin"></div>
+        <p className="font-editorial text-xl tracking-widest uppercase">Loading Botanical Experience...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-brand-purple-dark text-brand-cream selection:bg-brand-sage/25 selection:text-brand-cream relative">
-      
 
 
       {/* Main Header navigation */}

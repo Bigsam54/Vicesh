@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { FAQS } from '../data/faqs';
+import React, { useState, useEffect } from 'react';
+import { api } from '../services/api';
+import { FAQItem } from '../types';
 import { Search, ChevronDown, ChevronUp, MessageCircle, HelpCircle } from 'lucide-react';
 
 interface FAQsProps {
@@ -15,12 +16,29 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  
+  const [faqs, setFaqs] = useState<FAQItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadFaqs = async () => {
+      try {
+        const data = await api.faqs.getAll();
+        setFaqs(data);
+      } catch (error) {
+        console.error("Failed to load FAQs", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadFaqs();
+  }, []);
 
   // Group unique categories
-  const categories = ['all', ...Array.from(new Set(FAQS.map(faq => faq.category)))];
+  const categories = ['all', ...Array.from(new Set(faqs.map(faq => faq.category)))];
 
   // Filtering logic
-  const filteredFAQs = FAQS.filter((faq) => {
+  const filteredFAQs = faqs.filter((faq) => {
     const matchesCategory = activeCategory === 'all' || faq.category === activeCategory;
     const matchesSearch = 
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -31,6 +49,15 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  if (isLoading) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-24 text-center">
+        <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-brand-cream/80 text-sm">Loading FAQs...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">

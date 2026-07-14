@@ -59,16 +59,16 @@ export const Account: React.FC<AccountProps> = ({
   const [addrSaved, setAddrSaved] = useState(false);
 
   // Form handle submit
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!loginEmail.trim()) return;
-    loginUser(loginEmail);
+    await loginUser(loginEmail);
   };
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!registerName.trim() || !registerEmail.trim()) return;
-    registerUser(registerName, registerEmail);
+    await registerUser(registerName, registerEmail);
   };
 
   const handleProfileSave = (e: React.FormEvent) => {

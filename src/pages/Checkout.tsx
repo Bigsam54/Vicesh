@@ -83,7 +83,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handlePlaceOrder = (e: React.FormEvent) => {
+  const handlePlaceOrder = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -101,13 +101,16 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
       ? `Mobile Money (${momoNetwork.toUpperCase()})` 
       : 'Credit/Debit Card';
 
-    setTimeout(() => {
-      const order = placeOrder(methodLabel, shippingAddress);
+    try {
+      const order = await placeOrder(methodLabel, shippingAddress);
       setLastOrderPlaced(order);
       setIsSubmitting(false);
       setStep(3); // Success step
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 1500);
+    } catch (error) {
+      console.error("Order failed", error);
+      setIsSubmitting(false);
+    }
   };
 
   return (

@@ -1,14 +1,10 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Product, CartItem, Order, User, Address, Coupon, Review } from '../types';
-import { PRODUCTS } from '../data/products';
+import { api } from '../services/api';
 
 interface StoreContextType {
   products: Product[];
+  isLoadingProducts: boolean;
   cart: CartItem[];
   wishlist: string[]; // array of product ids
   currentUser: User | null;
@@ -31,19 +27,19 @@ interface StoreContextType {
   isInWishlist: (productId: string) => boolean;
   
   // User Profile & Auth
-  loginUser: (email: string, password?: string) => { success: boolean; error?: string };
-  registerUser: (name: string, email: string, password?: string) => { success: boolean; error?: string };
+  loginUser: (email: string, password?: string) => Promise<{ success: boolean; error?: string }>;
+  registerUser: (name: string, email: string, password?: string) => Promise<{ success: boolean; error?: string }>;
   logoutUser: () => void;
   updateProfile: (name: string, phone: string) => void;
   updateAddresses: (shipping: Address, billing?: Address) => void;
   addLoyaltyPoints: (points: number) => void;
   
   // Order Actions
-  placeOrder: (paymentMethod: string, shippingAddress: Address) => Order;
+  placeOrder: (paymentMethod: string, shippingAddress: Address) => Promise<Order>;
   trackOrder: (orderId: string) => Order | undefined;
   
   // Coupon Actions
-  applyCouponCode: (code: string) => { success: boolean; message: string };
+  applyCouponCode: (code: string) => Promise<{ success: boolean; message: string }>;
   removeCoupon: () => void;
   
   // Quick View Modal Action
@@ -51,7 +47,7 @@ interface StoreContextType {
   closeQuickView: () => void;
   
   // Review Actions
-  addProductReview: (productId: string, review: Omit<Review, 'id' | 'date'>) => void;
+  addProductReview: (productId: string, review: Omit<Review, 'id' | 'date'>) => Promise<void>;
   
   // Utility for recently viewed
   addRecentlyViewed: (productId: string) => void;
@@ -59,17 +55,9 @@ interface StoreContextType {
 
 const StoreContext = createContext<StoreContextType | undefined>(undefined);
 
-const AVAILABLE_COUPONS: Coupon[] = [
-  { code: 'VICESH20', discountType: 'percent', value: 20, minPurchase: 50 },
-  { code: 'ORGANIC10', discountType: 'percent', value: 10, minPurchase: 0 },
-  { code: 'ECOGOLD', discountType: 'fixed', value: 15, minPurchase: 60 }
-];
-
 export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [products, setProducts] = useState<Product[]>(() => {
-    const savedProducts = localStorage.getItem('vicesh_products');
-    return savedProducts ? JSON.parse(savedProducts) : PRODUCTS;
-  });
+  const [products, setProducts] = useState<Product[]>([]);
+  const [isLoadingProducts, setIsLoadingProducts] = useState(true);
 
   const [cart, setCart] = useState<CartItem[]>(() => {
     const saved = localStorage.getItem('vicesh_cart');
@@ -98,6 +86,21 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return saved ? JSON.parse(saved) : [];
   });
 
+  // Load initial data
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const productsData = await api.products.getAll();
+        setProducts(productsData);
+      } catch (error) {
+        console.error("Failed to load products:", error);
+      } finally {
+        setIsLoadingProducts(false);
+      }
+    };
+    loadData();
+  }, []);
+
   // Sync to local storage
   useEffect(() => {
     localStorage.setItem('vicesh_cart', JSON.stringify(cart));
@@ -118,10 +121,6 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     localStorage.setItem('vicesh_recent', JSON.stringify(recentlyViewed));
   }, [recentlyViewed]);
-
-  useEffect(() => {
-    localStorage.setItem('vicesh_products', JSON.stringify(products));
-  }, [products]);
 
   // Cart Actions
   const addToCart = (product: Product, quantity: number, size: string) => {
@@ -201,42 +200,25 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return wishlist.includes(productId);
   };
 
-  // Auth/User Simulation
-  const loginUser = (email: string, password?: string) => {
-    // Simulate real user lookup or create default
-    const name = email.split('@')[0];
-    const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
-    
-    const loggedUser: User = {
-      id: `usr-${Date.now()}`,
-      name: formattedName,
-      email: email,
-      phone: '+233 24 4123 456',
-      loyaltyPoints: 120,
-      shippingAddress: {
-        fullName: formattedName + ' Mensah',
-        addressLine1: '34 Liberation Road',
-        addressLine2: 'Airport Residential Area',
-        city: 'Accra',
-        state: 'Greater Accra',
-        country: 'Ghana',
-        phone: '+233 24 4123 456'
-      }
-    };
-    
-    setCurrentUser(loggedUser);
-    return { success: true };
+  // Auth/User
+  const loginUser = async (email: string, password?: string) => {
+    try {
+      const user = await api.auth.login(email, password);
+      setCurrentUser(user);
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: 'Login failed' };
+    }
   };
 
-  const registerUser = (name: string, email: string, password?: string) => {
-    const newUser: User = {
-      id: `usr-${Date.now()}`,
-      name: name,
-      email: email,
-      loyaltyPoints: 50, // bonus points for signing up
-    };
-    setCurrentUser(newUser);
-    return { success: true };
+  const registerUser = async (name: string, email: string, password?: string) => {
+    try {
+      const user = await api.auth.register(name, email, password);
+      setCurrentUser(user);
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: 'Registration failed' };
+    }
   };
 
   const logoutUser = () => {
@@ -271,7 +253,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   // Order Actions
-  const placeOrder = (paymentMethod: string, shippingAddress: Address) => {
+  const placeOrder = async (paymentMethod: string, shippingAddress: Address) => {
     const subtotal = getCartSubtotal();
     const shipping = getShippingCost();
     let discount = 0;
@@ -284,10 +266,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       }
     }
 
-    const orderId = `VC-${Math.floor(100000 + Math.random() * 900000)}`;
-    const newOrder: Order = {
-      id: orderId,
-      date: new Date().toISOString().split('T')[0],
+    const orderData: Partial<Order> = {
       items: cart.map((item) => ({
         productId: item.product.id,
         productName: item.product.name,
@@ -300,20 +279,20 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       discountAmount: discount,
       shippingCost: shipping,
       total: getCartTotal(),
-      status: 'processing',
       paymentMethod,
       shippingAddress,
-      trackingNumber: `TRACK-${Math.floor(10000000 + Math.random() * 90000000)}`,
       couponUsed: appliedCoupon?.code
     };
 
+    const newOrder = await api.orders.create(orderData);
+    
     setOrders((prev) => [newOrder, ...prev]);
     
     // Earn loyalty points: 1 point per $1 spent
     const pointsEarned = Math.floor(newOrder.total);
     addLoyaltyPoints(pointsEarned);
     
-    // Deduct stock
+    // Deduct stock (if products are tracking stock properly, ideally backend handles this)
     setProducts((prevProducts) => {
       return prevProducts.map((p) => {
         const orderItem = cart.find((item) => item.product.id === p.id);
@@ -333,22 +312,26 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   // Coupon Actions
-  const applyCouponCode = (code: string) => {
-    const coupon = AVAILABLE_COUPONS.find((c) => c.code.toUpperCase() === code.toUpperCase());
-    if (!coupon) {
-      return { success: false, message: 'Invalid coupon code.' };
-    }
-    
-    const subtotal = getCartSubtotal();
-    if (subtotal < coupon.minPurchase) {
-      return { 
-        success: false, 
-        message: `Minimum purchase of $${coupon.minPurchase.toFixed(2)} required for this coupon.` 
-      };
-    }
+  const applyCouponCode = async (code: string) => {
+    try {
+      const coupon = await api.coupons.verify(code);
+      if (!coupon) {
+        return { success: false, message: 'Invalid coupon code.' };
+      }
+      
+      const subtotal = getCartSubtotal();
+      if (subtotal < coupon.minPurchase) {
+        return { 
+          success: false, 
+          message: `Minimum purchase of $${coupon.minPurchase.toFixed(2)} required for this coupon.` 
+        };
+      }
 
-    setAppliedCoupon(coupon);
-    return { success: true, message: `Coupon applied: ${coupon.value}% off your order!` };
+      setAppliedCoupon(coupon);
+      return { success: true, message: `Coupon applied: ${coupon.value}% off your order!` };
+    } catch (error) {
+      return { success: false, message: 'Failed to apply coupon.' };
+    }
   };
 
   const removeCoupon = () => {
@@ -365,12 +348,8 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   // Product Reviews
-  const addProductReview = (productId: string, reviewData: Omit<Review, 'id' | 'date'>) => {
-    const newReview: Review = {
-      id: `rev-${Date.now()}`,
-      date: new Date().toISOString().split('T')[0],
-      ...reviewData
-    };
+  const addProductReview = async (productId: string, reviewData: Omit<Review, 'id' | 'date'>) => {
+    const newReview = await api.products.submitReview(productId, reviewData);
 
     setProducts((prevProducts) => {
       return prevProducts.map((p) => {
@@ -403,6 +382,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     <StoreContext.Provider
       value={{
         products,
+        isLoadingProducts,
         cart,
         wishlist,
         currentUser,
