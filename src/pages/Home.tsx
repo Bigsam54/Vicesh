@@ -80,9 +80,12 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
       <section id="hero-section" className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] bg-brand-purple overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543197/Woman_holding_cosmetic_product_2K_202607082034_isptot.jpg" 
-            alt="Vicesh Fresh Botanical Care" 
+          <video 
+            src="https://res.cloudinary.com/dja3u7oha/video/upload/v1784036263/Conditioner_bottle_floating_drea__1080p_202607141241_vzoscr.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
             className="w-full h-full object-cover object-top sm:object-center filter brightness-105 contrast-105 transform scale-105 opacity-100"
           />
           {/* Elegant dark gradient overlay for better text readability */}

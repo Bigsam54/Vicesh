@@ -12,9 +12,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: '/images/rosemary_shampoo_1783773464827.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/rosemary_shampoo_1783773464827.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'haircare',
     shortDescription: 'Cleanses the hair and the scalp gently whilst stimulating hair growth.',
@@ -46,9 +46,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: '/images/avocado_conditioner_1783773475439.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/avocado_conditioner_1783773475439.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'haircare',
     shortDescription: 'Restores and retains moisture after hair cleansing while supplying the hair with healthy fats and proteins.',
@@ -81,9 +81,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: '/images/leave_in_conditioner_1783773519703.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/leave_in_conditioner_1783773519703.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'haircare',
     shortDescription: 'Retains moisture, tightens hair shaft and conditions the hair for a healthy look.',
@@ -115,9 +115,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: '/images/hair_protein_1783773529449.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/hair_protein_1783773529449.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'haircare',
     shortDescription: 'Combats hair brittleness, stimulates sheen, and protects the hair strands.',
@@ -148,9 +148,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: '/images/almond_hair_mayo_1783773536923.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/almond_hair_mayo_1783773536923.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'haircare',
     shortDescription: 'Rich in proteins and nutrients necessary for retaining moisture and strengthening hair strands.',
@@ -184,9 +184,9 @@ export const PRODUCTS: Product[] = [
     price: 0,
     rating: 0,
     reviewsCount: 0,
-    image: '/images/scalp_therapy_1783773545562.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/scalp_therapy_1783773545562.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'haircare',
     shortDescription: 'Contains Jojoba oil which stimulate hair growth and repairs the barriers of the scalp.',
@@ -218,9 +218,9 @@ export const PRODUCTS: Product[] = [
     price: 65.00,
     rating: 4.9,
     reviewsCount: 88,
-    image: '/images/pedicure_green_set_1783773485048.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/pedicure_green_set_1783773485048.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'pedicure',
     shortDescription: 'An authentic 6-step numbered pedicure kit with 2 additional gift products for a comprehensive, professional foot spa treatment.',
@@ -274,9 +274,9 @@ export const PRODUCTS: Product[] = [
     price: 75.00,
     rating: 4.9,
     reviewsCount: 71,
-    image: '/images/pedicure_red_set_1783773494727.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/pedicure_red_set_1783773494727.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'pedicure',
     shortDescription: 'An elite 5-step numbered pedicure restoration system with 4 professional-grade gifts for tough calluses and nail care.',
@@ -330,9 +330,9 @@ export const PRODUCTS: Product[] = [
     price: 60.00,
     rating: 4.8,
     reviewsCount: 54,
-    image: '/images/manicure_set_1783773553340.png',
+    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
     images: [
-      '/images/manicure_set_1783773553340.png'
+      'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg'
     ],
     category: 'manicure',
     shortDescription: 'An authentic 6-step numbered manicure kit with 3 professional-grade gifts to hydrate hands, soften cuticles, and promote nail health.',

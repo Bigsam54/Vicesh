@@ -20,9 +20,12 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
       {/* 1. IMMERSIVE HERO SECTION */}
       <section className="relative w-full h-[60vh] min-h-[500px] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543196/African_woman_applying_hair_cond__202607082033_jiapeo.jpg" 
-            alt="Vicesh Sourcing Heritage" 
+          <video 
+            src="https://res.cloudinary.com/dja3u7oha/video/upload/v1784036252/Beauty_influencer_applying_condi__1080p_202607141242_wwgxas.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
             className="w-full h-full object-cover filter brightness-90 contrast-105 object-center"
           />
         </div>
@@ -51,7 +54,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-lg overflow-hidden shadow-luxury">
               <img 
-                src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543197/Mother_helping_daughter_with_hair_202607082034_arawam.jpg" 
+                src="https://res.cloudinary.com/dja3u7oha/image/upload/v1784036241/Woman_holding_conditioner_bottle_2K_202607141242_hgkl7p.jpg" 
                 alt="Botanical formulation process"
                 className="w-full h-full object-cover opacity-100 drop-shadow-sm transform hover:scale-105 transition-transform duration-700 relative z-10"
               />
@@ -193,7 +196,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
             </div>
 
             <div onClick={() => handleNavigate('pedicure')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
-              <img src="/images/pedicure_green_set_1783773485048.png" alt="Pedicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
+              <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg" alt="Pedicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                 <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Pedicure</h3>
                 <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Professional-quality foot care products that help you enjoy restorative, salon-quality treatments from the comfort of home.</p>
