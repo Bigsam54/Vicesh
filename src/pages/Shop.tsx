@@ -36,42 +36,42 @@ const categoryCards = [
   {
     id: 'haircare',
     label: 'Hair Care',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: '/images/haircare_collection.png',
   },
   {
     id: 'pedicure',
     label: 'Pedicure',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: '/images/pedicure_collection.png',
   },
   {
     id: 'manicure',
     label: 'Manicure',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: '/images/manicure_collection.png',
   },
   {
     id: 'skincare',
     label: 'Skincare',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: '/images/skincare_category.png',
   },
   {
     id: 'spa',
     label: 'Spa',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: '/images/spa_category.png',
   },
   {
     id: 'oils',
     label: 'Essential Oils',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: '/images/oils_category.png',
   },
   {
     id: 'bodycare',
     label: 'Body Care',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: '/images/bodycare_category.png',
   },
   {
     id: 'gifts',
     label: 'Gifts & Wrapping',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: '/images/gifts_category.png',
   },
 ];
 
@@ -80,49 +80,37 @@ const moodCards = [
   {
     id: 'relaxed',
     label: 'Relaxed',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=400',
     color: '#E8D5B7',
   },
   {
     id: 'refreshed',
     label: 'Cool & Refreshed',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&q=80&w=400',
     color: '#B5D3E7',
   },
   {
     id: 'sensual',
     label: 'Sensual',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=400',
     color: '#D4A6B5',
   },
   {
     id: 'comforted',
     label: 'Comforted',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
-    color: '#E5C9A4',
-  },
-  {
-    id: 'uplifted',
-    label: 'Uplifted',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
-    color: '#F5E6A3',
-  },
-  {
-    id: 'grounded',
-    label: 'Grounded',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1549465220-1a8b9238f073?auto=format&fit=crop&q=80&w=400',
     color: '#A4B88F',
   },
   {
     id: 'playful',
     label: 'Playful',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1531353826977-0941b4779a1c?auto=format&fit=crop&q=80&w=400',
     color: '#F0B4D4',
   },
   {
     id: 'sleepy',
     label: 'Sleepy',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1511295742362-92c96b124e41?auto=format&fit=crop&q=80&w=400',
     color: '#C8B5E3',
   },
 ];
@@ -132,32 +120,32 @@ const trendingCards = [
   {
     id: 'bestsellers',
     label: 'Bestsellers',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&q=80&w=400',
   },
   {
     id: 'newArrivals',
     label: 'New Arrivals',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=400',
   },
   {
     id: 'organic',
     label: 'Organic Botanicals',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
   },
   {
     id: 'shea',
     label: 'Shea Butter Range',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=400',
   },
   {
     id: 'gift-sets',
     label: 'Gift Sets',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=400',
   },
   {
     id: 'scalp',
     label: 'Scalp Treatments',
-    image: 'https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg',
+    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=400',
   },
 ];
 

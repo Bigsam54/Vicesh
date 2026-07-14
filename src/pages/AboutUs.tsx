@@ -185,7 +185,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
 
           <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 md:grid md:grid-cols-3 md:gap-8 pb-4 sm:pb-8 hide-scrollbar">
             <div onClick={() => handleNavigate('haircare')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
-              <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543196/Man_applying_hair_oil_mirror_202607082036_pkobba.jpg" alt="Hair Care" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
+              <img src="/images/haircare_collection.png" alt="Hair Care" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                 <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Hair Care</h3>
                 <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Cleanse, strengthen, moisturize, repair, and stimulate healthy growth using our signature botanical blends.</p>
@@ -207,7 +207,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
             </div>
 
             <div onClick={() => handleNavigate('manicure')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
-              <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543196/African_woman_caring_for_hands_202607082036_dcxe2g.jpg" alt="Manicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
+              <img src="/images/manicure_collection.png" alt="Manicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                 <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Manicure</h3>
                 <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Experience the importance of healthy hand care, intensive hydration, and professional nail care routines daily.</p>

@@ -237,12 +237,7 @@ const MainApp: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-brand-purple-dark text-brand-cream selection:bg-brand-sage/25 selection:text-brand-cream relative">
       
-      {/* Announcement Banner Bar */}
-      {currentPage !== 'admin' && (
-        <div id="vicesh-announcement-bar" className="bg-brand-forest text-brand-cream text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] py-2.5 px-4 text-center border-b border-brand-gold/15 select-none z-50">
-          🍃 Complimentary Shipping on all Ghana orders above $100 equivalent — Hand-crafted Organic Botanicals
-        </div>
-      )}
+
 
       {/* Main Header navigation */}
       {currentPage !== 'admin' && (

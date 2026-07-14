@@ -84,10 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      {/* Top Promotional Banner */}
-      <div className="bg-brand-purple text-brand-cream text-xs sm:text-sm font-sans font-bold text-center py-2 px-4 cursor-pointer hover:bg-brand-purple-dark transition-colors border-b border-brand-purple-dark/20">
-        ✨ Join Vicesh Club
-      </div>
+
 
       {/* Navigation Header */}
       <header 
