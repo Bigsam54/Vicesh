@@ -200,7 +200,7 @@ export const Shop: React.FC<ShopProps> = ({
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 relative z-10">
           
           {/* Centered title */}
-          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10 drop-shadow-md">
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-left text-brand-cream mb-10 drop-shadow-md italic">
             Find your perfect product
           </h2>
 
@@ -249,7 +249,7 @@ export const Shop: React.FC<ShopProps> = ({
       {/* ═══ ROW 2: "How do you want to feel?" ═══ */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-cream/20">
 
-        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10">
+        <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-left text-brand-cream mb-10 italic">
           How do you want to feel?
         </h2>
 
@@ -301,7 +301,7 @@ export const Shop: React.FC<ShopProps> = ({
         
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
 
-          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-center text-brand-cream mb-10 drop-shadow-md">
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-left text-brand-cream mb-10 drop-shadow-md italic">
             Trending
           </h2>
 

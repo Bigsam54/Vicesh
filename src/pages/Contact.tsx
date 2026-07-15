@@ -31,7 +31,7 @@ export const Contact: React.FC = () => {
         {/* Bottom wave overlay */}
         <div className="absolute inset-x-0 bottom-0 z-20 flex flex-col justify-end pointer-events-none">
           <svg 
-            className="w-full h-[40px] sm:h-[80px] md:h-[100px] -mb-[1px] text-brand-purple-dark fill-current drop-shadow-[0_-10px_20px_rgba(223,175,55,0.1)]" 
+            className="w-full h-[15px] sm:h-[25px] md:h-[35px] -mb-[1px] text-brand-purple-dark fill-current drop-shadow-[0_-10px_20px_rgba(223,175,55,0.1)]" 
             viewBox="0 0 1440 120" 
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"

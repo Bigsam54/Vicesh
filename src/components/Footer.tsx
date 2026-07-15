@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
 
           {/* Quick Nav Collections */}
           <div className="space-y-6">
-            <h3 className="font-editorial text-xl font-medium text-brand-white">
+            <h3 className="font-editorial text-xl font-medium text-brand-white italic">
               Botanical Collections
             </h3>
             <ul className="space-y-4 text-sm font-sans font-light text-brand-white/80">
@@ -105,7 +105,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
 
           {/* Support & Policies */}
           <div className="space-y-6">
-            <h3 className="font-editorial text-xl font-medium text-brand-white">
+            <h3 className="font-editorial text-xl font-medium text-brand-white italic">
               Customer Sanctuary
             </h3>
             <ul className="space-y-4 text-sm font-sans font-light text-brand-white/80">
@@ -149,7 +149,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
 
           {/* Newsletter Signup */}
           <div className="space-y-6">
-            <h3 className="font-editorial text-xl font-medium text-brand-white">
+            <h3 className="font-editorial text-xl font-medium text-brand-white italic">
               The Botanical Circle
             </h3>
             <p className="text-sm text-brand-white/80 font-sans font-light leading-relaxed">
