@@ -206,13 +206,14 @@ export const Header: React.FC<HeaderProps> = ({
             <button 
               id="header-account-btn"
               onClick={() => handleNavigate('account')}
-              className={`hover:text-brand-gold transition-colors p-2 relative`}
+              className="hover:text-brand-gold transition-colors p-2 relative group"
               aria-label="Account"
             >
               <User className="w-5 h-5 stroke-[1.5]" />
               {currentUser && (
                 <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-brand-gold border-2 border-brand-purple"></span>
               )}
+              <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-brand-charcoal text-brand-white text-[10px] font-sans px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-sm">Account</span>
             </button>
 
             {/* Wishlist Button - Desktop Only */}
@@ -225,7 +226,7 @@ export const Header: React.FC<HeaderProps> = ({
                   handleNavigate('account'); // force login
                 }
               }}
-              className="flex hover:text-brand-gold transition-colors p-2 relative"
+              className="flex hover:text-brand-gold transition-colors p-2 relative group"
               aria-label="Wishlist"
             >
               <Heart className="w-5 h-5 stroke-[1.5]" />
@@ -234,13 +235,14 @@ export const Header: React.FC<HeaderProps> = ({
                   {wishlist.length}
                 </span>
               )}
+              <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-brand-charcoal text-brand-white text-[10px] font-sans px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-sm">Wishlist</span>
             </button>
 
             {/* Cart Button */}
             <button 
               id="header-cart-btn"
               onClick={() => setIsCartDrawerOpen(true)}
-              className="hover:text-brand-gold transition-colors p-2 relative"
+              className="hover:text-brand-gold transition-colors p-2 relative group"
               aria-label="Cart"
             >
               <ShoppingBag className="w-5 h-5 stroke-[1.5]" />
@@ -249,6 +251,7 @@ export const Header: React.FC<HeaderProps> = ({
                   {totalCartItems}
                 </span>
               )}
+              <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-brand-charcoal text-brand-white text-[10px] font-sans px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-sm">Basket</span>
             </button>
           </div>
         </div>

@@ -98,7 +98,7 @@ const moodCards = [
   {
     id: 'comforted',
     label: 'Comforted',
-    image: 'https://images.unsplash.com/photo-1549465220-1a8b9238f073?auto=format&fit=crop&q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=400',
     color: '#A4B88F',
   },
   {
@@ -110,7 +110,7 @@ const moodCards = [
   {
     id: 'sleepy',
     label: 'Sleepy',
-    image: 'https://images.unsplash.com/photo-1511295742362-92c96b124e41?auto=format&fit=crop&q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1519781542704-957ff19eff00?auto=format&fit=crop&q=80&w=400',
     color: '#C8B5E3',
   },
 ];
@@ -263,17 +263,22 @@ export const Shop: React.FC<ShopProps> = ({
               <button
                 key={card.id}
                 onClick={() => handleCategoryClick(card.id)}
-                className="flex-none w-[140px] sm:w-[160px] aspect-square rounded-lg overflow-hidden relative group cursor-pointer focus:outline-none transition-all duration-400 hover:-translate-y-1 hover:shadow-luxury"
+                className="flex-none relative w-[140px] h-[140px] sm:w-[160px] sm:h-[160px] group cursor-pointer focus:outline-none rounded-sm overflow-hidden"
               >
                 <img
                   src={card.image}
                   alt={card.label}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                 />
-                {/* Bottom label overlay */}
-                <div className="absolute inset-x-0 bottom-0 p-3 flex justify-center">
-                  <span className="bg-brand-purple-dark/95 backdrop-blur-md text-brand-cream text-xs font-sans font-semibold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                {/* Text */}
+                <div className="absolute bottom-4 left-4 text-left z-10">
+                  <span className="block text-brand-cream font-sans font-bold text-sm uppercase tracking-wide">
                     {card.label}
+                  </span>
+                  <span className="block text-[9px] text-brand-gold font-medium tracking-widest uppercase mt-1">
+                    Explore
                   </span>
                 </div>
               </button>
@@ -310,18 +315,23 @@ export const Shop: React.FC<ShopProps> = ({
               <button
                 key={card.id}
                 onClick={() => handleCategoryClick(card.id)}
-                className="flex-none w-[220px] sm:w-[280px] aspect-[4/3] rounded-lg overflow-hidden relative group cursor-pointer focus:outline-none transition-all duration-400 hover:-translate-y-1 hover:shadow-luxury"
+                className="flex-none relative w-[220px] aspect-[4/3] sm:w-[280px] group cursor-pointer focus:outline-none rounded-sm overflow-hidden"
               >
                 <img
                   src={card.image}
                   alt={card.label}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                 />
-                {/* Bottom label overlay */}
-                <div className="absolute inset-x-0 bottom-0 p-4 flex justify-center">
-                  <div className="w-full bg-brand-purple-dark text-brand-cream text-xs sm:text-sm font-sans font-semibold uppercase tracking-widest px-2 py-3 rounded-md shadow-lg text-center leading-tight">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                {/* Text */}
+                <div className="absolute bottom-4 left-4 text-left z-10">
+                  <span className="block text-brand-cream font-sans font-bold text-sm uppercase tracking-wide">
                     {card.label}
-                  </div>
+                  </span>
+                  <span className="block text-[9px] text-brand-gold font-medium tracking-widest uppercase mt-1">
+                    Explore
+                  </span>
                 </div>
               </button>
             ))}

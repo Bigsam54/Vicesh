@@ -56,7 +56,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
               <img 
                 src="https://res.cloudinary.com/dja3u7oha/image/upload/v1784036241/Woman_holding_conditioner_bottle_2K_202607141242_hgkl7p.jpg" 
                 alt="Botanical formulation process"
-                className="w-full h-full object-cover opacity-100 drop-shadow-sm transform hover:scale-105 transition-transform duration-700 relative z-10"
+                className="w-full h-full object-cover object-[20%_center] opacity-100 drop-shadow-sm transform hover:scale-105 transition-transform duration-700 relative z-10"
               />
               <div className="absolute inset-0 bg-brand-gold/10 z-0" />
               <div className="absolute bottom-8 left-8 right-8 bg-brand-purple-dark/95 backdrop-blur-md p-8 rounded-md border border-brand-cream/20 shadow-sm">
@@ -186,9 +186,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
           <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 md:grid md:grid-cols-3 md:gap-8 pb-4 sm:pb-8 hide-scrollbar">
             <div onClick={() => handleNavigate('haircare')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
               <img src="/images/haircare_collection.png" alt="Hair Care" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
-              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-cream bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                 <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Hair Care</h3>
-                <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Cleanse, strengthen, moisturize, repair, and stimulate healthy growth using our signature botanical blends.</p>
+                <p className="text-xs md:text-sm font-sans font-light text-brand-cream/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Cleanse, strengthen, moisturize, repair, and stimulate healthy growth using our signature botanical blends.</p>
                 <span className="text-[10px] md:text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
                   Explore Rituals <ArrowRight className="w-3 h-3 md:w-4 md:h-4 stroke-[1.5]" />
                 </span>
@@ -197,9 +197,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
 
             <div onClick={() => handleNavigate('pedicure')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
               <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1784036242/Feminine_hands_holding_condition__2K_202607141242_jacl1b.jpg" alt="Pedicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
-              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-cream bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                 <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Pedicure</h3>
-                <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Professional-quality foot care products that help you enjoy restorative, salon-quality treatments from the comfort of home.</p>
+                <p className="text-xs md:text-sm font-sans font-light text-brand-cream/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Professional-quality foot care products that help you enjoy restorative, salon-quality treatments from the comfort of home.</p>
                 <span className="text-[10px] md:text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
                   Explore Rituals <ArrowRight className="w-3 h-3 md:w-4 md:h-4 stroke-[1.5]" />
                 </span>
@@ -208,9 +208,9 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
 
             <div onClick={() => handleNavigate('manicure')} className="group cursor-pointer block relative shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-center aspect-[4/5] overflow-hidden rounded-lg shadow-sm hover:shadow-luxury transition-all duration-500 bg-black">
               <img src="/images/manicure_collection.png" alt="Manicure Collection" className="w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" />
-              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-purple bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end text-brand-cream bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                 <h3 className="font-editorial text-2xl md:text-3xl font-medium mb-2 md:mb-3">Manicure</h3>
-                <p className="text-xs md:text-sm font-sans font-light text-brand-purple/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Experience the importance of healthy hand care, intensive hydration, and professional nail care routines daily.</p>
+                <p className="text-xs md:text-sm font-sans font-light text-brand-cream/90 mb-4 md:mb-6 max-w-xs leading-relaxed">Experience the importance of healthy hand care, intensive hydration, and professional nail care routines daily.</p>
                 <span className="text-[10px] md:text-xs font-sans font-semibold uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">
                   Explore Rituals <ArrowRight className="w-3 h-3 md:w-4 md:h-4 stroke-[1.5]" />
                 </span>
