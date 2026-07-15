@@ -178,6 +178,14 @@ export const Header: React.FC<HeaderProps> = ({
                 Our Story
                 <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-brand-gold transition-transform duration-300 origin-left ${currentPage === 'about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
               </button>
+              <button 
+                id="nav-contact"
+                onClick={() => handleNavigate('contact')}
+                className={`relative py-2 transition-colors cursor-pointer group hover:text-brand-gold`}
+              >
+                Contact Us
+                <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-brand-gold transition-transform duration-300 origin-left ${currentPage === 'contact' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+              </button>
             </nav>
           </div>
 
@@ -193,7 +201,7 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsSearchOpen(true);
                 }}
                 onClick={() => setIsSearchOpen(true)}
-                className="w-full bg-brand-white text-brand-charcoal border border-brand-beige/60 rounded-full font-sans text-sm py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brand-purple focus:border-brand-purple transition-all duration-300 hover:shadow-sm cursor-pointer placeholder-brand-gray/60"
+                className="w-full bg-brand-white text-brand-charcoal border-2 border-[#d8b4e2] rounded-full font-sans text-sm py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brand-purple focus:border-brand-purple transition-all duration-300 hover:shadow-sm cursor-pointer placeholder-brand-gray/60"
               />
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-gray/60 pointer-events-none group-focus-within:text-brand-purple transition-colors" />
             </div>
@@ -583,6 +591,13 @@ export const Header: React.FC<HeaderProps> = ({
                     className="text-left font-editorial text-2xl font-bold text-brand-charcoal hover:text-brand-purple transition-colors py-1"
                   >
                     Our Story
+                  </button>
+                  <button 
+                    id="mobile-nav-contact"
+                    onClick={() => handleNavigate('contact')}
+                    className="text-left font-editorial text-2xl font-bold text-brand-charcoal hover:text-brand-purple transition-colors py-1"
+                  >
+                    Contact Us
                   </button>
                 </div>
 

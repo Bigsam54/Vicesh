@@ -31,20 +31,25 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/30 to-transparent z-10" />
         
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16 md:pb-24">
-          <div className="max-w-3xl space-y-6">
-            <span className="text-xs uppercase tracking-[0.3em] text-brand-gold font-sans font-medium flex items-center gap-2">
-              <BrandDroplet size={12} color="#C5A059" />
-              Our Story
-            </span>
-            <h1 className="font-editorial text-4xl sm:text-5xl md:text-7xl font-medium text-brand-purple tracking-tight leading-[1.1]">
-              Nature’s Best.<br />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-20 md:pb-32">
+          <div className="max-w-3xl text-left">
+            <h1 className="font-editorial text-4xl sm:text-5xl md:text-7xl font-medium italic text-brand-cream tracking-tight leading-[1.1]">
+              Nature's Best.<br />
               <span className="text-brand-gold">Crafted in Ghana.</span>
             </h1>
-            <p className="text-sm md:text-base text-brand-cream/90 max-w-xl leading-relaxed font-sans font-light">
-              Vicesh Cosmetics was born from a desire to offer beauty products that are both effective and gentle. We believe that modern consumers deserve formulations that deliver profound results without compromising the deep health of their hair and skin.
-            </p>
           </div>
+        </div>
+
+        {/* Bottom wave overlay */}
+        <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end pointer-events-none">
+          <svg 
+            className="w-full h-[40px] sm:h-[80px] md:h-[120px] -mb-[1px] text-brand-purple-dark fill-current drop-shadow-[0_-10px_20px_rgba(223,175,55,0.1)]" 
+            viewBox="0 0 1440 120" 
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0,70 C360,15 720,110 1080,85 C1260,72 1380,78 1440,65 L1440,120 L0,120 Z" />
+          </svg>
         </div>
       </section>
 
@@ -52,7 +57,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
       <section className="py-20 md:py-32 bg-brand-purple-dark relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-lg overflow-hidden shadow-luxury">
+            <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-lg overflow-hidden shadow-luxury order-2 lg:order-1">
               <img 
                 src="https://res.cloudinary.com/dja3u7oha/image/upload/v1784036241/Woman_holding_conditioner_bottle_2K_202607141242_hgkl7p.jpg" 
                 alt="Botanical formulation process"
@@ -66,7 +71,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            <div className="space-y-10">
+            <div className="space-y-10 order-1 lg:order-2">
               <div className="space-y-4">
                 <span className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-sans font-semibold flex items-center gap-2">
                   <Leaf className="w-3.5 h-3.5" />

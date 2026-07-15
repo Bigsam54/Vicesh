@@ -119,12 +119,12 @@ export const Account: React.FC<AccountProps> = ({
         /* =========================================================================
             AUTHENTICATION SHEETS (LOGIN & REGISTRATION)
             ========================================================================= */
-        <div className="max-w-4xl mx-auto bg-brand-offwhite border border-brand-cream/20 rounded-md shadow-md text-left overflow-hidden grid grid-cols-1 md:grid-cols-2">
+        <div className="max-w-4xl mx-auto bg-brand-purple border border-brand-cream/20 rounded-md shadow-md text-left overflow-hidden grid grid-cols-1 md:grid-cols-2">
           
           {/* Aesthetic Background Image Side */}
           <div className="hidden md:block relative bg-brand-purple-dark">
             <img 
-              src="https://images.unsplash.com/photo-1615397323192-3c25e2db8122?auto=format&fit=crop&q=80&w=1000" 
+              src="https://res.cloudinary.com/dja3u7oha/image/upload/v1783543197/Mother_helping_daughter_with_hair_202607082034_arawam.jpg" 
               alt="Botanical Beauty Elements" 
               className="w-full h-full object-cover"
             />
@@ -323,7 +323,7 @@ export const Account: React.FC<AccountProps> = ({
           </aside>
 
           {/* Dashboard Right Main Content Column */}
-          <div className="lg:col-span-9 bg-brand-offwhite border border-brand-beige/40 rounded-md p-6 sm:p-8 text-left min-h-[480px] shadow-sm">
+          <div className="lg:col-span-9 bg-brand-offwhite border border-brand-beige/40 rounded-md p-6 sm:p-8 text-left min-h-[480px] shadow-sm text-brand-charcoal">
             
             {/* TAB 1: OVERVIEW PANEL */}
             {activeTab === 'overview' && (

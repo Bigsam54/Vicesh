@@ -258,7 +258,7 @@ const MainApp: React.FC = () => {
       )}
 
       {/* Dynamic Main Body Content Area */}
-      <main id="vicesh-main-canvas" className={`flex-grow ${currentPage === 'admin' ? '' : 'pt-10 sm:pt-16 pb-16'}`}>
+      <main id="vicesh-main-canvas" className={`flex-grow ${currentPage === 'admin' ? '' : 'pb-16'}`}>
         {renderPage()}
       </main>
 

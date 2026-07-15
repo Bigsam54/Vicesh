@@ -9,6 +9,7 @@ import {
   ArrowRight, ArrowLeft, ShieldCheck, CreditCard, CheckCircle, 
   ShoppingBag, HelpCircle, User, MapPin
 } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { Address } from '../types';
 
 interface CheckoutProps {

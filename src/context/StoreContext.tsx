@@ -51,6 +51,11 @@ interface StoreContextType {
   
   // Utility for recently viewed
   addRecentlyViewed: (productId: string) => void;
+
+  // Admin Coupon Management
+  coupons: Coupon[];
+  addCoupon: (coupon: Coupon) => void;
+  removeDiscountCode: (code: string) => void;
 }
 
 const StoreContext = createContext<StoreContextType | undefined>(undefined);
@@ -84,6 +89,15 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [recentlyViewed, setRecentlyViewed] = useState<string[]>(() => {
     const saved = localStorage.getItem('vicesh_recent');
     return saved ? JSON.parse(saved) : [];
+  });
+
+  const [coupons, setCoupons] = useState<Coupon[]>(() => {
+    const saved = localStorage.getItem('vicesh_coupons');
+    return saved ? JSON.parse(saved) : [
+      { code: 'VICESH20', discountType: 'percent', value: 20, minPurchase: 50 },
+      { code: 'ORGANIC10', discountType: 'percent', value: 10, minPurchase: 0 },
+      { code: 'ECOGOLD', discountType: 'fixed', value: 15, minPurchase: 60 }
+    ];
   });
 
   // Load initial data
@@ -121,6 +135,10 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     localStorage.setItem('vicesh_recent', JSON.stringify(recentlyViewed));
   }, [recentlyViewed]);
+
+  useEffect(() => {
+    localStorage.setItem('vicesh_coupons', JSON.stringify(coupons));
+  }, [coupons]);
 
   // Cart Actions
   const addToCart = (product: Product, quantity: number, size: string) => {
@@ -314,7 +332,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   // Coupon Actions
   const applyCouponCode = async (code: string) => {
     try {
-      const coupon = await api.coupons.verify(code);
+      const coupon = coupons.find((c) => c.code.toUpperCase() === code.toUpperCase());
       if (!coupon) {
         return { success: false, message: 'Invalid coupon code.' };
       }
@@ -328,7 +346,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       }
 
       setAppliedCoupon(coupon);
-      return { success: true, message: `Coupon applied: ${coupon.value}% off your order!` };
+      return { success: true, message: `Coupon applied: ${coupon.discountType === 'percent' ? coupon.value + '%' : '$' + coupon.value} off your order!` };
     } catch (error) {
       return { success: false, message: 'Failed to apply coupon.' };
     }
@@ -336,6 +354,17 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const removeCoupon = () => {
     setAppliedCoupon(null);
+  };
+
+  const addCoupon = (coupon: Coupon) => {
+    setCoupons((prev) => [...prev, coupon]);
+  };
+
+  const removeDiscountCode = (code: string) => {
+    setCoupons((prev) => prev.filter((c) => c.code !== code));
+    if (appliedCoupon?.code === code) {
+      setAppliedCoupon(null);
+    }
   };
 
   // Quick View Actions
@@ -419,7 +448,11 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         closeQuickView,
         
         addProductReview,
-        addRecentlyViewed
+        addRecentlyViewed,
+
+        coupons,
+        addCoupon,
+        removeDiscountCode
       }}
     >
       {children}

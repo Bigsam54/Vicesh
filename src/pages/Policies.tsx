@@ -29,7 +29,7 @@ export const Policies: React.FC<PoliciesProps> = ({ initialPolicy = 'shipping' }
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
         {/* Sidebar Nav */}
-        <aside className="lg:col-span-3 bg-brand-offwhite border border-brand-cream/20 rounded-md p-5 space-y-2 text-left sticky top-32">
+        <aside className="lg:col-span-3 bg-brand-purple-dark border border-brand-cream/20 rounded-md p-5 space-y-2 text-left sticky top-32">
           {[
             { id: 'shipping', label: 'Shipping & Delivery', icon: Truck },
             { id: 'returns', label: 'Returns & Refunds', icon: RotateCcw },
@@ -58,7 +58,7 @@ export const Policies: React.FC<PoliciesProps> = ({ initialPolicy = 'shipping' }
         </aside>
 
         {/* Content body */}
-        <div className="lg:col-span-9 bg-brand-offwhite border border-brand-cream/20 rounded-md p-6 sm:p-10 text-left text-xs sm:text-sm text-brand-cream/80 leading-relaxed font-light space-y-6 shadow-2xs">
+        <div className="lg:col-span-9 bg-brand-purple-dark border border-brand-cream/20 rounded-md p-6 sm:p-10 text-left text-xs sm:text-sm text-brand-cream/80 leading-relaxed font-light space-y-6 shadow-2xs">
           
           {/* SHIPPING & DELIVERY POLICY */}
           {activePolicy === 'shipping' && (

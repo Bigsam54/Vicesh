@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
           {/* Brand Info & Story */}
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center">
-              <h2 className="font-editorial text-3xl font-bold tracking-widest text-brand-gold">
+              <h2 className="font-editorial text-3xl font-bold tracking-widest text-brand-white">
                 Vicesh Cosmetics
               </h2>
             </div>
@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
 
           {/* Quick Nav Collections */}
           <div className="space-y-6">
-            <h3 className="font-editorial text-xl font-medium text-brand-gold">
+            <h3 className="font-editorial text-xl font-medium text-brand-white">
               Botanical Collections
             </h3>
             <ul className="space-y-4 text-sm font-sans font-light text-brand-white/80">
@@ -97,7 +97,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
               </li>
               <li>
                 <button onClick={() => handleNavigate('about')} className="hover:text-brand-gold hover:translate-x-1 transition-all text-left text-brand-white font-medium">
-                  Our Botanical Story
+                  Our Story
                 </button>
               </li>
             </ul>
@@ -105,7 +105,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
 
           {/* Support & Policies */}
           <div className="space-y-6">
-            <h3 className="font-editorial text-xl font-medium text-brand-gold">
+            <h3 className="font-editorial text-xl font-medium text-brand-white">
               Customer Sanctuary
             </h3>
             <ul className="space-y-4 text-sm font-sans font-light text-brand-white/80">
@@ -149,7 +149,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
 
           {/* Newsletter Signup */}
           <div className="space-y-6">
-            <h3 className="font-editorial text-xl font-medium text-brand-gold">
+            <h3 className="font-editorial text-xl font-medium text-brand-white">
               The Botanical Circle
             </h3>
             <p className="text-sm text-brand-white/80 font-sans font-light leading-relaxed">
@@ -172,7 +172,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
-                    className="bg-brand-white/5 border border-brand-white/20 rounded-full text-sm w-full font-sans focus:outline-none focus:border-brand-gold placeholder-brand-white/40 pl-5 pr-12 py-3 transition-colors"
+                    className="bg-brand-gold/10 border-2 border-brand-gold rounded-full text-sm w-full font-sans focus:outline-none focus:bg-brand-gold/20 text-brand-gold placeholder-brand-gold/60 pl-5 pr-12 py-3 transition-colors"
                     required
                   />
                   <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-brand-gold text-brand-purple hover:bg-white transition-colors" aria-label="Subscribe">

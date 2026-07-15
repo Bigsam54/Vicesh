@@ -112,7 +112,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
               {/* Left Column */}
               <div className="space-y-3 sm:space-y-5 text-left">
                 <div className="flex items-center gap-3">
-                  <h2 className="font-editorial text-3xl sm:text-5xl lg:text-6xl text-brand-cream font-medium select-none">
+                  <h2 className="font-editorial text-3xl sm:text-5xl lg:text-6xl text-brand-cream font-medium italic select-none">
                     Fresh Botanical Care
                   </h2>
                 </div>

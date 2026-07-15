@@ -18,6 +18,7 @@ html {
   /* Neutral Palette */
   --color-brand-ivory: #ffffee; /* Cream */
   --color-brand-white: #fdfffa; /* Off - white */
+  --color-brand-offwhite: #fcfcfc; /* Off white / light gray */
   --color-brand-beige: #fdfae8;
   --color-brand-light-gray: #fcfcfc;
   --color-brand-cream: #ffffee; /* Cream */ 
@@ -40,12 +41,14 @@ html {
   --radius-xl: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif) !important;
-  font-weight: 700 !important;
-  color: var(--color-brand-cream);
-  letter-spacing: 0.01em;
-  text-transform: none !important;
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif) !important;
+    font-weight: 700 !important;
+    color: var(--color-brand-cream);
+    letter-spacing: 0.01em;
+    text-transform: none !important;
+  }
 }
 
 body {

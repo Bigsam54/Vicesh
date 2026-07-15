@@ -6,7 +6,8 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
 import { FAQItem } from '../types';
-import { Search, ChevronDown, ChevronUp, MessageCircle, HelpCircle } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 
 interface FAQsProps {
   setCurrentPage: (page: string) => void;
@@ -84,7 +85,7 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search our help database..."
-            className="w-full bg-brand-offwhite border border-brand-cream/20 text-xs rounded-full px-5 py-3 pl-11 focus:outline-none focus:border-brand-sage text-brand-cream shadow-xs"
+            className="w-full bg-brand-purple-dark border border-brand-cream/20 text-xs rounded-full px-5 py-3 pl-11 focus:outline-none focus:border-brand-sage text-brand-cream shadow-xs"
           />
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-cream/80 pointer-events-none" />
         </div>
@@ -114,7 +115,7 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
       {/* FAQ list Accordions */}
       <div className="space-y-4 text-left">
         {filteredFAQs.length === 0 ? (
-          <div className="bg-brand-offwhite border border-brand-cream/20 rounded-md p-10 text-center space-y-2">
+          <div className="bg-brand-purple-dark border border-brand-cream/20 rounded-md p-10 text-center space-y-2">
             <HelpCircle className="w-10 h-10 text-brand-cream/80 mx-auto" />
             <h4 className="font-editorial text-lg font-semibold text-brand-cream">No matches found</h4>
             <p className="text-xs text-brand-cream/80 font-light">Try entering alternative keywords or expanding your active category tag filters.</p>
@@ -125,7 +126,7 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
             return (
               <div 
                 key={idx} 
-                className="bg-brand-offwhite border border-brand-cream/20 rounded-md overflow-hidden transition-all duration-300 shadow-2xs"
+                className="bg-brand-purple-dark border border-brand-cream/20 rounded-md overflow-hidden transition-all duration-300 shadow-2xs"
               >
                 {/* Trigger heading banner */}
                 <button
@@ -170,9 +171,9 @@ export const FAQs: React.FC<FAQsProps> = ({ setCurrentPage }) => {
             href="https://wa.me/233595780477"
             target="_blank"
             rel="noreferrer"
-            className="px-6 py-3 border border-brand-forest text-brand-cream hover:bg-brand-offwhite transition-all rounded-xs flex items-center justify-center gap-1.5"
+            className="px-6 py-3 border border-brand-forest text-brand-cream hover:bg-brand-purple-dark transition-all rounded-xs flex items-center justify-center gap-1.5"
           >
-            <MessageCircle className="w-4 h-4 text-brand-cream/80 fill-current" />
+            <WhatsAppIcon className="w-4 h-4 text-brand-cream/80 fill-current" />
             WhatsApp Support Desk
           </a>
         </div>
