@@ -139,7 +139,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
         /* =========================================================================
             SUCCESS STATE
             ========================================================================= */
-        <div className="max-w-2xl bg-brand-offwhite border border-brand-cream/20 rounded-md p-8 sm:p-12 mx-auto text-center space-y-6 shadow-md">
+        <div className="max-w-2xl bg-brand-purple border border-brand-cream/20 rounded-md p-8 sm:p-12 mx-auto text-center space-y-6 shadow-md">
           <div className="w-16 h-16 rounded-full bg-brand-sage/10 border-2 border-brand-sage flex items-center justify-center mx-auto text-brand-cream/80">
             <CheckCircle className="w-10 h-10 text-brand-sage" />
           </div>
@@ -196,7 +196,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
             
             {/* STEP 1: DELIVERY DETAILS (Combined Info + Shipping) */}
             {step === 1 && (
-              <form onSubmit={handleNextStep} className="bg-brand-offwhite border border-brand-cream/20 rounded-md p-6 sm:p-8 space-y-8 text-left shadow-xs">
+              <form onSubmit={handleNextStep} className="bg-brand-purple border border-brand-cream/20 rounded-md p-6 sm:p-8 space-y-8 text-left shadow-xs">
                 
                 {/* Contact Info Section */}
                 <div className="space-y-4">
@@ -321,7 +321,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
 
             {/* STEP 2: PAYMENT & REVIEW */}
             {step === 2 && (
-              <form onSubmit={handlePlaceOrder} className="bg-brand-offwhite border border-brand-cream/20 rounded-md p-6 sm:p-8 space-y-8 text-left shadow-xs">
+              <form onSubmit={handlePlaceOrder} className="bg-brand-purple border border-brand-cream/20 rounded-md p-6 sm:p-8 space-y-8 text-left shadow-xs">
                 
                 {/* Review Details Summary */}
                 <div className="space-y-4">
@@ -409,7 +409,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
                           value={momoNumber}
                           onChange={(e) => setMomoNumber(e.target.value)}
                           placeholder="e.g. 024 123 4567"
-                          className="w-full text-xs bg-brand-offwhite border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream"
+                          className="w-full text-xs bg-brand-purple border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream"
                           required
                         />
                       </div>
@@ -425,7 +425,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
                           type="text"
                           value={cardHolder}
                           onChange={(e) => setCardHolder(e.target.value)}
-                          className="w-full text-xs bg-brand-offwhite border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream"
+                          className="w-full text-xs bg-brand-purple border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream"
                           required
                         />
                       </div>
@@ -436,7 +436,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
                           value={cardNumber}
                           onChange={(e) => setCardNumber(e.target.value)}
                           placeholder="XXXX XXXX XXXX XXXX"
-                          className="w-full text-xs bg-brand-offwhite border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream font-mono"
+                          className="w-full text-xs bg-brand-purple border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream font-mono"
                           required
                         />
                       </div>
@@ -448,7 +448,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
                             value={cardExpiry}
                             onChange={(e) => setCardExpiry(e.target.value)}
                             placeholder="MM/YY"
-                            className="w-full text-xs bg-brand-offwhite border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream font-mono"
+                            className="w-full text-xs bg-brand-purple border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream font-mono"
                             required
                           />
                         </div>
@@ -459,7 +459,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
                             value={cardCVV}
                             onChange={(e) => setCardCVV(e.target.value)}
                             placeholder="123"
-                            className="w-full text-xs bg-brand-offwhite border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream font-mono"
+                            className="w-full text-xs bg-brand-purple border border-brand-cream/20 px-4 py-3 rounded-xs focus:outline-none focus:border-brand-sage text-brand-cream font-mono"
                             maxLength={3}
                             required
                           />
@@ -493,7 +493,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
 
           {/* Right Column: Order Summary */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-brand-offwhite border border-brand-cream/20 rounded-md p-6 space-y-4 shadow-xs text-left">
+            <div className="bg-brand-purple border border-brand-cream/20 rounded-md p-6 space-y-4 shadow-xs text-left">
               <h3 className="font-editorial text-lg font-bold text-brand-cream flex items-center gap-2 border-b border-brand-cream/20 pb-2">
                 <ShoppingBag className="w-4.5 h-4.5 text-brand-cream/80" />
                 Order Summary
@@ -543,7 +543,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ setCurrentPage }) => {
             </div>
 
             {/* Assistance Card */}
-            <div className="bg-brand-offwhite border border-brand-cream/20 rounded-md p-5 text-left text-xs text-brand-cream/80 space-y-2 font-light">
+            <div className="bg-brand-purple border border-brand-cream/20 rounded-md p-5 text-left text-xs text-brand-cream/80 space-y-2 font-light">
               <p className="font-bold text-brand-cream flex items-center gap-1">
                 <HelpCircle className="w-4 h-4 text-brand-cream/80" />
                 Need help?
