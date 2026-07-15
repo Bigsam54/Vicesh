@@ -106,7 +106,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage, setSelectedProductId
           </svg>
 
           {/* Bright bar content area */}
-          <div className="bg-brand-purple text-brand-cream pt-2 sm:pt-4 pb-6 md:pb-16 px-4 sm:px-6 lg:px-8 border-b border-brand-cream/10 relative">
+          <div className="bg-brand-purple text-brand-cream pt-2 sm:pt-4 pb-6 md:pb-16 px-4 sm:px-6 lg:px-8 relative">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-8 relative z-10">
               
               {/* Left Column */}
