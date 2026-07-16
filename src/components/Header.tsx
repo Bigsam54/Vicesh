@@ -428,71 +428,93 @@ export const Header: React.FC<HeaderProps> = ({
           FULL-SCREEN INTERACTIVE SEARCH OVERLAY
           ========================================================================= */}
       {isSearchOpen && (
-        <div className="fixed inset-0 z-50 bg-brand-ivory/98 backdrop-blur-md overflow-y-auto p-4 sm:p-6 md:p-10 transition-opacity duration-300">
-          <div className="max-w-4xl mx-auto flex flex-col h-full animate-fade-in-up">
-            
-            {/* Search Header */}
-            <div className="flex justify-between items-center py-6 border-b border-brand-beige/40">
-              <span className="font-editorial text-2xl md:text-3xl font-medium text-brand-charcoal">
-                Search Vicesh
-              </span>
-              <button 
-                id="close-search-btn"
-                onClick={() => {
-                  setIsSearchOpen(false);
-                  setSearchQuery('');
-                }}
-                className="text-brand-gray hover:text-brand-purple transition-colors p-2 rounded-full hover:bg-brand-white"
-              >
-                <X className="w-6 h-6 stroke-[1.5]" />
-              </button>
-            </div>
+        <div className="fixed inset-0 z-50 flex flex-col bg-brand-ivory">
+          {/* Background image — subtle, fresh */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center z-0"
+            style={{ backgroundImage: `url('https://res.cloudinary.com/dja3u7oha/image/upload/v1783594372/Oranges_water_splashes_botanical__2K_202607091044_anxijn.jpg')` }}
+          />
+          <div className="absolute inset-0 bg-brand-ivory/85 backdrop-blur-md z-0" />
 
-            {/* Input Form */}
-            <div className="py-12 relative">
-              <input 
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search by botanical ingredient, product name, or category..."
-                className="w-full bg-transparent text-brand-charcoal font-editorial text-2xl md:text-4xl placeholder-brand-muted border-b border-brand-beige/60 pb-4 focus:outline-none focus:border-brand-purple transition-colors"
-                autoFocus
-              />
-              <Search className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 text-brand-muted pointer-events-none mb-2" />
-            </div>
+          {/* Sticky top bar with back button — does NOT scroll */}
+          <div className="relative z-10 flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 border-b border-brand-beige/60 bg-white/50 backdrop-blur-md shrink-0 shadow-sm">
+            <button 
+              onClick={() => {
+                setIsSearchOpen(false);
+                setSearchQuery('');
+              }}
+              className="flex items-center gap-2 text-brand-charcoal hover:text-brand-purple transition-colors group cursor-pointer"
+            >
+              <ArrowRight className="w-5 h-5 rotate-180 group-hover:-translate-x-1 transition-transform" />
+              <span className="text-sm font-sans font-medium">Back</span>
+            </button>
+            <span className="font-editorial text-lg md:text-xl font-medium text-brand-charcoal italic">
+              Search Vicesh
+            </span>
+            <button 
+              id="close-search-btn"
+              onClick={() => {
+                setIsSearchOpen(false);
+                setSearchQuery('');
+              }}
+              className="text-brand-charcoal hover:text-brand-purple transition-colors p-2 rounded-full hover:bg-brand-purple/5"
+            >
+              <X className="w-5 h-5 stroke-[1.5]" />
+            </button>
+          </div>
 
-            {/* Suggestions & Results */}
-            <div className="flex-1">
+          {/* Scrollable content area */}
+          <div className="relative z-10 flex-1 overflow-y-auto">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-8 animate-fade-in-up">
+
+              {/* Input Form */}
+              <div className="pb-10 relative">
+                <input 
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="What are you looking for?"
+                  className="w-full bg-white text-brand-charcoal font-editorial text-xl sm:text-2xl md:text-3xl placeholder-brand-muted border border-brand-beige/80 rounded-xl px-6 py-5 shadow-sm focus:outline-none focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20 transition-all"
+                  autoFocus
+                />
+                <Search className="absolute right-6 top-1/2 -translate-y-1/2 w-6 h-6 text-brand-muted pointer-events-none" />
+              </div>
+
+              {/* Suggestions & Results */}
               {searchQuery.trim() === '' ? (
-                <div>
-                  <h4 className="text-sm font-sans font-medium text-brand-gray mb-6">Suggested Ingredients</h4>
-                  <div className="flex flex-wrap gap-3">
-                    {['Rosemary', 'Avocado', 'Shea Butter', 'Almond Oil', 'Tea Tree', 'Eucalyptus', 'Lavender'].map((ing) => (
-                      <button
-                        key={ing}
-                        onClick={() => setSearchQuery(ing)}
-                        className="px-5 py-2.5 rounded-full bg-white border border-brand-beige/50 text-sm font-medium text-brand-gray hover:text-brand-purple hover:border-brand-purple hover:shadow-sm transition-all"
-                      >
-                        {ing}
-                      </button>
-                    ))}
+                <div className="space-y-12">
+                  <div>
+                    <h4 className="text-xs font-sans font-bold text-brand-gray mb-5 uppercase tracking-[0.2em]">Suggested Ingredients</h4>
+                    <div className="flex flex-wrap gap-2.5">
+                      {['Rosemary', 'Avocado', 'Shea Butter', 'Almond Oil', 'Tea Tree', 'Eucalyptus', 'Lavender'].map((ing) => (
+                        <button
+                          key={ing}
+                          onClick={() => setSearchQuery(ing)}
+                          className="px-5 py-2.5 rounded-full bg-white border border-brand-beige shadow-sm text-sm font-medium text-brand-charcoal hover:text-brand-white hover:border-brand-purple hover:bg-brand-purple transition-all"
+                        >
+                          {ing}
+                        </button>
+                      ))}
+                    </div>
                   </div>
 
-                  <h4 className="text-sm font-sans font-medium text-brand-gray mt-12 mb-6">Quick Links</h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    {['Hair Care', 'Pedicure', 'Manicure', 'Shop All'].map((cat) => (
-                      <button
-                        key={cat}
-                        onClick={() => {
-                          const page = cat.toLowerCase().replace(' ', '');
-                          handleNavigate(page);
-                          setIsSearchOpen(false);
-                        }}
-                        className="p-6 rounded-md bg-white border border-brand-beige/40 text-center font-medium text-brand-charcoal hover:border-brand-purple hover:text-brand-purple hover:shadow-luxury transition-all"
-                      >
-                        {cat}
-                      </button>
-                    ))}
+                  <div>
+                    <h4 className="text-xs font-sans font-bold text-brand-gray mb-5 uppercase tracking-[0.2em]">Quick Links</h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                      {['Hair Care', 'Pedicure', 'Manicure', 'Shop All'].map((cat) => (
+                        <button
+                          key={cat}
+                          onClick={() => {
+                            const page = cat.toLowerCase().replace(' ', '');
+                            handleNavigate(page);
+                            setIsSearchOpen(false);
+                          }}
+                          className="py-5 px-4 rounded-xl bg-white border border-brand-beige shadow-sm text-center font-medium text-brand-charcoal hover:border-brand-purple hover:text-brand-purple hover:bg-brand-purple/5 transition-all text-sm"
+                        >
+                          {cat}
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -507,14 +529,14 @@ export const Header: React.FC<HeaderProps> = ({
                       <p className="text-base text-brand-gray mt-3 font-sans">Try searching for "rosemary", "shea", "foot", or "cuticle".</p>
                     </div>
                   ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {searchResults.map((product) => (
                         <div 
                           key={product.id}
                           onClick={() => handleSearchItemClick(product)}
-                          className="flex gap-4 p-4 bg-white border border-brand-beige/40 rounded-md hover:border-brand-purple/40 cursor-pointer transition-all hover:shadow-luxury group"
+                          className="flex gap-4 p-4 bg-white border border-brand-beige/80 rounded-xl shadow-sm hover:border-brand-purple hover:shadow-luxury cursor-pointer transition-all group"
                         >
-                          <div className="w-20 h-20 bg-brand-ivory rounded-sm overflow-hidden flex-shrink-0">
+                          <div className="w-20 h-20 bg-brand-ivory rounded-lg overflow-hidden flex-shrink-0">
                             <img 
                               src={product.image} 
                               alt={product.name} 
@@ -536,6 +558,7 @@ export const Header: React.FC<HeaderProps> = ({
                   )}
                 </div>
               )}
+
             </div>
           </div>
         </div>
