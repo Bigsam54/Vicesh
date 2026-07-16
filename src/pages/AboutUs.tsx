@@ -77,17 +77,17 @@ export const AboutUs: React.FC<AboutUsProps> = ({ setCurrentPage }) => {
                   <Leaf className="w-3.5 h-3.5" />
                   Our Philosophy
                 </span>
-                <h2 className="font-editorial text-3xl md:text-5xl font-medium text-brand-cream leading-tight tracking-tight">
+                <h2 className="font-editorial text-3xl md:text-5xl font-medium italic text-brand-cream leading-tight tracking-tight">
                   Where Nature & Science Complement.
                 </h2>
               </div>
               
               <div className="space-y-6 text-brand-cream/80 text-sm md:text-base leading-relaxed font-sans font-light">
                 <p>
-                  Healthy beauty begins with healthy ingredients. At Vicesh Cosmetics, our journey started with a simple observation: the market was saturated with products that sacrificed long-term wellness for short-term illusions. We knew that true beauty is not only about appearance, but also about confidence, wellness, and daily self-care.
+                  Healthy beauty begins with healthy ingredients. At Vicesh Cosmetics, our journey started with a simple observation: the market was saturated with products that sacrificed long-term wellness for short-term illusions. We understood that true beauty shouldn't only focus on appearance, but also wellness, confidence, and daily self-care.
                 </p>
                 <p>
-                  We develop authentic, local eco-friendly haircare, skincare, and nail care formulated with raw botanical elements and carefully selected essential oils. Every formulation is developed with intention rather than simply following fleeting trends. 
+                  We develop nature-first, eco-friendly haircare, skincare, and nail care formulated with raw botanical ingredients and carefully selected essential oils. Every formulation is developed with intention rather than simply following fleeting trends.
                 </p>
                 <p>
                   Located proudly at CL-0635-9738, Oguaakrom, Winneba Road, Ghana, we serve both individual connoisseurs of self-care and elite wholesale partners who demand the very best for their clientele. Customers deserve products they can trust deeply.

@@ -182,7 +182,7 @@ export const Shop: React.FC<ShopProps> = ({
      RENDER
      ═══════════════════════════════════════════════════════════════════════ */
   return (
-    <div className="w-full bg-brand-purple text-brand-cream pb-16">
+    <div className="w-full bg-brand-purple text-brand-cream">
       
       {/* ─── Thin top banner ─── */}
       <div className="w-full bg-brand-gold text-brand-purple text-center text-xs tracking-widest uppercase font-sans font-medium py-3">
@@ -301,7 +301,7 @@ export const Shop: React.FC<ShopProps> = ({
         
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
 
-          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-left text-brand-cream mb-10 drop-shadow-md italic">
+          <h2 className="font-editorial text-3xl sm:text-4xl font-medium text-left text-brand-cream mb-10 italic">
             Trending
           </h2>
 

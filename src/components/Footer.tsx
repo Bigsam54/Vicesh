@@ -52,12 +52,12 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage, setPolicyTab }) 
           {/* Brand Info & Story */}
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center">
-              <h2 className="font-editorial text-3xl font-bold tracking-widest text-brand-white">
+              <h2 className="font-editorial text-3xl font-bold tracking-widest text-brand-white whitespace-nowrap">
                 Vicesh Cosmetics
               </h2>
             </div>
             <p className="text-sm leading-relaxed text-brand-white/80 font-sans font-light">
-              We handcraft authentic, organic self-care formulas infused with wild-harvested African botanicals and therapeutic essential oils, directly supporting women-led agricultural collectives in Northern Ghana.
+              We handcraft authentic, organic self-care formulas infused with wild-harvested African botanicals and therapeutic essential oils, directly supporting women-led agricultural collectives in Ghana.
             </p>
             <div className="flex space-x-5 pt-2">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-brand-white/80 hover:text-brand-gold transition-colors" aria-label="Instagram">
